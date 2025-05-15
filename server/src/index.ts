@@ -23,6 +23,10 @@ app.use('/quest', questRouter);
 app.use('/user', userRouter);
 app.use('/auth', authRouter);
 
+app.use((req, res) => {
+  res.status(404).json({ success: false, message: "Resource not found" });
+});
+
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
