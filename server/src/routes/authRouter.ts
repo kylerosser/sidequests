@@ -17,6 +17,8 @@ if (JWT_SECRET == undefined) {
     throw new Error("JSON web token secret not provided");
 }
 
+// POST api/auth/login
+// Login and retrieve JSON web token
 router.post("/login", async (req: Request, res: Response) => {
     // NOTE: users can login with either username or password
     // such value is the identifier parameter
@@ -79,6 +81,8 @@ router.post("/login", async (req: Request, res: Response) => {
     }
 });
 
+// POST api/auth/signup
+// Signup and create a new account
 router.post("/signup", async (req: Request, res: Response) => {
     let { username, email, password } = req.body;
 

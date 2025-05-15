@@ -2,8 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import 'dotenv/config';
 
-import questRouter from './routes/questRouter';
-import userRouter from './routes/userRouter';
+import questRouter from './routes/questsRouter';
+import userRouter from './routes/usersRouter';
 import authRouter from './routes/authRouter';
 
 const PORT = process.env.PORT || 3000;
@@ -21,8 +21,8 @@ mongoose.connect(MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB', err));
 
-app.use(`${API_PREFIX}/quest`, questRouter);
-app.use(`${API_PREFIX}/user`, userRouter);
+app.use(`${API_PREFIX}/quests`, questRouter);
+app.use(`${API_PREFIX}/users`, userRouter);
 app.use(`${API_PREFIX}/auth`, authRouter);
 
 app.use((req, res) => {
