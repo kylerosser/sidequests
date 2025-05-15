@@ -9,6 +9,7 @@ import authRouter from './routes/authRouter';
 const PORT = process.env.PORT || 3000;
 const API_PREFIX = '/api';
 const MONGODB_URI = process.env.MONGODB_URI
+
 if (MONGODB_URI == undefined) {
   throw new Error("MongoDB URI not provided");
 }
