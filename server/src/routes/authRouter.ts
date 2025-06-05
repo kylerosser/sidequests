@@ -8,6 +8,7 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRY = "7d";
+const JWT_COOKIE_EXPIRY = 7 * 24 * 60 * 60 * 1000;
 const SALT_ROUNDS = 10;
 const MIN_USERNAME_LENGTH = 3;
 const MAX_USERNAME_LENGTH = 20;
@@ -62,13 +63,19 @@ router.post("/login", async (req: Request, res: Response) => {
             { expiresIn: JWT_EXPIRY }
         );
 
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: false, // note: in prod, change to true for https
+            sameSite: "strict",
+            maxAge: JWT_COOKIE_EXPIRY
+        });
+
         return res.status(200).json({
             success: true,
             data: {
                 id: existingUser.id,
                 username: existingUser.username,
                 email: existingUser.email,
-                token: token,
             },
         });
         

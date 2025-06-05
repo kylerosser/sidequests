@@ -9,12 +9,11 @@ if (!JWT_SECRET) {
 } 
 
 export const authenticateToken = (req: AuthRequest, res: Response, next: NextFunction) => {
-    const authHeader = req.headers["authorization"];
-    const token = authHeader?.split(" ")[1]; // Bearer <token>
+    const token = req.cookies.token;
 
     if (!token) return res.status(401).json({ success: false, message: "Access token missing" });
 
-    jwt.verify(token, JWT_SECRET, (err, user) => {
+    jwt.verify(token, JWT_SECRET, (err: jwt.VerifyErrors | null, user: jwt.JwtPayload | string | undefined) => {
         if (err || !user) {
             return res.status(401).json({ success: false, message: "Invalid token" });
         }
