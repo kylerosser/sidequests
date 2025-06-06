@@ -7,6 +7,7 @@
     --color-sq-secondary-darker: rgb(10, 90, 125); /* Darker blue */
     --color-sq-dark: rgb(25,62,85); /* Dark navy */
     --color-sq-light: rgb(245,245,245); /* Off-white */
+    --color-sq-grey: rgb(224, 224, 224); /* Grey */
     --color-sq-tint-lighter: rgb(255,247,228); /* Light amber tint */
     --color-sq-tint-darker: rgb(245,231,201); /* Darker amber tint */
 }

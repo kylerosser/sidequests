@@ -1,4 +1,4 @@
-import { PageLayout } from '../components/page/PageLayout'
+import { PageLayout } from '../components/layouts/PageLayout'
 
 export const NotFoundPage = () => {
     return (
