@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme {  
+    --color-sq-primary: rgb(226,132,41); /* Amber */
+    --color-sq-primary-darker: rgb(212, 122, 36); /* Darker amber*/
+    --color-sq-secondary: rgb(12,103,143); /* Blue */
+    --color-sq-secondary-darker: rgb(10, 90, 125); /* Darker blue */
+    --color-sq-dark: rgb(25,62,85); /* Dark navy */
+    --color-sq-light: rgb(245,245,245); /* Off-white */
+    --color-sq-tint-lighter: rgb(255,247,228); /* Light amber tint */
+    --color-sq-tint-darker: rgb(245,231,201); /* Darker amber tint */
+}

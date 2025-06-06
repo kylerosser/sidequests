@@ -25,7 +25,7 @@
      showgrid="false"
      inkscape:zoom="0.12787542"
      inkscape:cx="762.46084"
-     inkscape:cy="1536.6518"
+     inkscape:cy="1528.8317"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -48,20 +48,16 @@
        d="M 944.88281,182.47852 A 762.4033,762.4033 0 0 1 1707.2852,944.88281 762.4033,762.4033 0 0 1 944.88281,1707.2852 762.4033,762.4033 0 0 1 182.47852,944.88281 762.4033,762.4033 0 0 1 944.88281,182.47852 Z"
        transform="scale(0.26458333)"
        id="path8164" />
-    <g
-       id="g10335"
-       transform="matrix(-0.77420099,0.63293983,-0.63294268,-0.77420447,602.68175,281.40185)">
-      <path
-         style="fill:#133752;fill-opacity:1;stroke:none;stroke-width:0.163159px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 253.17107,193.40381 161.49651,54.13276 -161.49651,54.13275 z"
-         id="path3886"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="fill:#e1842a;fill-opacity:1;stroke:none;stroke-width:0.163159px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 253.17107,193.40381 91.674608,247.53657 253.17107,301.66932 Z"
-         id="path4901"
-         sodipodi:nodetypes="cccc" />
-    </g>
+    <path
+       style="fill:#0c678f;fill-opacity:1;stroke:none;stroke-width:0.163159px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 284.26293,291.90981 124.96924,352.21756 215.73707,208.09017 Z"
+       id="path3886"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#e1842a;fill-opacity:1;stroke:none;stroke-width:0.163159px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 284.26293,291.90981 375.03072,147.78244 215.73707,208.09017 Z"
+       id="path4901"
+       sodipodi:nodetypes="cccc" />
     <path
        style="fill:#fff7e3;fill-opacity:1;stroke-width:0.136009;stroke-linecap:round;stroke-linejoin:round"
        d="m 250.00001,232.9806 a 17.019389,17.019389 0 0 1 17.01937,17.01941 17.019389,17.019389 0 0 1 -17.01937,17.01937 17.019389,17.019389 0 0 1 -17.01941,-17.01937 17.019389,17.019389 0 0 1 17.01941,-17.01941 z"
