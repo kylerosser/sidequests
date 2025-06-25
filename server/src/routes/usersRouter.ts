@@ -23,7 +23,8 @@ router.get("/me", authenticateToken, async (req: AuthRequest, res: Response) => 
             success: true,
             data: {
                 id: existingUser.id,
-                username: existingUser.username
+                username: existingUser.username,
+                email: existingUser.email
             },
         });
 

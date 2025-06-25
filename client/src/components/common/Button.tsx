@@ -1,13 +1,14 @@
 type ButtonProps = {
   type?: 'submit' | 'button' | 'reset';
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'white';
   children: React.ReactNode;
   className?: string;
 };
 
 const variantClasses = {
   primary: 'bg-sq-primary hover:bg-sq-primary-darker text-white',
-  secondary: 'bg-sq-secondary hover:bg-sq-secondary-darker text-white'
+  secondary: 'bg-sq-secondary hover:bg-sq-secondary-darker text-white',
+  white: 'bg-white hover:bg-sq-light text-sq-dark border-1 border-sq-grey'
 };
 
 export const Button = ({
@@ -19,7 +20,7 @@ export const Button = ({
   return (
     <button
       type={type}
-      className={`flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer ${variantClasses[variant]} ${className}`}
+      className={`flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer whitespace-nowrap ${variantClasses[variant]} ${className}`}
     >
       {children}
     </button>

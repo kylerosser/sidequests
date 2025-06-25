@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { api } from "../api/axios";
 
 import { AuthContext } from './AuthContext';
-import type { User } from './authTypes';
 
+import type { User } from './authTypes';
+import type { ApiResponse } from "../api/apiTypes";
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const [user, setUser] = useState<User | null>(null);
@@ -13,8 +14,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await api.get<User>("/me");
-                setUser(res.data);
+                const res = await api.get<ApiResponse<User>>("/users/me");
+                setUser(res.data.data);
             } catch {
                 setUser(null);
             } finally {
@@ -24,9 +25,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         fetchUser();
     }, []);
 
-    const login = async (username: string, password: string) => {
-        const res = await api.post<User>("/login", { username, password });
-        setUser(res.data); // save public user info
+    const login = async (identifier: string, password: string) => {
+        const res = await api.post<ApiResponse<User>>("/auth/login", { identifier, password });
+        setUser(res.data.data); // save public user info
     };
 
     const logout = async () => {
