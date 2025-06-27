@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { api } from "../api/axios";
 
 import { AuthContext } from './AuthContext';
@@ -25,18 +25,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         fetchUser();
     }, []);
 
-    const login = async (identifier: string, password: string) => {
+    const login = useCallback(async (identifier: string, password: string) => {
         const res = await api.post<ApiResponse<User>>("/auth/login", { identifier, password });
         setUser(res.data.data); // save public user info
-    };
+    }, []);
 
-    const logout = async () => {
+    const logout = useCallback(async () => {
         await api.post("/logout");
         setUser(null);
-    };
+    }, []);
 
     return (
-        <AuthContext.Provider value={{ user, loading, login, logout }}>
+        <AuthContext.Provider
+            value={useMemo(() => ({ user, loading, login, logout }), [user, loading, login, logout])}
+        >
         {children}
         </AuthContext.Provider>
     );
