@@ -47,9 +47,23 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             });
     }, []);
 
-    const logout = useCallback(async () => {
-        await api.post("/logout");
-        setUser(null);
+    const logout = useCallback((): Promise<ApiResponse<string>> => {
+        return api.post<ApiResponse<string>>("/auth/logout")
+            .then((res) => {
+                if (res.data.success) {
+                    setUser(null);
+                }
+                return res.data;
+            })
+            .catch((error: Error | AxiosError): ApiResponse<string> => {
+                if (axios.isAxiosError(error) && error.response?.data) {
+                    return error.response.data as ApiResponse<string>;
+                }
+                return {
+                    success: false,
+                    data: "An unknown error occurred",
+                };
+            });
     }, []);
 
     return (

@@ -2,13 +2,19 @@ import express, { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
+import { AuthRequest } from '../types/authTypes';
+
 import User from '../models/userModel';
+
+import { authenticateToken } from '../middleware/authMiddleware';
 
 const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRY = "7d";
 const JWT_COOKIE_EXPIRY = 7 * 24 * 60 * 60 * 1000;
+const USE_SECURE_JWT_COOKIE = false; // note: in prod, change to true for https
+const JWT_COOKIE_SAMESITE = "strict";
 const SALT_ROUNDS = 10;
 const MIN_USERNAME_LENGTH = 3;
 const MAX_USERNAME_LENGTH = 20;
@@ -65,8 +71,8 @@ router.post("/login", async (req: Request, res: Response) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false, // note: in prod, change to true for https
-            sameSite: "strict",
+            secure: USE_SECURE_JWT_COOKIE, 
+            sameSite: JWT_COOKIE_SAMESITE,
             maxAge: JWT_COOKIE_EXPIRY
         });
 
@@ -79,6 +85,32 @@ router.post("/login", async (req: Request, res: Response) => {
             },
         });
         
+    } catch(err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            data: "An unexpected error occurred",
+        });
+    }
+});
+
+// POST api/auth/logout
+// Log out and clear JSON web token
+router.post("/logout", authenticateToken, async (req: AuthRequest, res: Response) => {
+    try {
+        if (!req.user) return res.status(401).json({ success: false, data: "Unauthorized" });
+        
+        res.clearCookie("token", {
+            httpOnly: true,
+            secure: USE_SECURE_JWT_COOKIE,
+            sameSite: JWT_COOKIE_SAMESITE
+        });
+
+        return res.status(200).json({
+            success: true,
+            data: "Logged out successfuly"
+        });
+
     } catch(err) {
         console.error(err);
         return res.status(500).json({

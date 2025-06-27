@@ -10,5 +10,5 @@ export type AuthContextType = {
     user: User | null;
     loading: boolean;
     login: (username: string, password: string) => Promise<ApiResponse<User | string>>;
-    logout: () => Promise<void>;
+    logout: () => Promise<ApiResponse<string>>;
 };

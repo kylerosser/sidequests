@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router"
 
 interface HyperlinkProps {
   children: ReactNode;
@@ -8,11 +9,11 @@ interface HyperlinkProps {
 
 export const Hyperlink = ({ children, href, className = "" }: HyperlinkProps) => {
   return (
-    <a
-      href={href}
-      className={`font-semibold text-sq-secondary hover:text-sq-secondary-darker ${className}`}
+    <Link
+      to={href}
+      className={`font-semibold text-sq-secondary cursor-pointer hover:text-sq-secondary-darker ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 };
