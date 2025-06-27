@@ -15,23 +15,23 @@ export const LoginPage = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const redirect = searchParams.get('redirect')
-    const [username, setUsername] = useState("");
+    const [identifier, setIdentifier] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        try {
-            await login(username, password);
-            // If a redirect is provided as a query param, redirect there after logging in
-            if (redirect) {
-                navigate(redirect);
+        const loginResponse = await login(identifier, password);
+        if (loginResponse.success) {
+            // Login success, redirect to route specified in query params or /quests as fallback
+            navigate(redirect ? redirect : "/quests");
+        } else {
+            console.log(loginResponse);
+            if (typeof loginResponse.data == "string") {
+                setError(loginResponse.data);
             } else {
-                // Fallback to the quests page if no redirect specified
-                navigate('/quests');
+                setError("An error occured while trying to log you in");
             }
-            
-        } catch {
-            alert("Login failed"); // todo: improve with a popup or something
         }
     };
 
@@ -48,7 +48,7 @@ export const LoginPage = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <FormLabel htmlFor="email" text="Username or Email" />
-                                <FormShortTextInput value={username} onChange={(e) => setUsername(e.target.value)} className="mt-2" type="text" name="email" id="email" autoComplete="email" required />
+                                <FormShortTextInput value={identifier} onChange={(e) => setIdentifier(e.target.value)} className="mt-2" type="text" name="email" id="email" autoComplete="email" required />
                             </div>
 
                             <div>
@@ -58,9 +58,9 @@ export const LoginPage = () => {
                                 </div>
                                 <FormShortTextInput value={password} onChange={(e) => setPassword(e.target.value)} className="mt-2" type="password" name="password" id="password" autoComplete="current-password" required />
                             </div>
-
-                            <div>
+                            <div className="text-center">
                                 <Button type="submit" variant='primary'>Log in</Button>
+                                <span className={`text-sq-red text-sm/6 font-medium ${error ? "" : "hidden"}`}>{error}</span>
                             </div>
                         </form>
                         <div>

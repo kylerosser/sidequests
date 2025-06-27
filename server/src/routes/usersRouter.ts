@@ -12,11 +12,11 @@ const router = express.Router();
 // Retrieve private user profile linked to an authenticated user
 router.get("/me", authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
-        if (!req.user) return res.status(401).json({ success: false, message: "Unauthorized" });
+        if (!req.user) return res.status(401).json({ success: false, data: "Unauthorized" });
         const existingUser = await User.findOne({_id: req.user.id});
 
         if (!existingUser) {
-            return res.status(404).json({ success: false, message: "Account does not exist" });
+            return res.status(404).json({ success: false, data: "Account does not exist" });
         }
 
         return res.status(200).json({
@@ -32,7 +32,7 @@ router.get("/me", authenticateToken, async (req: AuthRequest, res: Response) => 
         console.error(err);
         return res.status(500).json({
             success: false,
-            message: "An unexpected error occurred",
+            data: "An unexpected error occurred",
         });
     }
 
@@ -73,7 +73,7 @@ router.get("", async (req: Request, res: Response) => {
         console.error(err);
         return res.status(500).json({
             success: false,
-            message: "An unexpected error occurred",
+            data: "An unexpected error occurred",
         });
     }
 

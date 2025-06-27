@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { api } from "../api/axios";
+import axios from "axios";
+import type { AxiosError } from "axios";
 
 import { AuthContext } from './AuthContext';
 
@@ -25,9 +27,24 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         fetchUser();
     }, []);
 
-    const login = useCallback(async (identifier: string, password: string) => {
-        const res = await api.post<ApiResponse<User>>("/auth/login", { identifier, password });
-        setUser(res.data.data); // save public user info
+    const login = useCallback((identifier: string, password: string): Promise<ApiResponse<User | string>> => {
+        return api
+            .post<ApiResponse<User | string>>("/auth/login", { identifier, password })
+            .then((res) => {
+                if (res.data.success) {
+                    setUser(res.data.data as User);
+                }
+                return res.data;
+            })
+            .catch((error: Error | AxiosError): ApiResponse<User | string> => {
+                if (axios.isAxiosError(error) && error.response?.data) {
+                    return error.response.data as ApiResponse<User>;
+                }
+                return {
+                    success: false,
+                    data: "An unknown error occurred",
+                };
+            });
     }, []);
 
     const logout = useCallback(async () => {

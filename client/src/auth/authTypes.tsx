@@ -1,3 +1,5 @@
+import type { ApiResponse } from "../api/apiTypes";
+
 export type User = {
     id: string;
     username: string;
@@ -7,6 +9,6 @@ export type User = {
 export type AuthContextType = {
     user: User | null;
     loading: boolean;
-    login: (username: string, password: string) => Promise<void>;
+    login: (username: string, password: string) => Promise<ApiResponse<User | string>>;
     logout: () => Promise<void>;
 };

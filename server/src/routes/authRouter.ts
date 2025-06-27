@@ -28,7 +28,7 @@ router.post("/login", async (req: Request, res: Response) => {
     try {
         // Ensure all fields are present
         if (!identifier || !password) {
-            return res.status(400).json({success: false, message: "Email and password are required"});
+            return res.status(400).json({success: false, data: "Email/username and password are required"});
         }
         
         // Remove leading and trailing whitespace from identifier
@@ -47,13 +47,13 @@ router.post("/login", async (req: Request, res: Response) => {
 
         // Handle nonexistent identifier
         if (!existingUser) {
-            return res.status(401).json({ success: false, message: "Account does not exist" });
+            return res.status(401).json({ success: false, data: "No account found with that username/email" });
         }
 
         // Handle incorrect password
         const isPasswordCorrect = await bcrypt.compare(password, existingUser.passwordHash)
         if (!isPasswordCorrect) {
-            return res.status(401).json({ success: false, message: "Incorrect password" });
+            return res.status(401).json({ success: false, data: "Incorrect password" });
         }
 
         // Generate a JSON web token
@@ -83,7 +83,7 @@ router.post("/login", async (req: Request, res: Response) => {
         console.error(err);
         return res.status(500).json({
             success: false,
-            message: "An unexpected error occurred",
+            data: "An unexpected error occurred",
         });
     }
 });
@@ -96,7 +96,7 @@ router.post("/signup", async (req: Request, res: Response) => {
     try {
         // Ensure all fields are present
         if (!username || !email || !password) {
-            return res.status(400).json({success: false, message: "Username, email, and password are required"});
+            return res.status(400).json({success: false, data: "Username, email, and password are required"});
         }
 
         // Remove leading and trailing whitespace from username and email
@@ -107,12 +107,12 @@ router.post("/signup", async (req: Request, res: Response) => {
         // Ensure username is alphanumeric (but allowing underscores)
         const usernameAlnumRegex = new RegExp(`^[a-zA-Z0-9_]+$`);
         if (!usernameAlnumRegex.test(username)) {
-            return res.status(400).json({success: false, message: "Your username can only contain numbers, letters and underscores"});
+            return res.status(400).json({success: false, data: "Your username can only contain numbers, letters and underscores"});
         }
 
         // Ensure username is of an acceptable length
         if (username.length < MIN_USERNAME_LENGTH || username.length > MAX_USERNAME_LENGTH) {
-            return res.status(400).json({success: false, message: `Your username must be between ${MIN_USERNAME_LENGTH} and ${MAX_USERNAME_LENGTH} characters`});
+            return res.status(400).json({success: false, data: `Your username must be between ${MIN_USERNAME_LENGTH} and ${MAX_USERNAME_LENGTH} characters`});
         }
         
         // Ensure username is unique (case insensitive)
@@ -120,25 +120,25 @@ router.post("/signup", async (req: Request, res: Response) => {
             username: { $regex: `^${username}$`, $options: 'i' } // ignore case
         }); 
         if (existingUsername) {
-            return res.status(400).json({success: false, message: "This username is already in use"});
+            return res.status(400).json({success: false, data: "This username is already in use"});
         }
 
         // Ensure email is unique
         const existingEmail = await User.findOne({ email });
         if (existingEmail) {
-            return res.status(400).json({success: false, message: "This email is already in use"});
+            return res.status(400).json({success: false, data: "This email is already in use"});
         }
 
         // Ensure password is of an acceptable length
         if (password.length < MIN_PASSWORD_LENGTH) {
-            return res.status(400).json({success: false, message: `Your password must be at least ${MIN_PASSWORD_LENGTH} character long`});
+            return res.status(400).json({success: false, data: `Your password must be at least ${MIN_PASSWORD_LENGTH} character long`});
         }
 
         // For security, ensure passwords contain at least a letter and a number
         const passwordComplexityRegex = new RegExp(`^(?=.*[A-Za-z])(?=.*\\d).+$`);
         if (!passwordComplexityRegex.test(password)) {
             console.log(password);
-            return res.status(400).json({success: false, message: "Your password must contain at least one letter and one number"});
+            return res.status(400).json({success: false, data: "Your password must contain at least one letter and one number"});
         }
 
         // Hash the password for storage
