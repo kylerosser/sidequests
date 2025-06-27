@@ -11,7 +11,6 @@ type NavbarProps = {
 
 export const Navbar = ({ hideSignupButton = false, hideLoginButton = false }: NavbarProps) => {
     const { user } = useAuth();
-    console.log(user != null)
 
     // Buttons for logging in / signing up to be displayed if the user is not currently logged in
     const loginSignupButtons = <>

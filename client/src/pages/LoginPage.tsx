@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router"
 import { useAuth } from "../auth/useAuth";
 
 import { PageLayout } from '../components/layouts/PageLayout'
@@ -11,6 +12,9 @@ import signInWithGoogleImage from '/google_login_SI.svg';
 
 export const LoginPage = () => {
     const { login } = useAuth();
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const redirect = searchParams.get('redirect')
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -18,6 +22,14 @@ export const LoginPage = () => {
         e.preventDefault();
         try {
             await login(username, password);
+            // If a redirect is provided as a query param, redirect there after logging in
+            if (redirect) {
+                navigate(redirect);
+            } else {
+                // Fallback to the quests page if no redirect specified
+                navigate('/quests');
+            }
+            
         } catch {
             alert("Login failed"); // todo: improve with a popup or something
         }
