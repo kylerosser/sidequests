@@ -16,7 +16,7 @@ const variantClasses = {
 };
 
 export const Button = ({
-    type = 'button',
+  type = 'button',
   variant = 'primary',
   children,
   className = '',
@@ -27,7 +27,7 @@ export const Button = ({
     <button
       type={type}
       onClick={onClick}
-      className={`flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer whitespace-nowrap ${variantClasses[variant]} ${className}`}
+      className={`flex justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer whitespace-nowrap ${variantClasses[variant]} ${className}`}
     >
       {loading ? <Spinner className="h-4 my-1"/> : children}
     </button>

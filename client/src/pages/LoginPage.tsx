@@ -75,7 +75,7 @@ export const LoginPage = () => {
                                 <FormShortTextInput value={password} onChange={(e) => setPassword(e.target.value)} className="mt-2" type="password" name="password" id="password" autoComplete="current-password" required />
                             </div>
                             <div className="text-center">
-                                <Button loading={submitLoading} type="submit" variant='primary'>Log in</Button>
+                                <Button className="w-full" loading={submitLoading} type="submit" variant='primary'>Log in</Button>
                                 <span className={`text-sq-red text-sm/6 font-medium ${error ? "" : "hidden"}`}>{error}</span>
                             </div>
                         </form>

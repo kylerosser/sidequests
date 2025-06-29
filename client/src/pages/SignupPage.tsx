@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router"
+import { useNavigate } from "react-router";
 
 import { PageLayout } from '../components/layouts/PageLayout'
 import { FormShortTextInput } from '../components/common/FormShortTextInput'
@@ -12,12 +12,13 @@ import { authApi } from '../api/authApi'
 import signUpWithGoogleImage from '/google_login_SU.svg';
 
 export const SignupPage = () => {
-    const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [submitLoading, setSubmitLoading] = useState(false); // True if waiting for server respond to form submit
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -26,7 +27,6 @@ export const SignupPage = () => {
 
         const signupResponse = await authApi.signupWithEmail(username, email, password);
         if (signupResponse.success) {
-            // Signup success: redirect to verify email page
             navigate('/verify');
         } else {
             setSubmitLoading(false);
@@ -75,7 +75,7 @@ export const SignupPage = () => {
                                 <FormShortTextInput value={password} onChange={(e) => setPassword(e.target.value)} className="mt-2" type="password" name="password" id="password" autoComplete="new-password" required />
                             </div>
                             <div className="text-center">
-                                <Button loading={submitLoading} type="submit" variant='primary'>Create Account</Button>
+                                <Button loading={submitLoading} className="w-full" type="submit" variant='primary'>Create Account</Button>
                                 <span className={`text-sq-red text-sm/6 font-medium ${error ? "" : "hidden"}`}>{error}</span>
                             </div>
                         </form>

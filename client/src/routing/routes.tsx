@@ -2,6 +2,7 @@ import type { RouteObject } from 'react-router';
 
 import { LoginPage } from '../pages/LoginPage';
 import { SignupPage } from '../pages/SignupPage';
+import { VerifyPage } from '../pages/VerifyPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 
 
@@ -24,6 +25,13 @@ export const routes: AppRouteObject[] = [
           <SignupPage />
       ),
       title: 'Create Account'
+    },
+    {
+      path: '/verify',
+      element: (
+          <VerifyPage />
+      ),
+      title: 'Verify'
     },
     {
     path: '*',
