@@ -23,15 +23,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.12787542"
-     inkscape:cx="762.46084"
-     inkscape:cy="1528.8317"
+     inkscape:zoom="0.090421577"
+     inkscape:cx="3041.3095"
+     inkscape:cy="3290.1439"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="true"
+     inkscape:snap-object-midpoints="true" />
   <defs
      id="defs2" />
   <g
@@ -44,23 +46,35 @@
        transform="scale(0.26458333)"
        id="path858" />
     <path
-       style="fill:#fff7e3;fill-opacity:1;stroke-width:6.09271;stroke-linecap:round;stroke-linejoin:round"
-       d="M 944.88281,182.47852 A 762.4033,762.4033 0 0 1 1707.2852,944.88281 762.4033,762.4033 0 0 1 944.88281,1707.2852 762.4033,762.4033 0 0 1 182.47852,944.88281 762.4033,762.4033 0 0 1 944.88281,182.47852 Z"
-       transform="scale(0.26458333)"
+       style="fill:#fff7e3;fill-opacity:1;stroke-width:1.52434;stroke-linecap:round;stroke-linejoin:round"
+       d="M 250.00023,59.253681 A 190.7463,190.7463 0 0 1 440.7463,250.00023 190.7463,190.7463 0 0 1 250.00023,440.7463 190.7463,190.7463 0 0 1 59.253681,250.00023 190.7463,190.7463 0 0 1 250.00023,59.253681 Z"
        id="path8164" />
-    <path
-       style="fill:#0c678f;fill-opacity:1;stroke:none;stroke-width:0.163159px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 284.26293,291.90981 124.96924,352.21756 215.73707,208.09017 Z"
-       id="path3886"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:#e1842a;fill-opacity:1;stroke:none;stroke-width:0.163159px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 284.26293,291.90981 375.03072,147.78244 215.73707,208.09017 Z"
-       id="path4901"
-       sodipodi:nodetypes="cccc" />
+    <g
+       id="g10653"
+       transform="translate(59.645584,-45.876493)">
+      <g
+         id="g8383-2"
+         transform="matrix(0.70710678,-0.70710678,0.80893221,0.80893221,71.981865,-365.7122)">
+        <path
+           id="path2537-8-7"
+           style="fill:#e1842a;fill-opacity:1;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -1451.7637,1632.0176 v 190.0683 190.0684 c 0,0 23.9846,-1.3342 48.3887,-6 24.4041,-4.6658 573.41602,-167.0684 573.41602,-167.0684 13.5846,-3.843 13.89062,-17 13.89062,-17 0,0 -0.30602,-13.1589 -13.89062,-17.0019 0,0 -549.01192,-162.4006 -573.41602,-167.0664 -24.4041,-4.6658 -48.3887,-6 -48.3887,-6 z"
+           transform="scale(0.26458333)" />
+      </g>
+      <g
+         id="g8387-2"
+         style="fill:#0c678f;fill-opacity:1"
+         transform="matrix(0.70710678,-0.70710678,0.80893221,0.80893221,71.981865,-365.7122)">
+        <path
+           id="path2537-8-0-6"
+           style="fill:#0c678f;fill-opacity:1;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m -1451.7637,1632.0176 c 0,0 -23.9846,1.3342 -48.3886,6 -24.4041,4.6658 -573.4141,167.0664 -573.4141,167.0664 -13.5846,3.843 -13.8906,17.0019 -13.8906,17.0019 0,0 0.306,13.157 13.8906,17 0,0 549.01,162.4026 573.4141,167.0684 24.404,4.6658 48.3886,6 48.3886,6 v -190.0684 z"
+           transform="scale(0.26458333)" />
+      </g>
+    </g>
     <path
        style="fill:#fff7e3;fill-opacity:1;stroke-width:0.136009;stroke-linecap:round;stroke-linejoin:round"
-       d="m 250.00001,232.9806 a 17.019389,17.019389 0 0 1 17.01937,17.01941 17.019389,17.019389 0 0 1 -17.01937,17.01937 17.019389,17.019389 0 0 1 -17.01941,-17.01937 17.019389,17.019389 0 0 1 17.01941,-17.01941 z"
+       d="m 247.12109,233.22584 a 17.019389,17.019389 45 0 1 19.65303,13.89525 17.019389,17.019389 45 0 1 -13.89519,19.65303 17.019389,17.019389 45 0 1 -19.65307,-13.89519 17.019389,17.019389 45 0 1 13.89523,-19.65309 z"
        id="path10331" />
   </g>
 </svg>

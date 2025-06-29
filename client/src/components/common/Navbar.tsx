@@ -4,7 +4,7 @@ import { Button } from '../common/Button'
 import { ProfileMenu } from "./ProfileMenu";
 import { Link } from "react-router"
 
-import iconImage from '/icon.svg';
+import wordmarkImage from '/wordmark.svg';
 
 type NavbarProps = {
   hideSignupButton?: boolean;
@@ -27,8 +27,7 @@ export const Navbar = ({ hideSignupButton = false, hideLoginButton = false }: Na
         <nav className="bg-white border-1 border-sq-grey fixed w-full">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1.5 h-15">
                 <div className="flex items-center space-x-3 cursor-pointer">
-                    <img src={iconImage} className="h-8" alt="Sidequests Logo"/>
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-sq-dark">Sidequests</span>
+                    <img src={wordmarkImage} className="h-8" alt="Sidequests Logo"/>
                 </div>
                 
                 {user == null ? loginSignupButtons : userInfo}
