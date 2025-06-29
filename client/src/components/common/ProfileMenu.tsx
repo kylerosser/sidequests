@@ -10,14 +10,18 @@ import avatarIconImage from '/account_circle_24dp_193E55_FILL0_wght200_GRAD0_ops
 export const ProfileMenu = () => {
     const { user, logout } = useAuth();
     const [open, setOpen] = useState(false);
+    const [logOutLoading, setLogOutLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleLogOut = async () => {
+        if (logOutLoading) return;
+        setLogOutLoading(true);
         const logOutResponse = await logout();
+        setOpen(false);
+        setLogOutLoading(false);
         if (logOutResponse.success) {
             navigate('/login');
         }
-        setOpen(false);
     }
 
     return (
@@ -34,7 +38,7 @@ export const ProfileMenu = () => {
             
             <div className="p-3 flex flex-col items-center text-center">
                 <Hyperlink onClick={() => setOpen(!open)} className="text-sm/6" href="/profile">View Profile</Hyperlink>
-                <Button onClick={handleLogOut} className="mt-3 w-full" variant='secondary'>Log out</Button>
+                <Button loading={logOutLoading} onClick={handleLogOut} className="mt-3 w-full" variant='secondary'>Log out</Button>
             </div>
             </div>
         )}
