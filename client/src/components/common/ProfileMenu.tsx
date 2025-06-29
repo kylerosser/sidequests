@@ -32,9 +32,9 @@ export const ProfileMenu = () => {
             {/* Bubble arrow */}
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-200" />
             
-            <div className="p-3 text-center">
+            <div className="p-3 flex flex-col items-center text-center">
                 <Hyperlink onClick={() => setOpen(!open)} className="text-sm/6" href="/profile">View Profile</Hyperlink>
-                <Button onClick={handleLogOut} className="mt-3" variant='secondary'>Log out</Button>
+                <Button onClick={handleLogOut} className="mt-3 w-full" variant='secondary'>Log out</Button>
             </div>
             </div>
         )}
