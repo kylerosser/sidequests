@@ -8,7 +8,7 @@ import { FormLabel } from '../components/common/FormLabel'
 import { Hyperlink } from '../components/common/Hyperlink'
 import { Button } from '../components/common/Button'
 
-import signInWithGoogleImage from '/google_login_SI.svg';
+import signInWithGoogleImage from '/google_login_SI.png';
 
 export const LoginPage = () => {
     const { login } = useAuth();
@@ -49,7 +49,7 @@ export const LoginPage = () => {
                     </div>
 
                     <div className="flex mt-5">
-                        <button className="mx-auto cursor-pointer"><img src={signInWithGoogleImage}/></button>
+                        <button className="mx-auto cursor-pointer"><img className="h-[40px] w-auto" src={signInWithGoogleImage}/></button>
                     </div>
 
                     <div>

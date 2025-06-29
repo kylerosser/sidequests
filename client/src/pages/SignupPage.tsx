@@ -9,7 +9,7 @@ import { Button } from '../components/common/Button'
 
 import { authApi } from '../api/authApi'
 
-import signUpWithGoogleImage from '/google_login_SU.svg';
+import signUpWithGoogleImage from '/google_login_SU.png';
 
 export const SignupPage = () => {
     const [username, setUsername] = useState("");
@@ -49,7 +49,7 @@ export const SignupPage = () => {
                     </div>
 
                     <div className="flex mt-5">
-                        <button className="mx-auto cursor-pointer"><img src={signUpWithGoogleImage}/></button>
+                        <button className="mx-auto cursor-pointer"><img className="h-[40px] w-auto" src={signUpWithGoogleImage}/></button>
                     </div>
 
                     <div>
