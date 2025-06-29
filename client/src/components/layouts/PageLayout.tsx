@@ -13,7 +13,7 @@ export const PageLayout = ({ children }: { children: ReactNode }) => {
     return (
         <>
             <Navbar hideSignupButton={isLoginPage} hideLoginButton={isSignupPage}/>
-            <div className="w-screen h-screen">
+            <div className="h-screen overflow-x:hidden">
                 {children}
             </div>
         </>

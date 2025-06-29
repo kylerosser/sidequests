@@ -19,6 +19,7 @@ const SALT_ROUNDS = 10;
 const MIN_USERNAME_LENGTH = 3;
 const MAX_USERNAME_LENGTH = 20;
 const MIN_PASSWORD_LENGTH = 8;
+const MAX_PASSWORD_LENGTH = 128;
 
 if (JWT_SECRET == undefined) {
     throw new Error("JSON web token secret not provided");
@@ -26,7 +27,7 @@ if (JWT_SECRET == undefined) {
 
 // POST api/auth/login
 // Login and retrieve JSON web token
-router.post("/login", async (req: Request, res: Response) => {
+router.post("/login/email", async (req: Request, res: Response) => {
     // NOTE: users can login with either username or password
     // such value is the identifier parameter
     let { identifier, password } = req.body;
@@ -122,7 +123,7 @@ router.post("/logout", authenticateToken, async (req: AuthRequest, res: Response
 
 // POST api/auth/signup
 // Signup and create a new account
-router.post("/signup", async (req: Request, res: Response) => {
+router.post("/signup/email", async (req: Request, res: Response) => {
     let { username, email, password } = req.body;
 
     try {
@@ -143,8 +144,11 @@ router.post("/signup", async (req: Request, res: Response) => {
         }
 
         // Ensure username is of an acceptable length
-        if (username.length < MIN_USERNAME_LENGTH || username.length > MAX_USERNAME_LENGTH) {
-            return res.status(400).json({success: false, data: `Your username must be between ${MIN_USERNAME_LENGTH} and ${MAX_USERNAME_LENGTH} characters`});
+        if (username.length < MIN_USERNAME_LENGTH) {
+            return res.status(400).json({success: false, data: `Your username must be at least ${MIN_USERNAME_LENGTH} characters`});
+        }
+        if (username.length > MAX_USERNAME_LENGTH) {
+            return res.status(400).json({success: false, data: `Your username cannot be greater than ${MAX_USERNAME_LENGTH} characters`});
         }
         
         // Ensure username is unique (case insensitive)
@@ -160,16 +164,23 @@ router.post("/signup", async (req: Request, res: Response) => {
         if (existingEmail) {
             return res.status(400).json({success: false, data: "This email is already in use"});
         }
+        // Ensure email is of a reasonable format
+        const emailValidityRegex = new RegExp(`.+@.+`);
+        if (!emailValidityRegex.test(email)) {
+            return res.status(400).json({success: false, data: "Please enter a valid email address"});
+        }
 
         // Ensure password is of an acceptable length
         if (password.length < MIN_PASSWORD_LENGTH) {
-            return res.status(400).json({success: false, data: `Your password must be at least ${MIN_PASSWORD_LENGTH} character long`});
+            return res.status(400).json({success: false, data: `Your password must be at least ${MIN_PASSWORD_LENGTH} characters long`});
+        }
+        if (password.length > MAX_PASSWORD_LENGTH) {
+            return res.status(400).json({success: false, data: `Your password is too long. ${MAX_PASSWORD_LENGTH} character limit.`});
         }
 
-        // For security, ensure passwords contain at least a letter and a number
+        // Password must contain at least one letter and one number
         const passwordComplexityRegex = new RegExp(`^(?=.*[A-Za-z])(?=.*\\d).+$`);
         if (!passwordComplexityRegex.test(password)) {
-            console.log(password);
             return res.status(400).json({success: false, data: "Your password must contain at least one letter and one number"});
         }
 
@@ -184,21 +195,9 @@ router.post("/signup", async (req: Request, res: Response) => {
         });
         await newUser.save();
 
-        // Generate a JSON web token
-        const token = jwt.sign(
-            { id: newUser.id, email: newUser.email },
-            JWT_SECRET,
-            { expiresIn: JWT_EXPIRY }
-        );
-
         return res.status(201).json({
             success: true,
-            data: {
-                id: newUser.id,
-                username: newUser.username,
-                email: newUser.email,
-                token,
-            },
+            data: "Account created successfully",
         });
 
     } catch (err) {

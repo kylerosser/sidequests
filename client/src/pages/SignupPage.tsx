@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router"
-import { useAuth } from "../auth/useAuth";
+import { useNavigate } from "react-router"
 
 import { PageLayout } from '../components/layouts/PageLayout'
 import { FormShortTextInput } from '../components/common/FormShortTextInput'
@@ -8,14 +7,14 @@ import { FormLabel } from '../components/common/FormLabel'
 import { Hyperlink } from '../components/common/Hyperlink'
 import { Button } from '../components/common/Button'
 
-import signInWithGoogleImage from '/google_login_SI.svg';
+import { authApi } from '../api/authApi'
 
-export const LoginPage = () => {
-    const { login } = useAuth();
+import signUpWithGoogleImage from '/google_login_SU.svg';
+
+export const SignupPage = () => {
     const navigate = useNavigate();
-    const [searchParams] = useSearchParams();
-    const redirect = searchParams.get('redirect')
-    const [identifier, setIdentifier] = useState("");
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [submitLoading, setSubmitLoading] = useState(false); // True if waiting for server respond to form submit
@@ -25,16 +24,17 @@ export const LoginPage = () => {
         if (submitLoading) return;
         setSubmitLoading(true);
 
-        const loginResponse = await login(identifier, password);
-        if (loginResponse.success) {
-            // Login success, redirect to route specified in query params or /quests as fallback
-            navigate(redirect ? redirect : "/quests");
+        const signupResponse = await authApi.signupWithEmail(username, email, password);
+        if (signupResponse.success) {
+            // Signup success: redirect to verify email page
+            navigate('/verify');
         } else {
             setSubmitLoading(false);
-            if (typeof loginResponse.data == "string") {
-                setError(loginResponse.data);
+            if (typeof signupResponse.data == "string") {
+                setError(signupResponse.data);
             } else {
-                setError("An error occured while trying to log you in");
+                console.log(signupResponse)
+                setError("An error occurred. Please try again later");
             }
         }
     };
@@ -44,12 +44,12 @@ export const LoginPage = () => {
             <div className="flex min-h-full flex-col justify-center px-4 py-12 pt-20">
                 <div className="bg-white rounded-lg border-1 border-sq-grey mx-auto w-full max-w-md px-6">
                     <div className="mt-10 ">
-                        <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight">Adventure awaits...</h2>
-                        <p className="mt-1 text-center text-lg">Log in to your account to continue</p>
+                        <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight">Create your account</h2>
+                        <p className="mt-1 text-center text-lg">Sign up to get started — it only takes a minute.</p>
                     </div>
 
                     <div className="flex mt-5">
-                        <button className="mx-auto cursor-pointer"><img src={signInWithGoogleImage}/></button>
+                        <button className="mx-auto cursor-pointer"><img src={signUpWithGoogleImage}/></button>
                     </div>
 
                     <div>
@@ -63,26 +63,27 @@ export const LoginPage = () => {
                     <div className="mx-auto w-full max-w-sm">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <FormLabel htmlFor="email" text="Username or Email" />
-                                <FormShortTextInput value={identifier} onChange={(e) => setIdentifier(e.target.value)} className="mt-2" type="text" name="email" id="email" autoComplete="email" required />
+                                <FormLabel htmlFor="username" text="Username" />
+                                <FormShortTextInput value={username} onChange={(e) => setUsername(e.target.value)} className="mt-2" type="text" name="username" id="username" autoComplete="username" required />
                             </div>
-
                             <div>
-                                <div className="flex items-center justify-between">
-                                    <FormLabel htmlFor="password" text="Password" />
-                                    <Hyperlink className="text-sm" href="/forgot-password">Forgot password?</Hyperlink>
-                                </div>
-                                <FormShortTextInput value={password} onChange={(e) => setPassword(e.target.value)} className="mt-2" type="password" name="password" id="password" autoComplete="current-password" required />
+                                <FormLabel htmlFor="email" text="Email" />
+                                <FormShortTextInput value={email} onChange={(e) => setEmail(e.target.value)} className="mt-2" type="text" name="email" id="email" autoComplete="email" required />
+                            </div>
+                            <div>
+                                <FormLabel htmlFor="password" text="Password" />
+                                <FormShortTextInput value={password} onChange={(e) => setPassword(e.target.value)} className="mt-2" type="password" name="password" id="password" autoComplete="new-password" required />
                             </div>
                             <div className="text-center">
-                                <Button loading={submitLoading} type="submit" variant='primary'>Log in</Button>
+                                <Button loading={submitLoading} type="submit" variant='primary'>Create Account</Button>
                                 <span className={`text-sq-red text-sm/6 font-medium ${error ? "" : "hidden"}`}>{error}</span>
                             </div>
                         </form>
+                        
                     </div>
 
                     <div>
-                        <p className="mb-8 mt-5 block font-medium text-center text-sm/6">New to Sidequests? <Hyperlink href="/signup">Create an account</Hyperlink></p>
+                        <p className="mb-8 mt-5 block font-medium text-center text-sm/6">Already have an account? <Hyperlink href="/login">Log in</Hyperlink></p>
                     </div>
                 </div>
             </div>

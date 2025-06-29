@@ -24,7 +24,7 @@ export const Navbar = ({ hideSignupButton = false, hideLoginButton = false }: Na
     const userInfo = <ProfileMenu/>
 
     return (
-        <nav className="bg-white border-1 border-sq-grey top-0 start-0 fixed w-full">
+        <nav className="bg-white border-1 border-sq-grey fixed w-full">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1.5 h-15">
                 <div className="flex items-center space-x-3 cursor-pointer">
                     <img src={iconImage} className="h-8" alt="Sidequests Logo"/>

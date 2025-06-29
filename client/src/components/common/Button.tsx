@@ -1,9 +1,12 @@
+import { Spinner } from "./Spinner"
+
 type ButtonProps = {
   type?: 'submit' | 'button' | 'reset';
   variant?: 'primary' | 'secondary' | 'white';
   children: React.ReactNode;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  loading?: boolean;
 };
 
 const variantClasses = {
@@ -13,11 +16,12 @@ const variantClasses = {
 };
 
 export const Button = ({
-  type = 'button',
+    type = 'button',
   variant = 'primary',
   children,
   className = '',
-  onClick
+  onClick,
+  loading = false
 }: ButtonProps) => {
   return (
     <button
@@ -25,7 +29,7 @@ export const Button = ({
       onClick={onClick}
       className={`flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer whitespace-nowrap ${variantClasses[variant]} ${className}`}
     >
-      {children}
+      {loading ? <Spinner className="h-4 my-1"/> : children}
     </button>
   );
 };

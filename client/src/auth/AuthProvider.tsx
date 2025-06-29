@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const login = useCallback((identifier: string, password: string): Promise<ApiResponse<User | string>> => {
         return api
-            .post<ApiResponse<User | string>>("/auth/login", { identifier, password })
+            .post<ApiResponse<User | string>>("/auth/login/email", { identifier, password })
             .then((res) => {
                 if (res.data.success) {
                     setUser(res.data.data as User);
