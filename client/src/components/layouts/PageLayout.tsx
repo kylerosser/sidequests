@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
-import { routes } from '../../routes'
+import { routes } from '../../routing/routes'
 
 import { Navbar } from '../common/Navbar'
 

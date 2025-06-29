@@ -1,8 +1,8 @@
 import type { RouteObject } from 'react-router';
 
-import { LoginPage } from './pages/LoginPage';
-import { SignupPage } from './pages/SignupPage';
-import { NotFoundPage } from './pages/NotFoundPage';
+import { LoginPage } from '../pages/LoginPage';
+import { SignupPage } from '../pages/SignupPage';
+import { NotFoundPage } from '../pages/NotFoundPage';
 
 
 export type AppRouteObject = RouteObject & {
