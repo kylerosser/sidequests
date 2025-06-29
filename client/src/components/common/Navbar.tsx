@@ -27,7 +27,7 @@ export const Navbar = ({ hideSignupButton = false, hideLoginButton = false }: Na
         <nav className="bg-white border-1 border-sq-grey fixed w-full">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1.5 h-15">
                 <div className="flex items-center space-x-3 cursor-pointer">
-                    <img src={wordmarkImage} className="h-8" alt="Sidequests Logo"/>
+                    <Link to="/"><img src={wordmarkImage} className="h-8" alt="Sidequests Logo"/></Link>
                 </div>
                 
                 {user == null ? loginSignupButtons : userInfo}
