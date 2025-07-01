@@ -8,9 +8,9 @@ import User from '../models/userModel';
 const EMAIL_VERIFICATION_EXPIRY = 1000 * 60 * 60 * 24; // 24 hours
 
 export const emailVerificationService = {
-    createNewEmailVerification: async (id: Types.ObjectId) => {
+    sendVerificationEmail: async (id: Types.ObjectId, email: string) => {
         let hasBeenResent = false;
-        const existingEmailVerification = await EmailVerification.findOne()
+        const existingEmailVerification = await EmailVerification.findOne({ user: id })
         if (existingEmailVerification) hasBeenResent = true;
 
         const newEmailVerificationToken = crypto.randomBytes(32).toString('hex');
@@ -21,11 +21,17 @@ export const emailVerificationService = {
             hasBeenResent
         });
         await newEmailVerification.save();
-        return newEmailVerification;
-    },
-    sendVerificationEmail: async (email: string, token: string) => {
         // try catch to fail gracefully without error
-        console.log(`Sending email to ${email} with token: ${token}`);
+        console.log(`Sending email to ${email} with token: ${newEmailVerificationToken}`);
+    },
+    sendVerificationEmailIfExpired: async (id: Types.ObjectId, email: string) => {
+        let expired = true;
+        const existingEmailVerifications = await EmailVerification.find({ user: id })
+        existingEmailVerifications.forEach((existingEmailVerification) => {
+            if (existingEmailVerification.expiresAt > new Date()) expired = false;
+        })
+        if (!expired) return;
+        await emailVerificationService.sendVerificationEmail(id, email);
     },
     verifyUserWithToken: async (token: string): Promise<boolean> => {
         const foundEmailVerification = await EmailVerification.findOne({ token: token })

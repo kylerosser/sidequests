@@ -66,6 +66,12 @@ router.post("/login/email", async (req: Request, res: Response) => {
             return res.status(401).json({ success: false, data: "Incorrect password" });
         }
 
+        // If the user is unverified, resend verification email if expired and reject login
+        if (!existingUser.isEmailVerified) {
+            await emailVerificationService.sendVerificationEmailIfExpired(existingUser._id as Types.ObjectId, existingUser.email);
+            return res.status(401).json({ success: false, data: "Please click the link sent to your email to activate your account." });
+        }
+
         // Generate a JSON web token
         const token = jwt.sign(
             { id: existingUser.id, email: existingUser.email },
@@ -198,8 +204,7 @@ router.post("/signup/email", async (req: Request, res: Response) => {
         });
         await newUser.save();
 
-        const newEmailVerification = await emailVerificationService.createNewEmailVerification(newUser._id as Types.ObjectId);
-        await emailVerificationService.sendVerificationEmail(email, newEmailVerification.token);
+        await emailVerificationService.sendVerificationEmail(newUser._id as Types.ObjectId, email);
 
         return res.status(201).json({
             success: true,
