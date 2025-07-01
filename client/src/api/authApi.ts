@@ -22,5 +22,21 @@ export const authApi = {
                     data: "An unknown error occurred",
                 };
             });
+    },
+    verifyEmail: (token: string): Promise<ApiResponse<string>> => {
+        return api
+            .post<ApiResponse<string>>("/auth/verify", { token })
+            .then((res) => {
+                return res.data;
+            })
+            .catch((error: Error | AxiosError): ApiResponse<string> => {
+                if (axios.isAxiosError(error) && error.response?.data) {
+                    return error.response.data as ApiResponse<string>;
+                }
+                return {
+                    success: false,
+                    data: "An unknown error occurred",
+                };
+            });
     }
 }
