@@ -1,10 +1,13 @@
 import express, { Request, Response } from 'express';
+import { Types } from 'mongoose';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
 import { AuthRequest } from '../types/authTypes';
 
 import User from '../models/userModel';
+
+import { emailVerificationService } from '../services/emailVerificationService'
 
 import { authenticateToken } from '../middleware/authMiddleware';
 
@@ -194,6 +197,9 @@ router.post("/signup/email", async (req: Request, res: Response) => {
             passwordHash,
         });
         await newUser.save();
+
+        const newEmailVerification = await emailVerificationService.createNewEmailVerification(newUser._id as Types.ObjectId);
+        await emailVerificationService.sendVerificationEmail(email, newEmailVerification.token);
 
         return res.status(201).json({
             success: true,
