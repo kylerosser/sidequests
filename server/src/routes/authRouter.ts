@@ -124,8 +124,8 @@ router.post("/logout", authenticateToken, async (req: AuthRequest, res: Response
     }
 });
 
-// POST api/auth/signup
-// Signup and create a new account
+// POST api/auth/signup/email
+// Signup and create a new account using email and password
 router.post("/signup/email", async (req: Request, res: Response) => {
     let { username, email, password } = req.body;
 
@@ -206,6 +206,41 @@ router.post("/signup/email", async (req: Request, res: Response) => {
             data: "Account created successfully",
         });
 
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            message: "An unexpected error occurred",
+        });
+    }
+});
+
+// POST api/auth/verify
+// Verify the account associated with an EmailVerification token
+router.post("/verify", async (req: Request, res: Response) => {
+    let { token } = req.body;
+
+    try {
+        // Ensure all fields are present
+        if (!token) {
+            return res.status(400).json({success: false, data: "Token is required"});
+        }
+        if (typeof token !== 'string') {
+            return res.status(400).json({success: false, data: "Token must be a string"});
+        }
+
+        const verificationSuccess = await emailVerificationService.verifyUserWithToken(token);
+        if (verificationSuccess) {
+            return res.status(200).json({
+                success: true,
+                data: "Account verified successfully",
+            });
+        } else {
+            return res.status(400).json({
+                success: false,
+                data: "Invalid token",
+            });
+        }
     } catch (err) {
         console.error(err);
         return res.status(500).json({
