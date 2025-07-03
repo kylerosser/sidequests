@@ -21,6 +21,6 @@ const EmailVerificationSchema = new Schema<IEmailVerification>(
   }
 );
 
-const UserModel = model<IEmailVerification>('EmailVerification', EmailVerificationSchema);
+const EmailVerificationModel = model<IEmailVerification>('EmailVerification', EmailVerificationSchema);
 
-export default UserModel;
+export default EmailVerificationModel;
