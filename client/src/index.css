@@ -11,4 +11,6 @@
     --color-sq-tint-lighter: rgb(255,247,228); /* Light amber tint */
     --color-sq-tint-darker: rgb(245,231,201); /* Darker amber tint */
     --color-sq-red: rgb(227, 5, 12); /* Red for errors */
+
+    --font-sans: "Inter", "system-ui", "Roboto", "sans-serif";
 }

@@ -1,11 +1,16 @@
 import crypto from 'crypto';
+import { Resend } from 'resend';
 
 import { Types } from 'mongoose';
 
 import EmailVerification from '../models/emailVerificationModel';
 import User from '../models/userModel';
 
+import { verificationEmailTemplate, renderEmailTemplate } from '../emails/emailTemplates'
+
 const EMAIL_VERIFICATION_EXPIRY = 1000 * 60 * 60 * 24; // 24 hours
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const emailVerificationService = {
     sendVerificationEmail: async (id: Types.ObjectId, email: string) => {
@@ -21,8 +26,21 @@ export const emailVerificationService = {
             hasBeenResent
         });
         await newEmailVerification.save();
-        // try catch to fail gracefully without error
-        console.log(`Sending email to ${email} with token: ${newEmailVerificationToken}`);
+
+        (async function () {
+            const { data, error } = await resend.emails.send({
+                from: 'Sidequests <verification@email.sidequests.nz>',
+                to: [email],
+                subject: 'Please verify your email address',
+                html: renderEmailTemplate(verificationEmailTemplate, { "VERIFY_URL": `https://sidequests.nz/verify?token=${newEmailVerificationToken}`}),
+            });
+
+            if (error) {
+                return console.error({ error });
+            }
+
+            console.log({ data });
+        })();
     },
     sendVerificationEmailIfExpired: async (id: Types.ObjectId, email: string) => {
         let expired = true;
