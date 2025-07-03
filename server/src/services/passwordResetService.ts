@@ -27,7 +27,7 @@ export const passwordResetService = {
             from: 'Sidequests <accounts@email.sidequests.nz>',
             to: [email],
             subject: 'Password reset instructions',
-            html: renderEmailTemplate(passwordResetEmailTemplate, { "RESET_URL": `https://sidequests.nz/reset-password?token=${newEmailVerificationToken}`}),
+            html: renderEmailTemplate(passwordResetEmailTemplate, { "RESET_URL": `https://sidequests.nz/reset-password?token=${newPasswordResetToken}`}),
         });
     },
 }
