@@ -11,7 +11,7 @@
     <!-- Top padding -->
     <mj-section padding="24px 0"></mj-section>
 
-    <mj-section background-color="#FFFFFF" padding="20px">
+    <mj-section background-color="#FFFFFF" padding="42px 24px">
       <mj-column>
         <mj-text font-size="20px" color="#193E55" font-weight="bold">
           Welcome to Sidequests!
@@ -27,8 +27,7 @@
         </mj-text>
         <mj-divider border-color="#E0E0E0" />
         <mj-text font-size="12px" color="#888888">
-          If you're having trouble clicking the "Verify Email Address" button, copy and paste the URL below into your web browser:
-          <br /><a href="{{VERIFY_URL}}" style="color:#0C678F">{{VERIFY_URL}}</a>
+          If you're having trouble clicking the "Verify Email Address" button, copy and paste the URL below into your web browser: <a href="{{VERIFY_URL}}" style="color:#0C678F; text-decoration:none">{{VERIFY_URL}}</a>
         </mj-text>
       </mj-column>
     </mj-section>
