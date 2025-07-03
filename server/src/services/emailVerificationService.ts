@@ -27,20 +27,12 @@ export const emailVerificationService = {
         });
         await newEmailVerification.save();
 
-        (async function () {
-            const { data, error } = await resend.emails.send({
-                from: 'Sidequests <verification@email.sidequests.nz>',
-                to: [email],
-                subject: 'Please verify your email address',
-                html: renderEmailTemplate(verificationEmailTemplate, { "VERIFY_URL": `https://sidequests.nz/verify?token=${newEmailVerificationToken}`}),
-            });
-
-            if (error) {
-                return console.error({ error });
-            }
-
-            console.log({ data });
-        })();
+        const { data, error } = await resend.emails.send({
+            from: 'Sidequests <accounts@email.sidequests.nz>',
+            to: [email],
+            subject: 'Please verify your email address',
+            html: renderEmailTemplate(verificationEmailTemplate, { "VERIFY_URL": `https://sidequests.nz/verify?token=${newEmailVerificationToken}`}),
+        });
     },
     sendVerificationEmailIfExpired: async (id: Types.ObjectId, email: string) => {
         let expired = true;
