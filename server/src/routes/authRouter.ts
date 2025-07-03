@@ -1,13 +1,13 @@
 import express, { Request, Response } from 'express';
 import { Types } from 'mongoose';
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
 
 import { AuthRequest } from '../types/authTypes';
 
 import User from '../models/userModel';
 
 import { emailVerificationService } from '../services/emailVerificationService'
+import { validatePassword, hashPassword, comparePasswordToHash} from '../utils/passwordUtils'
 
 import { authenticateToken } from '../middleware/authMiddleware';
 
@@ -18,11 +18,8 @@ const JWT_EXPIRY = "7d";
 const JWT_COOKIE_EXPIRY = 7 * 24 * 60 * 60 * 1000;
 const USE_SECURE_JWT_COOKIE = false; // note: in prod, change to true for https
 const JWT_COOKIE_SAMESITE = "strict";
-const SALT_ROUNDS = 10;
 const MIN_USERNAME_LENGTH = 3;
 const MAX_USERNAME_LENGTH = 20;
-const MIN_PASSWORD_LENGTH = 8;
-const MAX_PASSWORD_LENGTH = 128;
 
 if (JWT_SECRET == undefined) {
     throw new Error("JSON web token secret not provided");
@@ -61,7 +58,7 @@ router.post("/login/email", async (req: Request, res: Response) => {
         }
 
         // Handle incorrect password
-        const isPasswordCorrect = await bcrypt.compare(password, existingUser.passwordHash)
+        const isPasswordCorrect = await comparePasswordToHash(password, existingUser.passwordHash)
         if (!isPasswordCorrect) {
             return res.status(401).json({ success: false, data: "Incorrect password" });
         }
@@ -179,22 +176,14 @@ router.post("/signup/email", async (req: Request, res: Response) => {
             return res.status(400).json({success: false, data: "Please enter a valid email address"});
         }
 
-        // Ensure password is of an acceptable length
-        if (password.length < MIN_PASSWORD_LENGTH) {
-            return res.status(400).json({success: false, data: `Your password must be at least ${MIN_PASSWORD_LENGTH} characters long`});
-        }
-        if (password.length > MAX_PASSWORD_LENGTH) {
-            return res.status(400).json({success: false, data: `Your password is too long. ${MAX_PASSWORD_LENGTH} character limit.`});
-        }
-
-        // Password must contain at least one letter and one number
-        const passwordComplexityRegex = new RegExp(`^(?=.*[A-Za-z])(?=.*\\d).+$`);
-        if (!passwordComplexityRegex.test(password)) {
-            return res.status(400).json({success: false, data: "Your password must contain at least one letter and one number"});
+        // Validate password
+        const validatePasswordResult = validatePassword(password)
+        if (!validatePasswordResult.success) {
+            return res.status(400).json({success: false, data: validatePasswordResult.data});
         }
 
         // Hash the password for storage
-        const passwordHash = await bcrypt.hash(password, SALT_ROUNDS);
+        const passwordHash = hashPassword(password);
 
         // Create a new User in the database
         const newUser = new User({
