@@ -7,6 +7,7 @@ import { AuthRequest } from '../types/authTypes';
 import User from '../models/userModel';
 
 import { emailVerificationService } from '../services/emailVerificationService'
+import { passwordResetService } from '../services/passwordResetService'
 import { validatePassword, hashPassword, comparePasswordToHash} from '../utils/passwordUtils'
 
 import { authenticateToken } from '../middleware/authMiddleware';
@@ -242,6 +243,48 @@ router.post("/verify", async (req: Request, res: Response) => {
             message: "An unexpected error occurred",
         });
     }
+});
+
+// POST api/auth/reset-password
+// Reset an user's password given a password and a valid token
+router.post("/reset-password", async (req: Request, res: Response) => {
+    let { token, newPassword } = req.body;
+
+    try {
+        // Ensure all fields are present
+        if (!token || !newPassword) {
+            return res.status(400).json({success: false, data: "Token and new password are required"});
+        }
+        if (typeof token !== 'string') {
+            return res.status(400).json({success: false, data: "Token must be a string"});
+        }
+
+        // Check that the new password is valid
+        const validatePasswordResult = validatePassword(newPassword)
+        if (!validatePasswordResult.success) {
+            return res.status(400).json({success: false, data: validatePasswordResult.data});
+        }
+
+        // Attempt to reset password using the provided token 
+        const resetSuccess = await passwordResetService.resetPasswordWithToken(token, newPassword)
+        if (!resetSuccess) {
+            return res.status(400).json({success: false, data: "This password reset link has expired"});
+        }
+
+        return res.status(200).json({success: true, data: "Password reset successfully"});
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            message: "An unexpected error occurred",
+        });
+    }
+});
+
+// POST api/auth/forgot-password
+// Send a password reset email given a valid email address
+router.post("/forgot-password", async (req: Request, res: Response) => {
+
 });
 
 export default router;
