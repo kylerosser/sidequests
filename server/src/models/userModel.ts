@@ -5,6 +5,7 @@ interface IUser extends Document {
   email: string;
   passwordHash: string;
   isEmailVerified: boolean;
+  lastPasswordReset: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -15,6 +16,7 @@ const UserSchema = new Schema<IUser>(
     email: { type: String, required: true, unique: true, lowercase: true, trim: true },
     passwordHash: { type: String, required: true },
     isEmailVerified: { type: Boolean, required: true, default: false },
+    lastPasswordReset: { type: Date, required: true, default: new Date(0)}
   },
   {
     timestamps: true // adds createdAt and updatedAt Date fields
