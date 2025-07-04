@@ -295,6 +295,8 @@ router.post("/forgot-password", async (req: Request, res: Response) => {
             return res.status(400).json({success: false, data: "Email must be a string"});
         }
 
+        email = email?.trim().toLowerCase();
+
         const foundUser = await User.findOne({ email: email});
         if (!foundUser) {
             return res.status(400).json({success: false, data: "We couldn't find an account with this email"});
