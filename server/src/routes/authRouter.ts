@@ -284,7 +284,35 @@ router.post("/reset-password", async (req: Request, res: Response) => {
 // POST api/auth/forgot-password
 // Send a password reset email given a valid email address
 router.post("/forgot-password", async (req: Request, res: Response) => {
+    let { email } = req.body;
 
+    try {
+        // Ensure all fields are present
+        if (!email) {
+            return res.status(400).json({success: false, data: "Email is required"});
+        }
+        if (typeof email !== 'string') {
+            return res.status(400).json({success: false, data: "Email must be a string"});
+        }
+
+        const foundUser = await User.findOne({ email: email});
+        if (!foundUser) {
+            return res.status(400).json({success: false, data: "We couldn't find an account with this email"});
+        }
+        
+        const isEligibleForReset = await passwordResetService.checkUserEligibleForReset(foundUser._id as Types.ObjectId);
+        if (!isEligibleForReset) return res.status(400).json({success: false, data: "You must wait before requesting another password reset. Please try again later."});
+        
+        await passwordResetService.sendResetEmail(foundUser._id as Types.ObjectId, email);
+
+        return res.status(200).json({success: true, data: "Password reset email sent"});
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            message: "An unexpected error occurred",
+        });
+    }
 });
 
 export default router;
