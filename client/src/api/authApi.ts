@@ -5,6 +5,7 @@ import type { AxiosError } from "axios";
 import type { ApiResponse } from "../api/apiTypes";
 
 // TODO: Refactor: move the loginWithEmail/logout api calls from AuthProvider into authApi
+// TODO: Refactor: create generic util functions for error handling
 
 export const authApi = {
     signupWithEmail: (username: string, email: string, password: string): Promise<ApiResponse<string>> => {
