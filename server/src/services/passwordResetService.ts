@@ -24,8 +24,8 @@ export const passwordResetService = {
             token: newPasswordResetToken,
             expiresAt:  new Date(Date.now() + PASSWORD_RESET_EXPIRY)
         });
-        await newPasswordReset.save();
-
+        const result = await newPasswordReset.save();
+        
         const { data, error } = await resend.emails.send({
             from: 'Sidequests <accounts@email.sidequests.nz>',
             to: [email],
@@ -46,11 +46,13 @@ export const passwordResetService = {
         const foundPasswordReset = await PasswordReset.findOne({ token: token })
         if (!foundPasswordReset) return false;
         if (foundPasswordReset.expiresAt < new Date()) return false; // TTL index should delete the document once it is expired, but there is a delay hence this check
+        
+        const newPasswordHash = await hashPassword(newPassword);
         const user = await User.findByIdAndUpdate(
             foundPasswordReset.user,
             { 
                 lastPasswordReset: new Date(), 
-                passwordHash: hashPassword(newPassword)
+                passwordHash: newPasswordHash
             }
         );
         await foundPasswordReset.deleteOne({ _id: foundPasswordReset._id })

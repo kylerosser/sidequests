@@ -5,6 +5,7 @@ import { SignupPage } from '../pages/SignupPage';
 import { VerifyPage } from '../pages/VerifyPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
+import { ResetPasswordPage } from '../pages/ResetPasswordPage';
 
 
 export type AppRouteObject = RouteObject & {
@@ -40,6 +41,13 @@ export const routes: AppRouteObject[] = [
           <ForgotPasswordPage />
       ),
       title: 'Forgot Password'
+    },
+    {
+      path: '/reset-password',
+      element: (
+          <ResetPasswordPage />
+      ),
+      title: 'Reset Password'
     },
     {
     path: '*',

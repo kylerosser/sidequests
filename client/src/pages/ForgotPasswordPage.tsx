@@ -33,7 +33,7 @@ export const ForgotPasswordPage = () => {
     };
 
     const formView = (<>
-        <div className="mt-10 ">
+        <div className="mt-10 mb-5">
             <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight">Forgot your password?</h2>
             <p className="mt-1 text-center text-lg">Enter your email and we will send you a password reset link.</p>
         </div>
