@@ -55,7 +55,7 @@ export const routes: AppRouteObject[] = [
       element: (
           <GoogleCallbackPage />
       ),
-      title: 'Google Authentication'
+      title: 'Signing you in...'
     },
     {
     path: '*',

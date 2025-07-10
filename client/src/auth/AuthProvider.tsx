@@ -7,6 +7,7 @@ import { AuthContext } from './AuthContext';
 
 import type { User } from './authTypes';
 import type { ApiResponse } from "../api/apiTypes";
+import { authApi } from "../api/authApi";
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const [user, setUser] = useState<User | null>(null);
@@ -47,6 +48,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             });
     }, []);
 
+    const loginWithGoogle = useCallback(async (code: string): Promise<ApiResponse<User | string>> => {
+        const requestResponse = await authApi.loginWithGoogle(code);
+        if (requestResponse.success) {
+            setUser(requestResponse.data as User);
+        }
+        return requestResponse;
+    }, []);
+
     const logout = useCallback((): Promise<ApiResponse<string>> => {
         return api.post<ApiResponse<string>>("/auth/logout")
             .then((res) => {
@@ -68,7 +77,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <AuthContext.Provider
-            value={useMemo(() => ({ user, loading, login, logout }), [user, loading, login, logout])}
+            value={useMemo(() => ({ user, loading, login, loginWithGoogle, logout }), [user, loading, login, loginWithGoogle, logout])}
         >
         {children}
         </AuthContext.Provider>

@@ -14,6 +14,7 @@ export const VerifyPage = () => {
     const token = searchParams.get("token");
     const [status, setStatus] = useState<"no-token" | "verifying" | "verified" | "failed">(token ? "verifying" : "no-token")
 
+    // Run once on page load:
     useEffect(() => {
         if (!token) return;
 
@@ -27,7 +28,8 @@ export const VerifyPage = () => {
         }
 
         verifyEmail();
-    }, [token])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const noTokenView = (<>
         <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight">One last step!</h2>

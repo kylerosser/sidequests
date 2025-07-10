@@ -10,5 +10,6 @@ export type AuthContextType = {
     user: User | null;
     loading: boolean;
     login: (username: string, password: string) => Promise<ApiResponse<User | string>>;
+    loginWithGoogle: (code: string) => Promise<ApiResponse<User | string>>;
     logout: () => Promise<ApiResponse<string>>;
 };
