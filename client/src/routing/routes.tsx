@@ -6,6 +6,7 @@ import { VerifyPage } from '../pages/VerifyPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
 import { ResetPasswordPage } from '../pages/ResetPasswordPage';
+import { GoogleCallbackPage } from '../pages/GoogleCallbackPage';
 
 
 export type AppRouteObject = RouteObject & {
@@ -48,6 +49,13 @@ export const routes: AppRouteObject[] = [
           <ResetPasswordPage />
       ),
       title: 'Reset Password'
+    },
+    {
+      path: '/google-callback',
+      element: (
+          <GoogleCallbackPage />
+      ),
+      title: 'Google Authentication'
     },
     {
     path: '*',
