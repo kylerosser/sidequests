@@ -6,10 +6,9 @@ import { FormShortTextInput } from '../components/common/FormShortTextInput'
 import { FormLabel } from '../components/common/FormLabel'
 import { Hyperlink } from '../components/common/Hyperlink'
 import { Button } from '../components/common/Button'
+import { GoogleSignInButton } from '../components/common/GoogleSignInButton'
 
 import { authApi } from '../api/authApi'
-
-import signUpWithGoogleImage from '/google_login_SU.png';
 
 export const SignupPage = () => {
     const [username, setUsername] = useState("");
@@ -49,7 +48,7 @@ export const SignupPage = () => {
                     </div>
 
                     <div className="flex mt-5">
-                        <button className="mx-auto cursor-pointer"><img className="h-[40px] w-auto" src={signUpWithGoogleImage}/></button>
+                        <GoogleSignInButton variant="sign-up"/>
                     </div>
 
                     <div>

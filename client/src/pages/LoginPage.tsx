@@ -7,8 +7,7 @@ import { FormShortTextInput } from '../components/common/FormShortTextInput'
 import { FormLabel } from '../components/common/FormLabel'
 import { Hyperlink } from '../components/common/Hyperlink'
 import { Button } from '../components/common/Button'
-
-import signInWithGoogleImage from '/google_login_SI.png';
+import { GoogleSignInButton } from '../components/common/GoogleSignInButton'
 
 export const LoginPage = () => {
     const { login } = useAuth();
@@ -39,7 +38,7 @@ export const LoginPage = () => {
         }
     };
 
-    return (
+    return (<>
         <PageLayout>
             <div className="flex min-h-full flex-col justify-center px-4 py-12 pt-20">
                 <div className="bg-white rounded-lg border-1 border-sq-grey mx-auto w-full max-w-md px-6">
@@ -49,7 +48,7 @@ export const LoginPage = () => {
                     </div>
 
                     <div className="flex mt-5">
-                        <button className="mx-auto cursor-pointer"><img className="h-[40px] w-auto" src={signInWithGoogleImage}/></button>
+                        <GoogleSignInButton variant="sign-in"/>
                     </div>
 
                     <div>
@@ -87,5 +86,5 @@ export const LoginPage = () => {
                 </div>
             </div>
         </PageLayout>
-    )
+    </>)
 }
