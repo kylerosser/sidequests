@@ -7,7 +7,7 @@ import { NotFoundPage } from '../pages/NotFoundPage';
 import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
 import { ResetPasswordPage } from '../pages/ResetPasswordPage';
 import { GoogleCallbackPage } from '../pages/GoogleCallbackPage';
-
+import { QuestsPage } from '../pages/QuestsPage';
 
 export type AppRouteObject = RouteObject & {
   title?: string;
@@ -15,6 +15,13 @@ export type AppRouteObject = RouteObject & {
 }
 
 export const routes: AppRouteObject[] = [
+    {
+      path: '/quests',
+      element: (
+          <QuestsPage />
+      ),
+      title: 'Quests'
+    },
     {
       path: '/login',
       element: (
