@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import { useAuth } from "../auth/useAuth";
 
 import { PageLayout } from '../components/layouts/PageLayout'

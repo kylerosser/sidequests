@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearchParams, Navigate, Link } from "react-router"
+import { useSearchParams, Navigate, Link } from "react-router-dom"
 
 import { PageLayout } from '../components/layouts/PageLayout'
 import { FormShortTextInput } from '../components/common/FormShortTextInput'

@@ -2,7 +2,7 @@ import { useAuth } from "../../auth/useAuth";
 
 import { Button } from '../common/Button'
 import { ProfileMenu } from "./ProfileMenu";
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 
 import wordmarkImage from '/wordmark.svg';
 

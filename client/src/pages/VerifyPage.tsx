@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSearchParams, Link } from "react-router"
+import { useSearchParams, Link } from "react-router-dom"
 
 import { Spinner } from "../components/common/Spinner"
 import { PageLayout } from '../components/layouts/PageLayout'

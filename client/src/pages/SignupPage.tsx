@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 import { PageLayout } from '../components/layouts/PageLayout'
 import { FormShortTextInput } from '../components/common/FormShortTextInput'

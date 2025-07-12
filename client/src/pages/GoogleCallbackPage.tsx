@@ -1,4 +1,4 @@
-import { useSearchParams, Link, useNavigate } from "react-router"
+import { useSearchParams, Link, useNavigate } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 
 import { PageLayout } from '../components/layouts/PageLayout'
