@@ -20,7 +20,6 @@ export const GoogleCallbackPage = () => {
     useEffect(() => {
         if (hasRun.current) return;
         hasRun.current = true;
-        console.log("Ran")
         if (!code) {
             setError(true);
             return;

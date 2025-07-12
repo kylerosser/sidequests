@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import { Types } from 'mongoose';
 import jwt from 'jsonwebtoken';
+import { google } from 'googleapis';
 
 import { AuthRequest } from '../types/authTypes';
 
@@ -9,25 +10,24 @@ import User from '../models/userModel';
 import { emailVerificationService } from '../services/emailVerificationService'
 import { passwordResetService } from '../services/passwordResetService'
 import { validatePassword, hashPassword, comparePasswordToHash} from '../utils/passwordUtils'
+import { validateUsername, generateUsernameFromEmail} from '../utils/usernameUtils'
 
 import { authenticateToken } from '../middleware/authMiddleware';
-
-const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRY = "7d";
 const JWT_COOKIE_EXPIRY = 7 * 24 * 60 * 60 * 1000;
 const USE_SECURE_JWT_COOKIE = false; // note: in prod, change to true for https
 const JWT_COOKIE_SAMESITE = "strict";
-const MIN_USERNAME_LENGTH = 3;
-const MAX_USERNAME_LENGTH = 20;
+
+const router = express.Router();
 
 if (JWT_SECRET == undefined) {
     throw new Error("JSON web token secret not provided");
 }
 
-// POST api/auth/login
-// Login and retrieve JSON web token
+// POST api/auth/login/email
+// Login and retrieve JSON web token using identifier (email or username) and password
 router.post("/login/email", async (req: Request, res: Response) => {
     // NOTE: users can login with either username or password
     // such value is the identifier parameter
@@ -56,6 +56,11 @@ router.post("/login/email", async (req: Request, res: Response) => {
         // Handle nonexistent identifier
         if (!existingUser) {
             return res.status(401).json({ success: false, data: "No account found with that username/email" });
+        }
+
+        // Handle no password hash (user signed in previously with google)
+        if (!existingUser.passwordHash) {
+            return res.status(401).json({ success: false, data: "This account was not set up with a password. Please Sign In with Google instead." });
         }
 
         // Handle incorrect password
@@ -92,6 +97,149 @@ router.post("/login/email", async (req: Request, res: Response) => {
                 email: existingUser.email,
             },
         });
+        
+    } catch(err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            data: "An unexpected error occurred",
+        });
+    }
+});
+
+// POST api/auth/login/google
+// Login and retrieve JSON web token using google authorization code
+router.post("/login/google", async (req: Request, res: Response) => {
+    let { code } = req.body;
+
+    try {
+        // Ensure all fields are present
+        if (!code) {
+            return res.status(400).json({success: false, data: "Code is required"});
+        }
+
+        const oauth2Client = new google.auth.OAuth2(
+            process.env.GOOGLE_CLIENT_ID,
+            process.env.GOOGLE_CLIENT_SECRET,
+            "http://localhost:5173/google-callback"
+        );
+
+        let { tokens } = await oauth2Client.getToken(code);
+        oauth2Client.setCredentials(tokens);
+
+        const oauth2 = google.oauth2({
+            auth: oauth2Client,
+            version: 'v2',
+        });
+
+        const googleResponse = await oauth2.userinfo.get();
+        if (!googleResponse.data) return res.status(400).json({success: false, data: "Failed to authenticate with google"});
+        
+        const googleId = googleResponse.data.id as string;
+        const googleEmail = googleResponse.data.email as string;
+        const isGoogleEmailVerified = googleResponse.data.verified_email as boolean;
+        if (!googleId || !googleEmail ) return res.status(400).json({success: false, data: "Failed to authenticate with google"});
+
+        const existingUser = await User.findOne({ googleId });
+        if (existingUser) {
+            // A user with this googleId exists, log them in
+
+            // Generate a JSON web token
+            const token = jwt.sign(
+                { id: existingUser.id, email: existingUser.email },
+                JWT_SECRET,
+                { expiresIn: JWT_EXPIRY }
+            );
+
+            res.cookie("token", token, {
+                httpOnly: true,
+                secure: USE_SECURE_JWT_COOKIE, 
+                sameSite: JWT_COOKIE_SAMESITE,
+                maxAge: JWT_COOKIE_EXPIRY
+            });
+
+            return res.status(200).json({
+                success: true,
+                data: {
+                    id: existingUser.id,
+                    username: existingUser.username,
+                    email: existingUser.email,
+                },
+            });
+        } else {
+            // No user with this googleId exists, either:
+            // - Find a pre-existing user with the same email address, link the user with this google account, and log them in
+            // - Create a new user if no user with this email exists, link the user with this google account, and log them in
+
+            // Ensure that we only proceed if the google account email is verified, for security reasons
+            if (!isGoogleEmailVerified) return res.status(400).json({success: false, data: "Google account primary email is not verified"});
+            
+            const existingEmailUser = await User.findOne({ email: googleEmail });
+            if (existingEmailUser) {
+                // We found a pre-existing user with this email address
+                // Link the google account and log them in
+                existingEmailUser.googleId = googleId;
+                existingEmailUser.save();
+
+                // Generate a JSON web token
+                const token = jwt.sign(
+                    { id: existingEmailUser.id, email: existingEmailUser.email },
+                    JWT_SECRET,
+                    { expiresIn: JWT_EXPIRY }
+                );
+
+                res.cookie("token", token, {
+                    httpOnly: true,
+                    secure: USE_SECURE_JWT_COOKIE, 
+                    sameSite: JWT_COOKIE_SAMESITE,
+                    maxAge: JWT_COOKIE_EXPIRY
+                });
+                return res.status(200).json({
+                    success: true,
+                    data: {
+                        id: existingEmailUser.id,
+                        username: existingEmailUser.username,
+                        email: existingEmailUser.email,
+                    },
+                });
+            } else {
+                // Create a new account with this google email and a generated username and log them in
+                const generatedUsername = await generateUsernameFromEmail(googleEmail)
+                if (!generatedUsername) {
+                    return res.status(500).json({success: false, data: "Failed to generate username"});
+                }
+                const newUser = new User({
+                    username: generatedUsername,
+                    email: googleEmail,
+                    googleId,
+                    isEmailVerified: true
+                });
+                await newUser.save();
+
+                // Generate a JSON web token
+                const token = jwt.sign(
+                    { id: newUser.id, email: newUser.email },
+                    JWT_SECRET,
+                    { expiresIn: JWT_EXPIRY }
+                );
+
+                res.cookie("token", token, {
+                    httpOnly: true,
+                    secure: USE_SECURE_JWT_COOKIE, 
+                    sameSite: JWT_COOKIE_SAMESITE,
+                    maxAge: JWT_COOKIE_EXPIRY
+                });
+
+                return res.status(200).json({
+                    success: true,
+                    data: {
+                        id: newUser.id,
+                        username: newUser.username,
+                        email: newUser.email,
+                    },
+                });
+            }
+        }
         
     } catch(err) {
         console.error(err);
@@ -150,20 +298,10 @@ router.post("/signup/email", async (req: Request, res: Response) => {
             return res.status(400).json({success: false, data: "Your username can only contain numbers, letters and underscores"});
         }
 
-        // Ensure username is of an acceptable length
-        if (username.length < MIN_USERNAME_LENGTH) {
-            return res.status(400).json({success: false, data: `Your username must be at least ${MIN_USERNAME_LENGTH} characters`});
-        }
-        if (username.length > MAX_USERNAME_LENGTH) {
-            return res.status(400).json({success: false, data: `Your username cannot be greater than ${MAX_USERNAME_LENGTH} characters`});
-        }
-        
-        // Ensure username is unique (case insensitive)
-        const existingUsername = await User.findOne({
-            username: { $regex: `^${username}$`, $options: 'i' } // ignore case
-        }); 
-        if (existingUsername) {
-            return res.status(400).json({success: false, data: "This username is already in use"});
+        // Validate username
+        const validateUsernameResult = await validateUsername(username)
+        if (!validateUsernameResult.success) {
+            return res.status(400).json({success: false, data: validateUsernameResult.data});
         }
 
         // Ensure email is unique
