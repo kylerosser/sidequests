@@ -48,7 +48,7 @@ export const LoginPage = () => {
                     </div>
 
                     <div className="flex mt-5">
-                        <GoogleSignInButton variant="sign-in"/>
+                        <GoogleSignInButton variant="sign-in" redirect={redirect}/>
                     </div>
 
                     <div>

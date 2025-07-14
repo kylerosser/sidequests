@@ -12,6 +12,7 @@ export const GoogleCallbackPage = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const code = searchParams.get("code");
+    const redirect = searchParams.get("state");
 
     const [error, setError] = useState(false);
 
@@ -28,7 +29,7 @@ export const GoogleCallbackPage = () => {
         (async () => {
             const requestResponse = await loginWithGoogle(code as string);
             if (requestResponse.success) {
-                navigate('/quests')
+                navigate(redirect ? redirect : '/quests')
             } else {
                 setError(true)
             }

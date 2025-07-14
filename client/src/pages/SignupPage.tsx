@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 import { PageLayout } from '../components/layouts/PageLayout'
 import { FormShortTextInput } from '../components/common/FormShortTextInput'
@@ -18,6 +18,8 @@ export const SignupPage = () => {
     const [submitLoading, setSubmitLoading] = useState(false); // True if waiting for server respond to form submit
 
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const redirect = searchParams.get('redirect')
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -48,7 +50,7 @@ export const SignupPage = () => {
                     </div>
 
                     <div className="flex mt-5">
-                        <GoogleSignInButton variant="sign-up"/>
+                        <GoogleSignInButton variant="sign-up" redirect={redirect}/>
                     </div>
 
                     <div>
