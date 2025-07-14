@@ -28,7 +28,7 @@ export const QuestMarker = ({ position }: QuestMarkerProps) => {
 						Placeholder tooltip text
 					</div>
 					{/* Arrow */}
-    				<div className="absolute -bottom-2 left-1/2 -translate-x-[calc(50%+0px)] w-4 h-4 bg-white rotate-45 border-r border-b border-gray-300"/>
+    				<div className="absolute -bottom-2 left-1/2 -translate-x-[calc(50%-0.5px)] w-4 h-4 bg-white rotate-45 border-r border-b border-gray-300"/>
 				</div>
 			</Tooltip>
 		</Marker>
