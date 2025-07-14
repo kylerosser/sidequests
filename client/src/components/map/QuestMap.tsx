@@ -18,6 +18,7 @@ export const QuestMap = () => {
             minZoom={6}
             maxZoom={18}
             scrollWheelZoom={true}
+            zoomControl={false}
             touchZoom="center"
             maxBounds={newZealandBounds}
             maxBoundsViscosity={1.0}
