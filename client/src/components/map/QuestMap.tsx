@@ -1,8 +1,7 @@
-import { MapContainer, TileLayer, Marker, Popup, Rectangle } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import type { LatLngBoundsExpression } from 'leaflet'
 
 import { RemoveLeafletAttribution } from './RemoveLeafletAttribution';
-import { CurrentLocationMarker } from './CurrentLocationMarker';
 
 const newZealandBounds: LatLngBoundsExpression = [
   [-48, 166-5],  // SW

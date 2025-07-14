@@ -1,13 +1,12 @@
 import { QuestMap } from "../components/map/QuestMap"
-import { ProfileMenu } from "../components/common/ProfileMenu"
+import { Navbar } from "../components/common/Navbar"
 
 export const QuestsPage = () => {
     return (
-        <div className="relative">
+        <div className="relative h-screen overflow-x:hidden">
             <QuestMap />
-            {/* Top right corner */}
-            <div className="absolute top-4 right-4 z-50">
-                <ProfileMenu />
+            <div className="absolute top-0 left-0 z-50">
+                <Navbar variant="tinted" />
             </div>
         </div>
     )
