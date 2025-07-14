@@ -1,7 +1,8 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 import type { LatLngBoundsExpression } from 'leaflet'
 
 import { RemoveLeafletAttribution } from './RemoveLeafletAttribution';
+import { QuestMarker } from './QuestMarker';
 
 const newZealandBounds: LatLngBoundsExpression = [
   [-48, 166-5],  // SW
@@ -28,11 +29,7 @@ export const QuestMap = () => {
                 attribution='Map data from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png"
             />
-            <Marker position={[-36.85, 174.77]}>
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
+            <QuestMarker position={[-36.85, 174.77]} />
         </MapContainer>
     );
 }

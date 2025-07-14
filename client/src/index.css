@@ -14,3 +14,15 @@
 
     --font-sans: "Inter", "system-ui", "Roboto", "sans-serif";
 }
+
+.disable-leaflet-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.leaflet-tooltip.disable-leaflet-tooltip::before,
+.leaflet-tooltip.disable-leaflet-tooltip::after {
+  display: none !important;
+}
