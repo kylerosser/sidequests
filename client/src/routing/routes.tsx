@@ -20,7 +20,7 @@ export const routes: AppRouteObject[] = [
       element: (
           <QuestsPage />
       ),
-      title: 'Quests'
+      title: 'Map'
     },
     {
       path: '/login',
