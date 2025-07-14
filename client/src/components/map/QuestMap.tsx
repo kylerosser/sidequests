@@ -13,7 +13,7 @@ export const QuestMap = () => {
     
     return (
         <MapContainer 
-            className="h-screen w-screen z-0" 
+            className="h-screen w-screen z-0 bg-sq-tint-lighter" 
             center={[-36.85, 174.77]} 
             zoom={15}
             minZoom={6}

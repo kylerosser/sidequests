@@ -26,3 +26,9 @@
 .leaflet-tooltip.disable-leaflet-tooltip::after {
   display: none !important;
 }
+.leaflet-container {
+  background: rgb(255,247,228);
+}
+.leaflet-tile-pane {
+  background-color: rgb(255,247,228) !important;
+}
