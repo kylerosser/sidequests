@@ -9,7 +9,7 @@ interface QuestMarkerProps {
 const customIcon = divIcon({
 	className: "",
 	html: `
-		<div class="quest-marker transition-transform duration-200 ease-in-out w-[20px] h-[20px] bg-sq-primary border-2 border-white rounded-full hover:scale-125 hover:shadow-[0_0_0_2px_#e1842a]"></div>
+		<div class="shadow-md rounded-full"><div class="quest-marker transition-transform duration-200 ease-in-out w-[20px] h-[20px] bg-sq-primary border-2 border-white rounded-full hover:scale-125 hover:shadow-[0_0_0_2px_#e1842a]"></div></div>
 	`,
 	iconSize: [20, 20],
 	iconAnchor: [10, 10],
