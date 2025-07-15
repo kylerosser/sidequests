@@ -1,4 +1,5 @@
 import { Marker, Tooltip } from "react-leaflet";
+import { useNavigate } from "react-router-dom";
 import { divIcon } from "leaflet";
 import type { LatLngExpression } from "leaflet";
 
@@ -18,11 +19,19 @@ const customIcon = divIcon({
 });
 
 export const QuestMarker = ({ quest }: QuestMarkerProps) => {
+	const navigate = useNavigate();
 	const position: LatLngExpression = [quest.location.coordinates[1], quest.location.coordinates[0]]
 	return (
 		<Marker 
 		position={position} 
 		icon={customIcon}
+		eventHandlers={
+			{
+				click: () => {
+					navigate(`/quests/${quest.id}`)
+				},
+      		}
+		}
 		>
 			<Tooltip className="disable-leaflet-tooltip" direction="top" offset={[0, -18]} opacity={1} permanent={false} sticky={false}>
 				<div className="relative m-0">

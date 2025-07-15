@@ -8,67 +8,76 @@ import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
 import { ResetPasswordPage } from '../pages/ResetPasswordPage';
 import { GoogleCallbackPage } from '../pages/GoogleCallbackPage';
 import { QuestsPage } from '../pages/QuestsPage';
+import { QuestDetailsPanel } from '../pages/QuestDetailsPanel';
 
 export type AppRouteObject = RouteObject & {
-  title?: string;
-  children?: AppRouteObject[]; // recursively type any children to be of AppRouteObject
+	title?: string;
+	children?: AppRouteObject[]; // recursively type any children to be of AppRouteObject
 }
 
 export const routes: AppRouteObject[] = [
     {
-      path: '/quests',
-      element: (
-          <QuestsPage />
-      ),
-      title: 'Map'
+    	path: '/quests',
+    	element: (
+        	<QuestsPage />
+      	),
+      	title: 'Map',
+      	children: [
+			{
+			path: ':id',
+			element: (
+				<QuestDetailsPanel />
+			),
+			},
+      	]
     },
     {
-      path: '/login',
-      element: (
-          <LoginPage />
-      ),
-      title: 'Login'
+		path: '/login',
+		element: (
+			<LoginPage />
+		),
+      	title: 'Login'
     },
     {
-      path: '/signup',
-      element: (
-          <SignupPage />
-      ),
-      title: 'Create Account'
+    	path: '/signup',
+    	element: (
+        	<SignupPage />
+      	),
+      	title: 'Create Account'
     },
     {
-      path: '/verify',
-      element: (
-          <VerifyPage />
-      ),
-      title: 'Verify'
+		path: '/verify',
+		element: (
+			<VerifyPage />
+		),
+		title: 'Verify'
     },
     {
-      path: '/forgot-password',
-      element: (
-          <ForgotPasswordPage />
-      ),
-      title: 'Forgot Password'
+		path: '/forgot-password',
+		element: (
+			<ForgotPasswordPage />
+		),
+		title: 'Forgot Password'
     },
     {
-      path: '/reset-password',
-      element: (
-          <ResetPasswordPage />
-      ),
-      title: 'Reset Password'
+		path: '/reset-password',
+		element: (
+			<ResetPasswordPage />
+		),
+		title: 'Reset Password'
     },
     {
-      path: '/google-callback',
-      element: (
-          <GoogleCallbackPage />
-      ),
-      title: 'Signing you in...'
+		path: '/google-callback',
+		element: (
+			<GoogleCallbackPage />
+		),
+		title: 'Signing you in...'
     },
     {
-    path: '*',
-    element: (
-      <NotFoundPage />
-    ),
-    title: '404 Not Found'
-  },
+		path: '*',
+		element: (
+			<NotFoundPage />
+		),
+		title: '404 Not Found'
+  	},
 ]
