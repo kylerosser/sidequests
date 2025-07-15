@@ -35,7 +35,7 @@ export const QuestMap = () => {
                 url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png"
             />
             {quests.map((quest) => (
-                <QuestMarker quest={quest} />
+                <QuestMarker key={quest.id} quest={quest} />
             ))}
             <FetchQuestsOnMapChange setQuests={setQuests} />
         </MapContainer>

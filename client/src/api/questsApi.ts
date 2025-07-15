@@ -11,6 +11,7 @@ export type CheckListItem = {
 }
 
 export type Quest = {
+    id: string;
     title: string;
     description: string;
     location: {

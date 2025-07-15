@@ -21,18 +21,17 @@ router.get("", async (req: Request, res: Response) => {
             const foundQuests = await questsService.getQuestsWithinBounds(bounds);
 
             const formattedQuests = foundQuests.map(quest => {
-                const objQuest = quest.toObject();
-                const creator = objQuest.creator as unknown as { _id: Types.ObjectId; username: string }; // to satisfy typescript
+                const creator = quest.creator as unknown as { _id: Types.ObjectId; username: string }; // to satisfy typescript
                 return {
-                    id: objQuest.id,
-                    title: objQuest.title,
-                    description: objQuest.description,
-                    location: objQuest.location,
+                    id: quest.id,
+                    title: quest.title,
+                    description: quest.description,
+                    location: quest.location,
                     creator: {
                         id: creator._id,
                         username: creator.username
                     },
-                    checkList: objQuest.checkList
+                    checkList: quest.checkList
                 };
             });
 
