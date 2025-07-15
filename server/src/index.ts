@@ -4,8 +4,8 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import 'dotenv/config';
 
-import questRouter from './routes/questsRouter';
-import userRouter from './routes/usersRouter';
+import questsRouter from './routes/questsRouter';
+import usersRouter from './routes/usersRouter';
 import authRouter from './routes/authRouter';
 
 const PORT = process.env.PORT || 3000;
@@ -28,8 +28,8 @@ mongoose.connect(MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB', err));
 
-app.use(`${API_PREFIX}/quests`, questRouter);
-app.use(`${API_PREFIX}/users`, userRouter);
+app.use(`${API_PREFIX}/quests`, questsRouter);
+app.use(`${API_PREFIX}/users`, usersRouter);
 app.use(`${API_PREFIX}/auth`, authRouter);
 
 app.use((req, res) => {
