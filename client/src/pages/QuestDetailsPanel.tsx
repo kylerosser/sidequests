@@ -21,15 +21,21 @@ export const QuestDetailsPanel = () => {
             if (!id) {
                 setQuest(null);
                 setError(true);
+                document.title = "Quest Not Found - Sidequests";
                 return;
             }
             const requestResponse = await questsApi.fetchQuestById(id);
             if (requestResponse.success) {
                 setQuest(requestResponse.data as Quest);
                 setLoading(false);
+                // Set the title of the browser tab with truncation if too long
+                const title = (requestResponse.data as Quest).title;
+                const truncatedTitle = title.length > 50 ? title.slice(0, 50 - 3) + '...' : title
+                document.title = `${truncatedTitle} - Sidequests`;
             } else {
                 setQuest(null);
                 setError(true);
+                document.title = "Quest Not Found - Sidequests";
             }
         })();
     }, [id]);

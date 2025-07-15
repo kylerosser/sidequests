@@ -55,6 +55,8 @@ export const FetchQuestsOnMapChange = ({ setQuests }: FetchQuestsOnMapChangeProp
 			map.on('dragend', debouncedFetch);
 			map.on('zoomend', debouncedFetch);
 
+			debouncedFetch();
+
 			return () => {
 				map.off('dragend', debouncedFetch);
 				map.off('zoomend', debouncedFetch);
