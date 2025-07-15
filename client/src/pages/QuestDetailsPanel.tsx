@@ -17,13 +17,14 @@ export const QuestDetailsPanel = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
+        if (!id) {
+            setQuest(null);
+            setError(true);
+            document.title = "Quest Not Found - Sidequests";
+            return;
+        }
         (async () => {
-            if (!id) {
-                setQuest(null);
-                setError(true);
-                document.title = "Quest Not Found - Sidequests";
-                return;
-            }
             const requestResponse = await questsApi.fetchQuestById(id);
             if (requestResponse.success) {
                 setQuest(requestResponse.data as Quest);
