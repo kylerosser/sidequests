@@ -18,8 +18,9 @@ export const QuestDetailsPanel = () => {
 
     useEffect(() => {
         setLoading(true);
+        setError(false);
+        setQuest(null);
         if (!id) {
-            setQuest(null);
             setError(true);
             document.title = "Quest Not Found - Sidequests";
             return;
