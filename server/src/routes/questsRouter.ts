@@ -24,11 +24,10 @@ router.get("", async (req: Request, res: Response) => {
                 const creator = quest.creator as unknown as { _id: Types.ObjectId; username: string }; // to satisfy typescript
                 return {
                     id: quest.id,
-                    title: quest.title
+                    title: quest.title,
+                    location: quest.location
                 };
             });
-
-
             return res.status(200).json({
                 success: true,
                 data: formattedQuests
@@ -68,7 +67,8 @@ router.get("/:id", async (req: Request, res: Response) => {
                     id: creator._id,
                     username: creator.username
                 },
-                checkList: foundQuest.checkList
+                checkList: foundQuest.checkList,
+                createdAt: foundQuest.createdAt
             }
         }); 
     } catch(err) {

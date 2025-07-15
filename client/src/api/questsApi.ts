@@ -18,24 +18,31 @@ export type Quest = {
         type: string;
         coordinates: [number, number];
     };
-    moderatorApproved: false;
     creator: {
         id: string,
         username: string
     };
     checkList: CheckListItem[];
     createdAt: Date;
-    updatedAt: Date;
+};
+
+export type QuestMarkerInfo = {
+    id: string;
+    title: string;
+    location: {
+        type: string;
+        coordinates: [number, number];
+    };
 };
 
 export const questsApi = {
-    fetchQuestsWithinBounds: (minLng: number, minLat: number, maxLng: number, maxLat: number): Promise<ApiResponse<Quest[] | string>> => {
+    fetchQuestsWithinBounds: (minLng: number, minLat: number, maxLng: number, maxLat: number): Promise<ApiResponse<QuestMarkerInfo[] | string>> => {
         return api
-            .get<ApiResponse<Quest[] | string>>(`/quests?minLat=${minLat}&minLng=${minLng}&maxLat=${maxLat}&maxLng=${maxLng}`)
+            .get<ApiResponse<QuestMarkerInfo[] | string>>(`/quests?minLat=${minLat}&minLng=${minLng}&maxLat=${maxLat}&maxLng=${maxLng}`)
             .then((res) => {
                 return res.data;
             })
-            .catch((error: Error | AxiosError): ApiResponse<Quest[] | string> => {
+            .catch((error: Error | AxiosError): ApiResponse<QuestMarkerInfo[] | string> => {
                 if (axios.isAxiosError(error) && error.response?.data) {
                     return error.response.data as ApiResponse<string>;
                 }
