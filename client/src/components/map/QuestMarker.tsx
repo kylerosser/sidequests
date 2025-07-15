@@ -2,8 +2,10 @@ import { Marker, Tooltip } from "react-leaflet";
 import { divIcon } from "leaflet";
 import type { LatLngExpression } from "leaflet";
 
+import type { Quest } from '../../api/questsApi'
+
 interface QuestMarkerProps {
-	position: LatLngExpression;
+	quest: Quest;
 }
 
 const customIcon = divIcon({
@@ -15,7 +17,8 @@ const customIcon = divIcon({
 	iconAnchor: [10, 10],
 });
 
-export const QuestMarker = ({ position }: QuestMarkerProps) => {
+export const QuestMarker = ({ quest }: QuestMarkerProps) => {
+	const position: LatLngExpression = [quest.location.coordinates[1], quest.location.coordinates[0]]
 	return (
 		<Marker 
 		position={position} 
@@ -25,7 +28,7 @@ export const QuestMarker = ({ position }: QuestMarkerProps) => {
 				<div className="relative m-0">
 					{/* Bubble */}
 					<div className="bg-white text-sm font-sans text-sq-dark px-3 py-2 rounded-lg shadow-md border border-gray-300">
-						Placeholder tooltip text
+						{quest.title}
 					</div>
 					{/* Arrow */}
     				<div className="absolute -bottom-2 left-1/2 -translate-x-[calc(50%-0.5px)] w-4 h-4 bg-white rotate-45 border-r border-b border-gray-300"/>

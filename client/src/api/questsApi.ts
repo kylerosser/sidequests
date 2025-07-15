@@ -28,13 +28,13 @@ export type Quest = {
 };
 
 export const questsApi = {
-    fetchQuestsWithinBounds: (minLng: string, minLat: string, maxLng: string, maxLat: string): Promise<ApiResponse<Quest | string>> => {
+    fetchQuestsWithinBounds: (minLng: number, minLat: number, maxLng: number, maxLat: number): Promise<ApiResponse<Quest[] | string>> => {
         return api
-            .post<ApiResponse<Quest |string>>(`/quests?minLat=${minLat}&minLng=${minLng}&maxLat=${maxLat}&maxLng=${maxLng}`)
+            .get<ApiResponse<Quest[] | string>>(`/quests?minLat=${minLat}&minLng=${minLng}&maxLat=${maxLat}&maxLng=${maxLng}`)
             .then((res) => {
                 return res.data;
             })
-            .catch((error: Error | AxiosError): ApiResponse<Quest | string> => {
+            .catch((error: Error | AxiosError): ApiResponse<Quest[] | string> => {
                 if (axios.isAxiosError(error) && error.response?.data) {
                     return error.response.data as ApiResponse<string>;
                 }
