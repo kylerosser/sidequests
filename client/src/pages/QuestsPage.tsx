@@ -14,7 +14,7 @@ export const QuestsPage = () => {
             </div>
 
             {/* Render QuestDetailsPanel if we are in the quests/:id subroute */}
-            <div className="absolute top-15 left-0 z-40 pointer-events-none">
+            <div className="absolute top-[60px] left-0 z-40 pointer-events-none h-[calc(100%-60px)] w-full p-4">
                 <Outlet />
             </div>
         </div>

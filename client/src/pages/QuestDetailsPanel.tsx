@@ -1,11 +1,78 @@
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { questsApi } from "../api/questsApi";
+
+import type { Quest } from '../api/questsApi'
+
+import { Hyperlink } from "../components/common/Hyperlink";
+import { Spinner } from "../components/common/Spinner";
+
+import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 
 export const QuestDetailsPanel = () => {
     const { id } = useParams();
 
+    const [quest, setQuest] = useState<Quest | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        (async () => {
+            if (!id) {
+                setQuest(null);
+                setError(true);
+                return;
+            }
+            const requestResponse = await questsApi.fetchQuestById(id);
+            if (requestResponse.success) {
+                setQuest(requestResponse.data as Quest);
+                setLoading(false);
+            } else {
+                setQuest(null);
+                setError(true);
+            }
+        })();
+    }, [id]);
+
+    const loadedView = (<>
+        <div className="p-6">
+            <h2 className="text-xl font-bold mb-1 mr-4">{quest?.title}</h2>
+            <p className="mb-4 text-sm">Submitted by <Hyperlink href={`/users/${quest?.creator.id}`}>{quest?.creator.username}</Hyperlink></p>
+            <p className="mb-4 text-sm">{quest?.description}</p>
+        </div>
+    </>)
+
+    const loadingView = (<>
+        <div className="flex justify-center items-center h-full">
+            <Spinner />
+        </div>
+    </>)
+
+    const failedView = (
+        <div className="flex justify-center items-center h-full">
+            <p className="mt-1 text-center text-md">Error: Quest not found</p>
+        </div>
+    )
+
+    let shownView = loadedView;
+    if (error) {
+        shownView = failedView;
+    } else if (loading) {
+        shownView = loadingView;
+    }
+
     return (
-        <div className="bg-white shadow-xl p-4 h-full pointer-events-auto overflow-y-auto">
-            <h2 className="text-xl font-bold">{id}</h2>
+        <div className="relative bg-white rounded-lg border-1 border-sq-grey shadow-md h-full w-full sm:w-md pointer-events-auto">
+            {/* Close Button */}
+            <div className="absolute top-2 right-2">
+                <Link to="/quests">
+                    <div className="bg-white rounded-full border-1 border-sq-grey w-8 h-8 flex items-center justify-center">
+                        <img src={closeButtonImage}/>
+                    </div>
+                </Link>
+            </div>
+        
+            {shownView}
         </div>
     )
 }
