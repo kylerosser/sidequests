@@ -46,6 +46,8 @@ router.get("", async (req: Request, res: Response) => {
     }
 });
 
+// GET api/quests/:id
+// Retrieve a quest by id
 router.get("/:id", async (req: Request, res: Response) => {
     const { id } = req.params;
     try {
@@ -77,9 +79,5 @@ router.get("/:id", async (req: Request, res: Response) => {
         });
     }
 });
-
-// GET api/quests/:id
-// Retrieve a quest by id
-
 
 export default router;

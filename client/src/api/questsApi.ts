@@ -45,4 +45,20 @@ export const questsApi = {
                 };
             });
     },
+    fetchQuestById: (id: string) => {
+        return api
+            .get<ApiResponse<Quest | string>>(`/quests/${id}`)
+            .then((res) => {
+                return res.data;
+            })
+            .catch((error: Error | AxiosError): ApiResponse<Quest | string> => {
+                if (axios.isAxiosError(error) && error.response?.data) {
+                    return error.response.data as ApiResponse<string>;
+                }
+                return {
+                    success: false,
+                    data: "An unknown error occurred",
+                };
+            });
+    }
 }
