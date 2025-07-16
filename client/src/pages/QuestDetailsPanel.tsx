@@ -6,8 +6,10 @@ import type { Quest } from '../api/questsApi'
 
 import { Hyperlink } from "../components/common/Hyperlink";
 import { Spinner } from "../components/common/Spinner";
+import { ReadMore } from "../components/common/ReadMore"
 
 import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
+import googleMapsImage from '/google_maps_icon.png';
 
 export const QuestDetailsPanel = () => {
     const { id } = useParams();
@@ -43,10 +45,23 @@ export const QuestDetailsPanel = () => {
     }, [id]);
 
     const loadedView = (<>
-        <div className="p-6">
-            <h2 className="text-xl font-bold mb-1 mr-4">{quest?.title}</h2>
-            <p className="mb-4 text-sm">Submitted by <Hyperlink href={`/users/${quest?.creator.id}`}>{quest?.creator.username}</Hyperlink></p>
-            <p className="mb-4 text-sm">{quest?.description}</p>
+        <div className="pr-1 py-1 h-full ">
+            <div className="p-6 h-full overflow-y-auto scrollbar-thin scrollbar-sq-grey scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+                <h2 className="text-xl font-bold mb-2 mr-4">{quest?.title}</h2>
+                <div className="flex justify-between mb-3">
+                    <p className="text-sm">Submitted by <Hyperlink href={`/users/${quest?.creator.id}`}>{quest?.creator.username}</Hyperlink></p>
+                    
+                </div>
+                <ReadMore className="mb-3" collapsedHeight={68}>
+                    <p className="text-sm">{quest?.description}</p>
+                </ReadMore>
+                <a className="inline-block" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps?q=${quest?.location.coordinates[1]},${quest?.location.coordinates[0]}`}>
+                    <div className="flex items-center rounded-full border-1 border-sq-grey shadow-sm py-2 px-3">
+                        <img className="h-5" src={googleMapsImage}></img><p className="ml-2 text-sm">Get Directions</p>
+                    </div>
+                </a>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                </div>
         </div>
     </>)
 
@@ -72,7 +87,7 @@ export const QuestDetailsPanel = () => {
     return (
         <div className="relative bg-white rounded-lg border-1 border-sq-grey shadow-md h-full w-full sm:w-md pointer-events-auto">
             {/* Close Button */}
-            <div className="absolute top-2 right-2">
+            <div className="absolute top-2 right-3.5 sm:top-0 sm:-right-9">
                 <Link to="/quests">
                     <div className="bg-white rounded-full border-1 border-sq-grey w-8 h-8 flex items-center justify-center">
                         <img src={closeButtonImage}/>
