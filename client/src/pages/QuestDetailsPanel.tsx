@@ -10,6 +10,9 @@ import { ReadMore } from "../components/common/ReadMore"
 
 import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import googleMapsImage from '/google_maps_icon.png';
+import checkedBoxImage from '/check_box_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
+import uncheckedBoxImage from '/check_box_outline_blank_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
+import warningImage from '/warning_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 
 export const QuestDetailsPanel = () => {
     const { id } = useParams();
@@ -47,7 +50,7 @@ export const QuestDetailsPanel = () => {
     const loadedView = (<>
         <div className="pr-1 py-1 h-full ">
             <div className="p-6 h-full overflow-y-auto scrollbar-thin scrollbar-sq-grey scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
-                <h2 className="text-xl font-bold mb-2 mr-4">{quest?.title}</h2>
+                <h2 className="text-xl font-bold mb-2 mr-4 sm:mr-0">{quest?.title}</h2>
                 <div className="flex justify-between mb-3">
                     <p className="text-sm">Submitted by <Hyperlink href={`/users/${quest?.creator.id}`}>{quest?.creator.username}</Hyperlink></p>
                     
@@ -55,13 +58,44 @@ export const QuestDetailsPanel = () => {
                 <ReadMore className="mb-3" collapsedHeight={68}>
                     <p className="text-sm">{quest?.description}</p>
                 </ReadMore>
-                <a className="inline-block" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps?q=${quest?.location.coordinates[1]},${quest?.location.coordinates[0]}`}>
+                <a className="inline-block mb-1" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps?q=${quest?.location.coordinates[1]},${quest?.location.coordinates[0]}`}>
                     <div className="flex items-center rounded-full border-1 border-sq-grey shadow-sm py-2 px-3">
                         <img className="h-5" src={googleMapsImage}></img><p className="ml-2 text-sm">Get Directions</p>
                     </div>
                 </a>
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+                <hr className="border-sq-grey my-3"></hr>
+
+                <p className="text-md font-bold">Quest Checklist</p>
+                {quest?.checkList.map((checkListItem) => (
+                    <div className="flex mt-2" key={checkListItem.title}>
+                        <img className="mr-3 h-8 cursor-pointer" src={uncheckedBoxImage}/>
+                        <div>
+                            <p className="text-sm font-bold">{checkListItem.title}</p>
+                            <ReadMore collapsedHeight={0} gradient={false} readMoreText={"See details"} showLessText={"Hide details"}>
+                                <p className="text-sm">{checkListItem.description}</p>
+                            </ReadMore>
+                        </div>
+                    </div>
+                ))}
+
+                <hr className="border-sq-grey my-3"></hr>
+
+                <p className="text-md font-bold mb-2">Recent Activity</p>
+                <p className="text-sm mb-4 italic">No one has completed this quest yet</p>
+
+                <hr className="border-sq-grey my-3"></hr>
+
+                <div className="flex">
+                    <img className="h-8 mr-3" src={warningImage} />
+                    <div>
+                        <p className="text-xs">Quests are user-submitted. Sidequests does not endorse the accuracy, safety, or legality of any quest. Always exercise caution, use common sense, and follow local laws and safety guidelines when participating in any activity. You are responsible for your own safety and actions.</p>
+                        <Hyperlink className="text-xs mt-2" href="/make-a-complaint">Make a complaint</Hyperlink>
+                    </div>
+                   
                 </div>
+                
+            </div>
         </div>
     </>)
 

@@ -4,9 +4,12 @@ interface ReadMoreProps {
   children: React.ReactNode;
   collapsedHeight?: number; // in px
   className?: string;
+  gradient?: boolean;
+  readMoreText?: string;
+  showLessText?: string;
 }
 
-export function ReadMore({ children, collapsedHeight = 100, className = "" }: ReadMoreProps) {
+export function ReadMore({ children, collapsedHeight = 100, className = "", gradient=true, readMoreText="Read more", showLessText="Show less" }: ReadMoreProps) {
   const [expanded, setExpanded] = useState(false);
   const [shouldShowToggle, setShouldShowToggle] = useState(false);
   const [height, setHeight] = useState<string | number>("auto");
@@ -38,8 +41,8 @@ export function ReadMore({ children, collapsedHeight = 100, className = "" }: Re
           {children}
         </div>
 
-        {!expanded && shouldShowToggle && (
-          <div className="absolute bottom-0 left-0 w-full h-15 0 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+        {!expanded && shouldShowToggle && gradient && (
+          <div className="absolute bottom-0 left-0 w-full h-10 0 bg-gradient-to-t from-white to-transparent pointer-events-none" />
           
         )}
       </div>
@@ -47,9 +50,9 @@ export function ReadMore({ children, collapsedHeight = 100, className = "" }: Re
       {shouldShowToggle && (
         <button
           onClick={() => setExpanded((prev) => !prev)}
-          className="text-sq-secondary text-sm font-semibold cursor-pointer"
+          className="text-sq-secondary text-sm cursor-pointer"
         >
-          {expanded ? "Show less" : "Read more"}
+          {expanded ? showLessText : readMoreText}
         </button>
       )}
     </div>
