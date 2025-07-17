@@ -7,6 +7,7 @@ import type { Quest } from '../api/questsApi'
 import { Hyperlink } from "../components/common/Hyperlink";
 import { Spinner } from "../components/common/Spinner";
 import { ReadMore } from "../components/common/ReadMore"
+import { DifficultyBadge } from "../components/quest-details/DifficultyBadge";
 
 import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import googleMapsImage from '/google_maps_icon.png';
@@ -73,7 +74,8 @@ export const QuestDetailsPanel = () => {
                         <div>
                             <p className="text-sm font-bold">{checkListItem.title}</p>
                             <ReadMore collapsedHeight={0} gradient={false} readMoreText={"See details"} showLessText={"Hide details"}>
-                                <p className="text-sm">{checkListItem.description}</p>
+                                <DifficultyBadge difficulty={checkListItem.difficulty as 1|2|3|4}/>
+                                <p className="text-sm mt-1">{checkListItem.description}</p>
                             </ReadMore>
                         </div>
                     </div>
@@ -119,7 +121,7 @@ export const QuestDetailsPanel = () => {
     }
 
     return (
-        <div className="relative bg-white rounded-lg border-1 border-sq-grey shadow-md h-full w-full sm:w-md pointer-events-auto">
+        <div className="relative bg-white rounded-lg border-1 border-sq-grey shadow-md h-full w-full sm:w-lg pointer-events-auto">
             {/* Close Button */}
             <div className="absolute top-2 right-3.5 sm:top-0 sm:-right-9">
                 <Link to="/quests">
