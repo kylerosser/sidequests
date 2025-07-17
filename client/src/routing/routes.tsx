@@ -8,7 +8,7 @@ import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
 import { ResetPasswordPage } from '../pages/ResetPasswordPage';
 import { GoogleCallbackPage } from '../pages/GoogleCallbackPage';
 import { QuestsPage } from '../pages/QuestsPage';
-import { QuestDetailsPanel } from '../pages/QuestDetailsPanel';
+import { QuestDetailsPanel } from '../components/quest-details/QuestDetailsPanel';
 
 export type AppRouteObject = RouteObject & {
 	title?: string;

@@ -1,18 +1,17 @@
 import { useParams, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { questsApi } from "../api/questsApi";
+import { questsApi } from "../../api/questsApi";
 
-import type { Quest } from '../api/questsApi'
+import type { Quest } from '../../api/questsApi'
 
-import { Hyperlink } from "../components/common/Hyperlink";
-import { Spinner } from "../components/common/Spinner";
-import { ReadMore } from "../components/common/ReadMore"
-import { DifficultyBadge } from "../components/quest-details/DifficultyBadge";
+import { Hyperlink } from "../common/Hyperlink";
+import { Spinner } from "../common/Spinner";
+import { ReadMore } from "../common/ReadMore"
+import { QuestChecklist } from "./QuestChecklist";
 
 import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import googleMapsImage from '/google_maps_icon.png';
-import checkedBoxImage from '/check_box_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
-import uncheckedBoxImage from '/check_box_outline_blank_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
+
 import warningImage from '/warning_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 
 export const QuestDetailsPanel = () => {
@@ -67,19 +66,7 @@ export const QuestDetailsPanel = () => {
 
                 <hr className="border-sq-grey my-3"></hr>
 
-                <p className="text-md font-bold">Quest Checklist</p>
-                {quest?.checkList.map((checkListItem) => (
-                    <div className="flex mt-2" key={checkListItem.title}>
-                        <img className="mr-3 h-8 cursor-pointer" src={uncheckedBoxImage}/>
-                        <div>
-                            <p className="text-sm font-bold">{checkListItem.title}</p>
-                            <DifficultyBadge difficulty={checkListItem.difficulty as 1|2|3|4}/>
-                            <ReadMore collapsedHeight={0} gradient={false} readMoreText={"See details"} showLessText={"Hide details"}>
-                                <p className="text-sm mt-1">{checkListItem.description}</p>
-                            </ReadMore>
-                        </div>
-                    </div>
-                ))}
+                <QuestChecklist quest={quest as Quest} />
 
                 <hr className="border-sq-grey my-3"></hr>
 
