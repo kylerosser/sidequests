@@ -73,8 +73,8 @@ export const QuestDetailsPanel = () => {
                         <img className="mr-3 h-8 cursor-pointer" src={uncheckedBoxImage}/>
                         <div>
                             <p className="text-sm font-bold">{checkListItem.title}</p>
+                            <DifficultyBadge difficulty={checkListItem.difficulty as 1|2|3|4}/>
                             <ReadMore collapsedHeight={0} gradient={false} readMoreText={"See details"} showLessText={"Hide details"}>
-                                <DifficultyBadge difficulty={checkListItem.difficulty as 1|2|3|4}/>
                                 <p className="text-sm mt-1">{checkListItem.description}</p>
                             </ReadMore>
                         </div>
