@@ -24,7 +24,7 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
         setLoading(true);
         // Todo: fetch from GET api/auth/completions?quest=quest.id&?userId=user.id
         // Dummy data for now:
-        setCompletionIndices([1,0]);
+        setCompletionIndices([]);
         setLoading(false);
     }
 
@@ -51,7 +51,7 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
         {user ? questProgressBar : <p className="text-sm italic">Log in to view your progress for this quest</p> }
         {quest?.checkList.map((_, index) => {
             const uniqueKey = quest.id + index.toString();
-            return <QuestChecklistItem loggedIn={user != null} key={uniqueKey} quest={quest} itemIndex={index} completionIndices={completionIndices}/>
+            return <QuestChecklistItem loggedIn={user != null} key={uniqueKey} quest={quest} itemIndex={index} completionIndices={completionIndices} setCompletionIndices={setCompletionIndices}/>
         })}
     </>)
 

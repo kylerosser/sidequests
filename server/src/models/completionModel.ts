@@ -1,7 +1,7 @@
 import { Schema, model, Document, Types } from 'mongoose';
 
 interface ICompletion extends Document {
-  comment: string;
+  comment?: string;
   completer: Types.ObjectId;
   completedQuest: Types.ObjectId;
   checkListIndex: number;
@@ -11,7 +11,7 @@ interface ICompletion extends Document {
 
 const CompletionSchema = new Schema<ICompletion>(
   {
-    comment: { type: String, required: true},
+    comment: { type: String, required: false},
     completer: { type: Schema.Types.ObjectId, ref: "User", required: true },
     completedQuest: { type: Schema.Types.ObjectId, ref: "Quest", required: true },
     checkListIndex: { type: Number, required: true}

@@ -34,8 +34,14 @@ router.post("", authenticateToken, async (req: AuthRequest, res: Response) => {
             return res.status(401).json({ success: false, data: "Unauthorized" });
         }
 
-        if (!checkListIndex || !comment || !completedQuest) {
-            return res.status(400).json({ success: false, data: "checkListIndex, comment, and completedQuest are required" });
+        if (checkListIndex == null 
+            || checkListIndex == undefined 
+            || completedQuest == null 
+            || completedQuest == undefined
+            || comment == null
+            || comment == undefined
+        ) {
+            return res.status(400).json({ success: false, data: "checkListIndex, comment and completedQuest are required" });
         }
         if (
             typeof checkListIndex !== 'number' || 

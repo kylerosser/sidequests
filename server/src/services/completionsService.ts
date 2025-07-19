@@ -19,7 +19,7 @@ export const completionsService = {
             completedQuest,
             completer: userId,
             checkListIndex,
-            comment
+            comment: comment,
         });
         await newCompletion.save();
 
