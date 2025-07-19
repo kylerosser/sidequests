@@ -7,6 +7,7 @@ import 'dotenv/config';
 import questsRouter from './routes/questsRouter';
 import usersRouter from './routes/usersRouter';
 import authRouter from './routes/authRouter';
+import completionsRouter from './routes/completionsRouter';
 
 const PORT = process.env.PORT || 3000;
 const API_PREFIX = '/api';
@@ -31,6 +32,7 @@ mongoose.connect(MONGODB_URI)
 app.use(`${API_PREFIX}/quests`, questsRouter);
 app.use(`${API_PREFIX}/users`, usersRouter);
 app.use(`${API_PREFIX}/auth`, authRouter);
+app.use(`${API_PREFIX}/completions`, completionsRouter);
 
 app.use((req, res) => {
   res.status(404).json({ success: false, message: "Resource not found" });
