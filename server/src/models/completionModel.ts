@@ -1,8 +1,7 @@
 import { Schema, model, Document, Types } from 'mongoose';
 
 interface ICompletion extends Document {
-  description: string;
-  starred: boolean;
+  comment: string;
   completer: Types.ObjectId;
   completedQuest: Types.ObjectId;
   createdAt: Date;
@@ -11,8 +10,7 @@ interface ICompletion extends Document {
 
 const CompletionSchema = new Schema<ICompletion>(
   {
-    description: { type: String, required: true},
-    starred: { type: Boolean, required: true },
+    comment: { type: String, required: true},
     completer: { type: Schema.Types.ObjectId, ref: "User", required: true },
     completedQuest: { type: Schema.Types.ObjectId, ref: "Quest", required: true },
   },
