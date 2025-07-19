@@ -35,7 +35,7 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
     
     const progressBarPercent = Math.round(numberOfCompletedItems/numberOfItems * 100);
     const questProgressBar = (
-        <div className="flex items-center">
+        <div className="flex items-center mb-3">
             <div className="bg-sq-grey rounded-full flex-grow h-3">
                 <div className="h-full bg-sq-primary rounded-full" style={{width: `${progressBarPercent}%`}}/>
             </div>
@@ -56,7 +56,7 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
     </>)
 
     return (<>
-        <p className="text-md font-bold">Quest Checklist</p>
+        <p className="text-lg font-bold">Quest Checklist</p>
         {loading ? loadingView : loadedView}
     </>)
 }
