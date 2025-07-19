@@ -18,6 +18,7 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
     const refreshChecklist = () => {
         if (!user) {
             setLoading(false);
+            setCompletionIndices([]);
             return;
         }
         setLoading(true);
@@ -41,7 +42,7 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
         {user ? questProgressBar : <p className="text-sm italic">Log in to view your progress for this quest</p> }
         {quest?.checkList.map((_, index) => {
             const uniqueKey = quest.id + index.toString();
-            return <QuestChecklistItem key={uniqueKey} quest={quest} itemIndex={index} completionIndices={completionIndices}/>
+            return <QuestChecklistItem loggedIn={user != null} key={uniqueKey} quest={quest} itemIndex={index} completionIndices={completionIndices}/>
         })}
     </>)
 

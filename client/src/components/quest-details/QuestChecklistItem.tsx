@@ -1,5 +1,6 @@
-import type { Quest } from '../../api/questsApi'
+import { useNavigate } from "react-router-dom"
 import { useState } from 'react';
+import type { Quest } from '../../api/questsApi'
 
 import { DifficultyBadge } from "./DifficultyBadge";
 import { ReadMore } from "../common/ReadMore"
@@ -13,9 +14,12 @@ type QuestChecklistItemProps = {
     completionIndices: number[];
     quest: Quest;
     itemIndex: number;
+    loggedIn: boolean;
 }
 
-export const QuestChecklistItem = ({ quest, itemIndex, completionIndices }: QuestChecklistItemProps) => {
+export const QuestChecklistItem = ({ quest, itemIndex, completionIndices, loggedIn }: QuestChecklistItemProps) => {
+    const navigate = useNavigate();
+
     const checkListItem = quest.checkList[itemIndex];
     const completed = completionIndices.includes(itemIndex);
 
@@ -29,6 +33,10 @@ export const QuestChecklistItem = ({ quest, itemIndex, completionIndices }: Ques
     
     const handleCompleteFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if (!loggedIn) {
+            navigate('/login?redirect=/quests/' + quest.id);
+            return;
+        }
     }
 
     const completeView = <>
