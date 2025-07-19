@@ -24,14 +24,23 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
         setLoading(true);
         // Todo: fetch from GET api/auth/completions?quest=quest.id&?userId=user.id
         // Dummy data for now:
-        setCompletionIndices([1]);
+        setCompletionIndices([1,0]);
         setLoading(false);
     }
 
     useEffect(refreshChecklist, [user]);
 
+    const numberOfItems = quest.checkList.length;
+    const numberOfCompletedItems = completionIndices.length;
+    
+    const progressBarPercent = Math.round(numberOfCompletedItems/numberOfItems * 100);
     const questProgressBar = (
-        <></>
+        <div className="flex items-center">
+            <div className="bg-sq-grey rounded-full flex-grow h-3">
+                <div className="h-full bg-sq-primary rounded-full" style={{width: `${progressBarPercent}%`}}/>
+            </div>
+            <p className="text-sm ml-3">{progressBarPercent}% Complete</p>
+        </div>
     )
 
     const loadingView = (
