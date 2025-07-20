@@ -20,7 +20,7 @@ if (MONGODB_URI == undefined) {
 
 const app = express();
 app.use(cors({
-  origin: FRONTEND_URI,
+  origin: process.env.NODE_ENV == "development" ? "http://localhost:5173" : "https://sidequests.nz",
   credentials: true
 }));
 app.use(express.json());
