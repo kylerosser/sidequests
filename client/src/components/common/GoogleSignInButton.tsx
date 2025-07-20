@@ -15,7 +15,6 @@ export const GoogleSignInButton = ({
     redirect
 }: GoogleSignInButtonProps) => {
     const chosenImage = (variant == "sign-in" ? signInWithGoogleImage : signUpWithGoogleImage)
-    console.log(import.meta.env.PROD)
     return (
         <a className = "mx-auto" href={GOOGLE_OAUTH_URL + (redirect ? "&state=" + redirect : "") }>
             <button className="cursor-pointer">
