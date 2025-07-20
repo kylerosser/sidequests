@@ -12,6 +12,7 @@ import completionsRouter from './routes/completionsRouter';
 const PORT = process.env.PORT || 3000;
 const API_PREFIX = '/api';
 const MONGODB_URI = process.env.MONGODB_URI
+const FRONTEND_URI = process.env.FRONTEND_URI
 
 if (MONGODB_URI == undefined) {
   throw new Error("MongoDB URI not provided");
@@ -19,7 +20,7 @@ if (MONGODB_URI == undefined) {
 
 const app = express();
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: FRONTEND_URI,
   credentials: true
 }));
 app.use(express.json());
