@@ -121,7 +121,7 @@ router.post("/login/google", async (req: Request, res: Response) => {
         const oauth2Client = new google.auth.OAuth2(
             process.env.GOOGLE_CLIENT_ID,
             process.env.GOOGLE_CLIENT_SECRET,
-            "http://localhost:5173/google-callback"
+            process.env.NODE_ENV == "production" ? "https://sidequests.nz/google-callback" : "http://localhost:5173/google-callback"
         );
 
         let { tokens } = await oauth2Client.getToken(code);
