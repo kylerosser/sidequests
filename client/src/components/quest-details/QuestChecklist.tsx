@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import type { Quest } from '../../api/questsApi'
 import { useAuth } from "../../auth/useAuth";
+import { completionsApi } from '../../api/completionsApi';
+import type { Completion } from '../../api/completionsApi';
 
 import { Spinner } from "../common/Spinner";
 import { QuestChecklistItem } from './QuestChecklistItem';
@@ -22,13 +24,23 @@ export const QuestChecklist = ({ quest }: QuestChecklistProps) => {
             return;
         }
         setLoading(true);
-        // Todo: fetch from GET api/auth/completions?quest=quest.id&?userId=user.id
-        // Dummy data for now:
-        setCompletionIndices([]);
-        setLoading(false);
+        (async () => {
+            const completionsResponse = await completionsApi.fetchCompletions(quest.id, user.id, undefined, undefined);
+            if (completionsResponse.success) {
+                const newCompletionIndices: number[] = [];
+                (completionsResponse.data as Completion[]).map((completion) => {
+                    newCompletionIndices.push(completion.checkListIndex)
+                })
+                setCompletionIndices(newCompletionIndices);
+            } else {
+                setCompletionIndices([]);
+            }
+            setLoading(false);
+        })()
+        
     }
 
-    useEffect(refreshChecklist, [user]);
+    useEffect(refreshChecklist, [user, quest.id]);
 
     const numberOfItems = quest.checkList.length;
     const numberOfCompletedItems = completionIndices.length;
