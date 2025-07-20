@@ -17,7 +17,7 @@ import { authenticateToken } from '../middleware/authMiddleware';
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_EXPIRY = "7d";
 const JWT_COOKIE_EXPIRY = 7 * 24 * 60 * 60 * 1000;
-const USE_SECURE_JWT_COOKIE = false; // note: in prod, change to true for https
+const USE_SECURE_JWT_COOKIE = process.env.NODE_ENV == "production"; // note: in prod, change to true for https
 const JWT_COOKIE_SAMESITE = "strict";
 
 const router = express.Router();
