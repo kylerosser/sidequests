@@ -15,9 +15,47 @@ const router = express.Router();
 // Retrieve all completions given certain query parameter options sorted by recency
 // ?completedQuest to filter by quest id
 // ?completer to filter by user id of the user that completed the quest
-// ?skip number of entries to skip over
-// ?limit number of entries to limit the request to
+// ?cursor a completions id used as a cursor to start fetching from (for infinite scroll pagination)
+// ?limit limit the number of completions found
 router.get("", async (req: Request, res: Response) => {
+    let {completedQuest, completer, cursor, limit} = req.query
+
+    try {
+        if (completedQuest !== undefined && typeof completedQuest !== 'string') return res.status(400).json({ success: false, data: "completedQuest must be a string" });
+        if (completer !== undefined && typeof completedQuest !== 'string') return res.status(400).json({ success: false, data: "completer must be a string" });
+        if (cursor !== undefined && typeof cursor !== 'string') return res.status(400).json({ success: false, data: "cursor must be a string" });
+        if (limit !== undefined && isNaN(Number(limit))) return res.status(400).json({ success: false, data: "limit must be a number" });
+        const limitNumber = (limit !== undefined) ? Number(limit) : undefined;
+    
+        const completions = await completionsService.findCompletions(
+            completedQuest as string | undefined, 
+            completer as string | undefined, 
+            cursor as string | undefined, 
+            limitNumber as number | undefined
+        );
+
+        const formattedCompletions = completions.map((completion) => {
+            return {
+                id: completion.id,
+                comment: completion.comment,
+                completer: completion.completer,
+                completedQuest: completion.completedQuest,
+                checkListIndex: completion.checkListIndex,
+                createdAt: completion.createdAt
+            }
+        })
+
+        return res.status(200).json({
+            success: true,
+            data: formattedCompletions
+        });
+    } catch(err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            data: "An unexpected error occurred",
+        });
+    }
 
 })
 

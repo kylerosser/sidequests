@@ -24,5 +24,15 @@ export const completionsService = {
         await newCompletion.save();
 
         return {success: true, data: "Completion logged"};
+    },
+    findCompletions: async (completedQuest: string | undefined, completer: string | undefined, cursor: string | undefined, limit: number | undefined) => {
+        const query: any = {}
+        if (cursor) query._id = { $lt: new Types.ObjectId(cursor) };
+        if (completedQuest) query.completedQuest = completedQuest;
+        if (completer) query.completer = completer;
+        if (!limit) limit = 20; // default fallback limit
+        const foundCompletions = await Completion.find(query).sort({ _id: -1 }).limit(limit);
+        return foundCompletions;
     }
+
 }
