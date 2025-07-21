@@ -1,4 +1,5 @@
 import type { RouteObject } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import { LoginPage } from '../pages/LoginPage';
 import { SignupPage } from '../pages/SignupPage';
@@ -16,6 +17,10 @@ export type AppRouteObject = RouteObject & {
 }
 
 export const routes: AppRouteObject[] = [
+	{
+		path: '/',
+		element: <Navigate to="/quests" replace />,
+	},
     {
     	path: '/quests',
     	element: (
