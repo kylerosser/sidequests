@@ -322,7 +322,7 @@ router.post("/signup/email", async (req: Request, res: Response) => {
         }
 
         // Hash the password for storage
-        const passwordHash = hashPassword(password);
+        const passwordHash = await hashPassword(password);
 
         // Create a new User in the database
         const newUser = new User({
