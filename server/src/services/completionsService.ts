@@ -31,7 +31,7 @@ export const completionsService = {
         if (completedQuest) query.completedQuest = completedQuest;
         if (completer) query.completer = completer;
         if (!limit) limit = 20; // default fallback limit
-        const foundCompletions = await Completion.find(query).sort({ _id: -1 }).limit(limit);
+        const foundCompletions = await Completion.find(query).populate('completer', {username: 1}).sort({ _id: -1 }).limit(limit);
         return foundCompletions;
     }
 

@@ -7,7 +7,10 @@ import type { ApiResponse } from "../api/apiTypes";
 export type Completion = {
     id: string;
     comment: string;
-    completer: string;
+    completer: {
+        id: string,
+        username: string
+    };
     completedQuest: string;
     checkListIndex: number;
     createdAt: string;

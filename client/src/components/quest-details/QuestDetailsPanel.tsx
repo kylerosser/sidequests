@@ -8,6 +8,7 @@ import { Hyperlink } from "../common/Hyperlink";
 import { Spinner } from "../common/Spinner";
 import { ReadMore } from "../common/ReadMore"
 import { QuestChecklist } from "./QuestChecklist";
+import { RecentActivity } from "./RecentActivity";
 
 import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import googleMapsImage from '/google_maps_icon.png';
@@ -70,12 +71,9 @@ export const QuestDetailsPanel = () => {
 
                 <hr className="border-sq-grey my-3"></hr>
 
-                <p className="text-md font-bold mb-2">Recent Activity</p>
-                <p className="text-sm mb-4 italic">No one has completed this quest yet</p>
+                <RecentActivity quest={quest as Quest} />
 
-                <hr className="border-sq-grey my-3"></hr>
-
-                <div className="flex">
+                <div className="flex mt-5">
                     <img className="h-8 mr-3" src={warningImage} />
                     <div>
                         <p className="text-xs">Quests are user-submitted. Sidequests does not endorse the accuracy, safety, or legality of any quest. Always exercise caution, use common sense, and follow local laws and safety guidelines when participating in any activity. You are responsible for your own safety and actions.</p>
