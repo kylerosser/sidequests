@@ -70,7 +70,7 @@ export const RecentActivity = ({ quest }: RecentActivityProps) => {
     </>)
 
     return (<>
-        <p className="text-md font-bold mb-2">Recent Activity</p>
+        <p className="text-lg font-bold mb-2">Recent Activity</p>
         {loading ? <Spinner/> : loadedView}
     </>)
 }

@@ -53,7 +53,8 @@ export const QuestDetailsPanel = () => {
             <div className="p-6 h-full overflow-y-auto scrollbar-thin scrollbar-sq-grey scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
                 <h2 className="text-xl font-bold mb-2 mr-4 sm:mr-0">{quest?.title}</h2>
                 <div className="flex justify-between mb-3">
-                    <p className="text-sm">Submitted by <Hyperlink href={`/users/${quest?.creator.id}`}>{quest?.creator.username}</Hyperlink></p>
+                    { /* TODO: href={`/users/${quest?.creator.id}`} */}
+                    <p className="text-sm">Submitted by <Hyperlink href={""}>{quest?.creator.username}</Hyperlink></p>
                     
                 </div>
                 <ReadMore className="mb-3" collapsedHeight={68}>
@@ -77,7 +78,7 @@ export const QuestDetailsPanel = () => {
                     <img className="h-8 mr-3" src={warningImage} />
                     <div>
                         <p className="text-xs">Quests are user-submitted. Sidequests does not endorse the accuracy, safety, or legality of any quest. Always exercise caution, use common sense, and follow local laws and safety guidelines when participating in any activity. You are responsible for your own safety and actions.</p>
-                        <Hyperlink className="text-xs mt-2" href="/make-a-complaint">Make a complaint</Hyperlink>
+                        {/* TODO: <Hyperlink className="text-xs mt-2" href="/make-a-complaint">Make a complaint</Hyperlink> */}
                     </div>
                    
                 </div>

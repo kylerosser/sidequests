@@ -14,7 +14,8 @@ export const RecentActivityEntry = ({ completion, title }: RecentActivityEntryPr
         timeStyle: "short",    // can also use "medium", "long", etc.
      });
     return (<>
-        <p className="text-xs"><Hyperlink href={`/users/${completion.completer.id}`}>{completion.completer.username}</Hyperlink> completed <span className="font-bold">{`"${title}"`}</span></p>
+        {/* TODO: href=`/users/${completion.completer.id}` */}
+        <p className="text-xs"><Hyperlink href={""}>{completion.completer.username}</Hyperlink> completed <span className="font-bold">{`"${title}"`}</span></p>
         <p className="text-xs">{formattedDate}</p>
         <p className="text-xs italic mt-2">{completion.comment}</p>
     </>)
