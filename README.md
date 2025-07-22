@@ -8,14 +8,14 @@ The first phase of the project is live and deployed, with ongoing development un
 View it for yourself: [sidequests.nz](sidequests.nz)
 
 ## Features Roadmap
-[x] Login with email/password & one-click Google sign-in using JWT authentication
-[x] Email verification & password resets via tokens with TTL stored in the database
-[x] Interactive Leaflet map to explore quests across New Zealand, featuring debounced, lazy loading for performance
-[x] Quest checklist with progress tracking, saved state, user comments, and recent activity feed
-[] Quest submission page (upcoming)
-[] User profile page (upcoming)
-[] Content moderation queue with user reporting and filtering of inappropriate content (upcoming)
-[] Search quests by location and keywords (upcoming)
+- [x] Login with email/password & one-click Google sign-in using JWT authentication
+- [x] Email verification & password resets via tokens with TTL stored in the database
+- [x] Interactive Leaflet map to explore quests across New Zealand, featuring debounced, lazy loading for performance
+- [x] Quest checklist with progress tracking, saved state, user comments, and recent activity feed
+- [ ] Quest submission page (upcoming)
+- [ ] User profile page (upcoming)
+- [ ] Content moderation queue with user reporting and filtering of inappropriate content (upcoming)
+- [ ] Search quests by location and keywords (upcoming)
 
 ## Technical Description
 
@@ -52,7 +52,7 @@ I'm also planning to clean up the codebase by adding validation middleware to ba
 
 ## Screenshots
 
-<img src="https://sidequests.nz/github_screenshot.png" alt="Screenshot of the Sidequests app" width="700px">
+<img src="https://sidequests.nz/github_screenshot.png" alt="Screenshot of the Sidequests app" width="700px" />
 
 ## License
 This project is not licensed. All rights are reserved by the author.
