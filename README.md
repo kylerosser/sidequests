@@ -17,6 +17,10 @@ View it for yourself: [sidequests.nz](sidequests.nz)
 - [ ] Content moderation queue with user reporting and filtering of inappropriate content (upcoming)
 - [ ] Search quests by location and keywords (upcoming)
 
+## Screenshots
+
+<img src="https://sidequests.nz/github_screenshot.png" alt="Screenshot of the Sidequests app" width="700px" />
+
 ## Technical Description
 
 ### Frontend
@@ -49,10 +53,6 @@ Soon you'll be able to submit your own quests and view the profiles of other use
 As the number of quests grows, maintaining smooth map performance will become more important. I plan to implement server-side clustering using spatial partitioning techniques like quadtrees to group nearby quests. This will reduce the number of markers sent to the client and improve load times.
 
 I'm also planning to clean up the codebase by adding validation middleware to backend routes, which will make the code cleaner and adding new routes easier. Re-typing the Mongoose schemas is on the list too, to improve type safety. I'm also working on separating business logic from route handlers to keep things more modular and maintainable.
-
-## Screenshots
-
-<img src="https://sidequests.nz/github_screenshot.png" alt="Screenshot of the Sidequests app" width="700px" />
 
 ## License
 This project is not licensed. All rights are reserved by the author.
