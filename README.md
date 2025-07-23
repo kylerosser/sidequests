@@ -2,10 +2,10 @@
 
 <img src="https://sidequests.nz/wordmark.svg" alt="Sidequests Logo" height="40" style="background-color:white; padding: 13px" />
 
-Sidequests is a web app that helps users discover and complete small adventures ("sidequests") near them... from scenic trails to quirky urban landmarks. The goal is to build a community-driven platform of user-submitted quests across New Zealand, where users can track progress, leave comments, and view each other’s profiles.
+[Sidequests](https://sidequests.nz) is a web app that helps users discover and complete small adventures ("sidequests") near them... from scenic trails to quirky urban landmarks. The goal is to build a community-driven platform of user-submitted quests across New Zealand, where users can track progress, leave comments, and view each other’s profiles.
 
 The first phase of the project is live and deployed, with ongoing development underway.
-View it for yourself: [sidequests.nz](sidequests.nz)
+View it for yourself: [https://sidequests.nz](https://sidequests.nz)
 
 ## Features Roadmap
 - [x] Login with email/password & one-click Google sign-in using JWT authentication
