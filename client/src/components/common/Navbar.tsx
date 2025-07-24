@@ -17,7 +17,7 @@ export const Navbar = ({ hideSignupButton = false, hideLoginButton = false }: Na
     // Buttons for logging in / signing up to be displayed if the user is not currently logged in
     const loginSignupButtons = <div className="flex justify-between inline-flex items-center">
         <Link className={`mx-1 ${hideSignupButton ? "hidden" : ""}`} to="/login"><Button>Log in</Button></Link>
-        <Link className={`mx-1 ${hideLoginButton ? "hidden" : ""}`} to="/signup"><Button variant="white">Create an account</Button></Link>
+        <Link className={`mx-1 ${hideLoginButton ? "hidden" : ""}`} to="/signup"><Button variant="white">Sign Up</Button></Link>
     </div>
 
     // User profile info to be displayed if the user is currently logged in
