@@ -10,6 +10,7 @@ import { ResetPasswordPage } from '../pages/ResetPasswordPage';
 import { GoogleCallbackPage } from '../pages/GoogleCallbackPage';
 import { QuestsPage } from '../pages/QuestsPage';
 import { QuestDetailsPanel } from '../components/quest-details/QuestDetailsPanel';
+import { CreateQuestPage } from '../pages/CreateQuestPage';
 
 export type AppRouteObject = RouteObject & {
 	title?: string;
@@ -20,6 +21,11 @@ export const routes: AppRouteObject[] = [
 	{
 		path: '/',
 		element: <Navigate to="/quests" replace />,
+	},
+	{
+		path: '/quests/create',
+		title: 'Submit a Quest',
+		element: <CreateQuestPage />
 	},
     {
     	path: '/quests',
