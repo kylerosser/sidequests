@@ -42,7 +42,7 @@ export const SignupPage = () => {
 
     return (
         <PageLayout>
-            <div className="flex min-h-full flex-col justify-center px-4 py-12 pt-20">
+            <div className="flex min-h-full flex-col justify-center px-4 pt-4">
                 <div className="bg-white rounded-lg border-1 border-sq-grey mx-auto w-full max-w-md px-6">
                     <div className="mt-10 ">
                         <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight">Create your account</h2>

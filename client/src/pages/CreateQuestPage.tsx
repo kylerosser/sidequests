@@ -1,43 +1,46 @@
+import { useState } from "react"
+import { GetStartedStep } from "../components/create-quest/GetStartedStep"
 import { PageLayout } from "../components/layouts/PageLayout"
+import { Button } from "../components/common/Button";
+import Stepper from "../components/common/Stepper";
 
 export const CreateQuestPage = () => {
+    const [step, setStep] = useState(0);
+
+    const stepComponents = [
+        <GetStartedStep />,
+        <p>choose location</p>,
+        <p>write details</p>,
+        <p>review & submit</p>,
+    ]
+
+    const nextButtonClicked = () => {
+        if (step == stepComponents.length - 1) {
+            // Submit
+
+            return;
+        }
+        setStep(step + 1);
+    }
+
+    const backButtonClicked = () => {
+        setStep(step - 1);
+    }
+
     return (<>
         <PageLayout>
-            <div className="flex min-h-full flex-col justify-center px-4">
+            <div className="flex min-h-full flex-col justify-center px-4 pt-4">
                 <div className="bg-white rounded-lg border-1 border-sq-grey mx-auto w-full max-w-2xl p-8">
-                    <div className="">
-                        {/* make a component for each step of the process with next buttons */}
-                        <h1 className="text-2xl font-bold">Submit a quest</h1>
-                        <p className="text-md mb-4">Got a spot worth sharing? Turn it into a Sidequest.</p>
-                        <div className="flex flex-col">
-                            <div className="flex gap-4 mb-2">
-                                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full text-white bg-sq-primary font-bold text-2xl">
-                                    <span>1</span>
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-semibold mb-1">Create your quest</h3>
-                                    <h3 className="text-md">Give it a title, description, location, and checklist.</h3>
-                                </div>
-                            </div>
-                            <div className="flex gap-4 mb-2">
-                                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full text-white bg-sq-primary font-bold text-2xl">
-                                    <span>2</span>
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-semibold mb-1">Send it in</h3>
-                                    <h3 className="text-md">Hit submit and we'll take a quick look to make sure it fits the vibe.</h3>
-                                </div>
-                            </div>
-                            <div className="flex gap-4 mb-2">
-                                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full text-white bg-sq-primary font-bold text-2xl">
-                                    <span>3</span>
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-semibold mb-1">Admire your contribution</h3>
-                                    <h3 className="text-md">Once our moderators approve it, your quest goes live for others to discover and complete.</h3>
-                                </div>
-                            </div>
-                        </div>
+                    <Stepper 
+                        current = {step}
+                        labels = {["Get started", "Location", "Details & Checklist", "Review & Submit"]}
+                    />
+                    <div className="mt-6">
+                        {stepComponents[step]}
+                    </div>
+                    <div className={`flex ${step == 0 ? "justify-end" : "justify-between"} mt-4`}>
+                        {step != 0 ? <Button onClick={backButtonClicked} variant="white" className="">Back</Button> : null}
+                        <Button onClick={nextButtonClicked}>{step == 0 ? "Get started" : "Next"}</Button>
                     </div>
                     
                 </div>
