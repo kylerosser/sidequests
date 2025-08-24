@@ -36,8 +36,8 @@ export const GetStartedStep = () => {
         <ul className="list-disc list-inside">
             <li>Only include places that are legally accessible to the public.</li>
             <li>Warn users about any natural hazards involved.</li>
-            <li>Make sure the quest isn't dangerous or illegal.</li>
-            <li>Do not promote anything that might disturb wildlife or fragile ecosystems.</li>
+            <li>Strictly no illegal activities, trespassing, or unsafe behaviour.</li>
+            <li>Do not promote anything that might disturb wildlife, fragile ecosystems, or heritage sites.</li>
             <li>Do not promote the exploration of tunnels, caves, or mines, unless they are well-known and open to the public.</li>
             <li>Respect track closures, including tracks closed due to Kauri Dieback.</li>
         </ul>
