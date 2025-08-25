@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { GetStartedStep } from "../components/create-quest/GetStartedStep"
+import { LocationStep } from "../components/create-quest/LocationStep"
 import { PageLayout } from "../components/layouts/PageLayout"
 import { Button } from "../components/common/Button";
 import Stepper from "../components/common/Stepper";
@@ -9,7 +10,7 @@ export const CreateQuestPage = () => {
 
     const stepComponents = [
         <GetStartedStep />,
-        <p>choose location</p>,
+        <LocationStep />,
         <p>write details</p>,
         <p>review & submit</p>,
     ]

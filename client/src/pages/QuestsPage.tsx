@@ -9,7 +9,7 @@ export const QuestsPage = () => {
         <SetPageTitle />
         <div className="relative h-dvh overflow-x:hidden">
             <QuestMap />
-            <div className="absolute top-0 left-0 z-50">
+            <div className="absolute top-0 left-0">
                 <Navbar />
             </div>
 
