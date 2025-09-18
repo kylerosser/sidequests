@@ -4,6 +4,7 @@ import { LocationStep } from "../components/create-quest/LocationStep"
 import { PageLayout } from "../components/layouts/PageLayout"
 import { Button } from "../components/common/Button";
 import Stepper from "../components/common/Stepper";
+import { DetailsStep } from "../components/create-quest/DetailsStep";
 
 export const CreateQuestPage = () => {
     const [step, setStep] = useState(0);
@@ -11,7 +12,7 @@ export const CreateQuestPage = () => {
     const stepComponents = [
         <GetStartedStep />,
         <LocationStep />,
-        <p>write details</p>,
+        <DetailsStep />,
         <p>review & submit</p>,
     ]
 

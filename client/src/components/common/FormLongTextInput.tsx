@@ -2,11 +2,13 @@ import React, { useState } from "react";
 
 interface FormLongTextInputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   maxCharacters?: number;
+  minHeight?: number; // new prop for min height in pixels
 }
 
 export const FormLongTextInput: React.FC<FormLongTextInputProps> = ({
   className = "",
   maxCharacters,
+  minHeight, // destructure minHeight
   value,
   onChange,
   ...rest
@@ -31,6 +33,7 @@ export const FormLongTextInput: React.FC<FormLongTextInputProps> = ({
         maxLength={maxCharacters}
         value={displayedValue}
         onChange={handleChange}
+        style={minHeight ? { minHeight: `${minHeight}px`, height: `${minHeight}px` } : undefined}
         {...rest}
       />
       {maxCharacters !== undefined && (
