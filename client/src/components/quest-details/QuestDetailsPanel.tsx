@@ -14,6 +14,7 @@ import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg'
 import googleMapsImage from '/google_maps_icon.png';
 
 import warningImage from '/warning_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
+import { useMapRef } from "../../hooks/useMapRef";
 
 export const QuestDetailsPanel = () => {
     const { id } = useParams();
@@ -21,6 +22,7 @@ export const QuestDetailsPanel = () => {
     const [quest, setQuest] = useState<Quest | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const mapRef = useMapRef();
 
     useEffect(() => {
         setLoading(true);
@@ -40,13 +42,35 @@ export const QuestDetailsPanel = () => {
                 const title = (requestResponse.data as Quest).title;
                 const truncatedTitle = title.length > 50 ? title.slice(0, 50 - 3) + '...' : title
                 document.title = `${truncatedTitle} - Sidequests`;
+
+                // Fly the map to the coordinates (note: what awful developer typed the quest DTO)
+                const map = mapRef.current;
+                const coords = (requestResponse.data as Quest)?.location?.coordinates;
+
+                if (map && coords) {
+                    const targetLatLng = [coords[1], coords[0]] as [number, number];
+
+                    // width of sidebar in pixels
+                    const sidebarWidth = window.innerWidth >= 640 ? 512 : 0;
+
+                    // tiny bounds around the target point
+                    const bounds = [targetLatLng, targetLatLng] as [typeof targetLatLng, typeof targetLatLng];
+
+                    // fly to the bounds with left padding for the sidebar
+                    map.flyToBounds(bounds, {
+                        paddingTopLeft: [sidebarWidth, 0],
+                        maxZoom: 16,
+                        duration: 1
+                    });
+                }
+
             } else {
                 setQuest(null);
                 setError(true);
                 document.title = "Quest Not Found - Sidequests";
             }
         })();
-    }, [id]);
+    }, [id, mapRef]);
 
     const loadedView = (<>
         <div className="pr-1 py-1 h-full ">

@@ -7,6 +7,7 @@ import { QuestMarker } from './QuestMarker';
 import { FetchQuestsOnMapChange } from './FetchQuestsOnMapChange';
 
 import type { Quest } from '../../api/questsApi'
+import { BindMapToMapRef } from './BindMapToMapRef';
 
 const newZealandBounds: LatLngBoundsExpression = [
   [-48, 166-5],  // SW
@@ -38,6 +39,7 @@ export const QuestMap = () => {
                 <QuestMarker key={quest.id} quest={quest} />
             ))}
             <FetchQuestsOnMapChange setQuests={setQuests} />
+            <BindMapToMapRef />
         </MapContainer>
     );
 }
