@@ -59,8 +59,8 @@ export const QuestDetailsPanel = () => {
                     // fly to the bounds with left padding for the sidebar
                     map.flyToBounds(bounds, {
                         paddingTopLeft: [sidebarWidth, 0],
-                        maxZoom: 16,
-                        duration: 1
+                        maxZoom: 17,
+                        duration: 1.5
                     });
                 }
 
