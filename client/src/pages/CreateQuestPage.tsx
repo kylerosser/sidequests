@@ -5,14 +5,17 @@ import { PageLayout } from "../components/layouts/PageLayout"
 import { Button } from "../components/common/Button";
 import Stepper from "../components/common/Stepper";
 import { DetailsStep } from "../components/create-quest/DetailsStep";
+import { CheckListStep } from "../components/create-quest/CheckListStep";
 
 export const CreateQuestPage = () => {
     const [step, setStep] = useState(0);
+    //const [questData, setQuestData] = useState(null);
 
     const stepComponents = [
         <GetStartedStep />,
         <LocationStep />,
         <DetailsStep />,
+        <CheckListStep />,
         <p>review & submit</p>,
     ]
 
@@ -35,7 +38,7 @@ export const CreateQuestPage = () => {
                 <div className="bg-white rounded-lg border-1 border-sq-grey mx-auto w-full max-w-2xl p-8">
                     <Stepper 
                         current = {step}
-                        labels = {["Get started", "Location", "Details & Checklist", "Review & Submit"]}
+                        labels = {["Get started", "Location", "Details", "Checklist", "Review & Submit"]}
                     />
                     <div className="mt-6">
                         {stepComponents[step]}

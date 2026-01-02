@@ -32,10 +32,9 @@ function ClickPicker({ onPick }: { onPick: (latlng: LatLng) => void }) {
   return null;
 }
 
-const PRECISION = 6; // tweak to 5 if you prefer
+const PRECISION = 6;
 
 export const LocationStep = () => {
-  // start blank
   const [lat, setLat] = useState<string>('');
   const [lng, setLng] = useState<string>('');
 
@@ -71,7 +70,7 @@ export const LocationStep = () => {
             Select the exact coordinates of where your quest takes place using the coordinate picker below.
           </p>
           <p className="text-md mb-4">
-            If your quest involves multiple locations, choose the trailhead or starting point.
+            If your quest involves multiple locations, or a trail, choose the trailhead or starting point.
           </p>
 
           <div className="flex gap-4 mb-4">

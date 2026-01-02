@@ -11,7 +11,7 @@ export default function StepperSegments({ current, labels, onStepClick }: Steppe
         <div className="mb-2 hidden md:flex gap-2">
             {labels.map((label, i) => (
             <div key={i} className="flex-1 text-left text-sm">
-                {`${i+1}. ${label}`}
+                {label}
             </div>
             ))}
         </div>
