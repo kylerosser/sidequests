@@ -8,7 +8,6 @@ import Stepper from "../components/common/Stepper";
 import { DetailsStep } from "../components/create-quest/DetailsStep";
 import { CheckListStep } from "../components/create-quest/CheckListStep";
 import { ReviewStep } from "../components/create-quest/ReviewStep";
-import { Link } from "react-router-dom";
 import { Hyperlink } from "../components/common/Hyperlink";
 
 export interface QuestData {
