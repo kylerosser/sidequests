@@ -1,10 +1,12 @@
-import { useState } from "react"
 import { FormLabel } from "../common/FormLabel"
 import { FormLongTextInput } from "../common/FormLongTextInput";
+import type { QuestData } from "../../pages/CreateQuestPage";
 
-export const DetailsStep = () => {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
+export const DetailsStep = ({ questData, setQuestData }: { questData: QuestData, setQuestData: React.Dispatch<React.SetStateAction<QuestData>> }) => {
+    const title = questData.title
+    const setTitle = (newTitle: string) => setQuestData((prev) => { return { ...prev, title: newTitle } })
+    const description = questData.description
+    const setDescription = (newDescription: string) => setQuestData((prev) => { return { ...prev, description: newDescription } })
 
     return <div>
         <h1 className="text-2xl font-bold">Describe your quest in detail</h1>

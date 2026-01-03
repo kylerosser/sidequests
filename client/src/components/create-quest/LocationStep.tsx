@@ -1,9 +1,10 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import { type LatLngBoundsExpression, type LatLng, divIcon } from 'leaflet';
 import { RemoveLeafletAttribution } from '../map/RemoveLeafletAttribution';
 import { FormLabel } from '../common/FormLabel';
 import { FormShortTextInput } from '../common/FormShortTextInput';
+import type { QuestData } from '../../pages/CreateQuestPage';
 
 const newZealandBounds: LatLngBoundsExpression = [
   [-48, 166 - 5], // SW
@@ -34,9 +35,49 @@ function ClickPicker({ onPick }: { onPick: (latlng: LatLng) => void }) {
 
 const PRECISION = 6;
 
-export const LocationStep = () => {
-  const [lat, setLat] = useState<string>('');
-  const [lng, setLng] = useState<string>('');
+export const LocationStep = ({ questData, setQuestData }: { questData: QuestData, setQuestData: React.Dispatch<React.SetStateAction<QuestData>> }) => {
+  const lat = questData.coordinates.lat == null ? "" : String(questData.coordinates.lat)
+  const lng = questData.coordinates.lng == null ? "" : String(questData.coordinates.lng)
+
+  const toNumberOrNull = (v: string) =>
+    Number.isFinite(Number(v)) ? Number(v) : null
+
+  // Could use a cleanup if this thing ever gets more complex
+  const setLat = (value: string | ((prev: string) => string)) =>
+    setQuestData(prev => {
+      const prevLat = prev.coordinates.lat == null
+        ? ""
+        : String(prev.coordinates.lat);
+
+      const nextLat =
+        typeof value === "function" ? value(prevLat) : value;
+
+      return {
+        ...prev,
+        coordinates: {
+          ...prev.coordinates,
+          lat: toNumberOrNull(nextLat),
+        },
+      };
+    });
+
+  const setLng = (value: string | ((prev: string) => string)) =>
+    setQuestData(prev => {
+      const prevLng = prev.coordinates.lng == null
+        ? ""
+        : String(prev.coordinates.lng);
+
+      const nextLng =
+        typeof value === "function" ? value(prevLng) : value;
+
+      return {
+        ...prev,
+        coordinates: {
+          ...prev.coordinates,
+          lng: toNumberOrNull(nextLng),
+        },
+      };
+    });
 
   const position = useMemo<[number, number] | null>(() => {
     const latNum = parseFloat(lat);
@@ -66,7 +107,7 @@ export const LocationStep = () => {
       <div>
         <div>
           <h1 className="text-2xl font-bold">Select the location of your quest</h1>
-          <p className="text-md mb-2">
+          <p className="text-md mt-2 mb-2">
             Select the exact coordinates of where your quest takes place using the coordinate picker below.
           </p>
           <p className="text-md mb-4">

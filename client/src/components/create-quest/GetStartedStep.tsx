@@ -17,7 +17,7 @@ const steps = [
 export const GetStartedStep = () => {
     return <>
         <h1 className="text-2xl font-bold">Submit a quest</h1>
-        <p className="text-md mb-4">Got a spot worth sharing? Turn it into a Sidequest!</p>
+        <p className="text-md mt-1 mb-4">Got a spot worth sharing? Turn it into a Sidequest!</p>
         <div className="flex flex-col">
             {steps.map((step, index) => {
                 return <div className="flex gap-4 mb-2">
