@@ -11,6 +11,7 @@ import { GoogleCallbackPage } from '../pages/GoogleCallbackPage';
 import { QuestsPage } from '../pages/QuestsPage';
 import { QuestDetailsPanel } from '../components/quest-details/QuestDetailsPanel';
 import { CreateQuestPage } from '../pages/CreateQuestPage';
+import { AuthenticatedOnly } from '../components/common/AuthenticatedOnly';
 
 export type AppRouteObject = RouteObject & {
 	title?: string;
@@ -25,7 +26,10 @@ export const routes: AppRouteObject[] = [
 	{
 		path: '/quests/create',
 		title: 'Submit a Quest',
-		element: <CreateQuestPage />
+		element: <>
+			<AuthenticatedOnly />
+			<CreateQuestPage />
+		</>
 	},
     {
     	path: '/quests',
