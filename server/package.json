@@ -28,6 +28,7 @@
     "googleapis": "^152.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.14.0",
-    "resend": "^4.6.0"
+    "resend": "^4.6.0",
+    "zod": "^4.3.4"
   }
 }
