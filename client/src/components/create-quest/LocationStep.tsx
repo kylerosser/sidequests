@@ -1,15 +1,16 @@
 import { useCallback, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
-import { type LatLngBoundsExpression, type LatLng, divIcon } from 'leaflet';
+import { type LatLng, divIcon } from 'leaflet';
 import { RemoveLeafletAttribution } from '../map/RemoveLeafletAttribution';
 import { FormLabel } from '../common/FormLabel';
 import { FormShortTextInput } from '../common/FormShortTextInput';
 import type { QuestData } from '../../pages/CreateQuestPage';
+import { NZ_BOUNDS } from '@shared/utils/geo'
+import L from "leaflet"
 
-const newZealandBounds: LatLngBoundsExpression = [
-  [-48, 166 - 5], // SW
-  [-33, 179 + 5], // NE
-];
+const newZealandBounds = L.latLngBounds(
+  NZ_BOUNDS.map(([lat, lng]) => [lat, lng])
+);
 
 const NZ_CENTER: [number, number] = [-41, 174]; // neutral map center
 

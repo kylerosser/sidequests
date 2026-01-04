@@ -26,7 +26,7 @@ const QuestSchema = new Schema<IQuest>(
     description: { type: String, required: true},
     location: {
         type: { type: String, enum: ['Point'], required: true },
-        coordinates: { type: [Number], required: true }
+        coordinates: { type: [Number], required: true }  // [lng, lat] as per MongoDB GeoJSON spec
     },
     moderatorApproved: { type: Boolean, required: true },
     creator: { type: Schema.Types.ObjectId, ref: "User", required: true },

@@ -9,6 +9,8 @@ import { DetailsStep } from "../components/create-quest/DetailsStep";
 import { CheckListStep } from "../components/create-quest/CheckListStep";
 import { ReviewStep } from "../components/create-quest/ReviewStep";
 import { Hyperlink } from "../components/common/Hyperlink";
+import { questsApi } from "../api/questsApi";
+import type { CreateQuestBody } from "@shared/schemas/questSchemas";
 
 export interface QuestData {
     title: string,
@@ -26,6 +28,8 @@ export const CreateQuestPage = () => {
         checkList: [{id: uuidv4(), title: "", description: "", difficulty: 1}]
     });
     const [submitted, setSubmitted] = useState(false)
+    const [submitLoading, setSubmitLoading] = useState(false)
+    const [errorMessage, setErrorMessage] = useState("")
 
     const stepComponents = [
         <GetStartedStep />,
@@ -36,15 +40,32 @@ export const CreateQuestPage = () => {
     ]
 
     const nextButtonClicked = () => {
+        if (submitLoading) return;
         if (step == stepComponents.length - 1) {
-            setSubmitted(true);
-
+            // Submit button clicked
+            setSubmitLoading(true);
+            setErrorMessage("");
+            (async () => {
+                const createResult = await questsApi.createQuest(questData as CreateQuestBody) // Force the type as Zod will validate anyways.
+                if (createResult.success) {
+                    console.log("A")
+                    setSubmitted(true);
+                    setSubmitLoading(false);
+                    return;
+                } else {
+                    console.log("B")
+                    setErrorMessage(createResult.data);
+                    setSubmitLoading(false);
+                    return;
+                }
+            })()
             return;
         }
         setStep(step + 1);
     }
 
     const backButtonClicked = () => {
+        if (submitLoading) return;
         setStep(step - 1);
     }
 
@@ -71,9 +92,9 @@ export const CreateQuestPage = () => {
                     </div>
                     <div className={`flex ${step == 0 ? "justify-end" : "justify-between"} mt-4`}>
                         {step != 0 ? <Button onClick={backButtonClicked} variant="white" className="">Back</Button> : null}
-                        <Button onClick={nextButtonClicked}>{step == 0 ? "Get started" : (step == stepComponents.length-1 ? "Submit" : "Next")}</Button>
+                        <Button loading={submitLoading} onClick={nextButtonClicked}>{step == 0 ? "Get started" : (step == stepComponents.length-1 ? "Submit" : "Next")}</Button>
                     </div>
-                    
+                    {errorMessage != "" && <p className="text-sq-red text-end mt-2">{errorMessage}</p>}
                 </div>
             </div>
         </PageLayout>

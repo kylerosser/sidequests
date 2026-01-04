@@ -22,5 +22,12 @@ export const questsService = {
     },
     findQuestById: async (id: string | Types.ObjectId) => {
         return await Quest.findById(id).populate('creator', {username: 1});
+    },
+    getUnmoderatedQuestCountForUser: async (userId: string | Types.ObjectId) => {
+        const count = await Quest.countDocuments({
+            creator: userId,
+            moderatorApproved: false
+        });
+        return count;
     }
 }
