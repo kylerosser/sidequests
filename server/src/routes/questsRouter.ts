@@ -5,8 +5,8 @@ import { z } from "zod"
 import { questsService, BBox } from '../services/questsService'
 import { parseNumber } from '../utils/routeUtils';
 import { CreateQuestBodySchema } from '@shared/schemas/questSchemas'
-import { authenticateToken } from 'src/middleware/authMiddleware';
-import { AuthRequest } from 'src/types/authTypes';
+import { authenticateToken } from '../middleware/authMiddleware';
+import { AuthRequest } from '../types/authTypes';
 import Quest from '../models/questModel';
 import { coordsInNZ } from '@shared/utils/geo'
 

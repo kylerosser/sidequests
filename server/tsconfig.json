@@ -5,9 +5,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,            
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@shared/*": ["../shared/src/*"]
-    }                          
+      "@shared/*": ["../../shared/src/*"]
+    }    
   }
 }

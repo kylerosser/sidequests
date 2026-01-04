@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx src/index.ts",
-    "build": "tsc -p tsconfig.prod.json"
+    "build": "tsc && tsc-alias"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "@types/node": "^22.15.2",
     "@types/react": "^19.2.7",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
     "tsx": "^4.21.0",
     "typescript": "^5.8.3"
   },
