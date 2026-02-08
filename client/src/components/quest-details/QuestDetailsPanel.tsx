@@ -12,6 +12,7 @@ import { RecentActivity } from "./RecentActivity";
 
 import closeButtonImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import googleMapsImage from '/google_maps_icon.png';
+import shareButtonImage from '/share_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 
 import warningImage from '/warning_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import { useMapRef } from "../../hooks/useMapRef";
@@ -72,6 +73,24 @@ export const QuestDetailsPanel = () => {
         })();
     }, [id, mapRef]);
 
+    const onShareButtonClicked = async () => {
+        try {
+            await navigator.share({
+                title: "sidequests.nz",
+                text: quest?.title || "Check out this sidequest",
+                url: window.location.href,
+            });
+        } catch {
+            // Fallback: copy to clipboard
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                alert("Link copied to clipboard!");
+            } catch {
+                alert("Your browser does not support this feature.");
+            }
+        }
+    }
+
     const loadedView = (<>
         <div className="pr-1 py-1 h-full ">
             <div className="p-6 h-full overflow-y-auto scrollbar-thin scrollbar-sq-grey scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
@@ -84,11 +103,19 @@ export const QuestDetailsPanel = () => {
                 <ReadMore className="mb-3" collapsedHeight={68}>
                     <p className="text-sm">{quest?.description}</p>
                 </ReadMore>
-                <a className="inline-block mb-1" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps?q=${quest?.location.coordinates[1]},${quest?.location.coordinates[0]}`}>
-                    <div className="flex items-center rounded-full border-1 border-sq-grey shadow-sm py-2 px-3">
-                        <img className="h-5" src={googleMapsImage}></img><p className="ml-2 text-sm">Get Directions</p>
-                    </div>
-                </a>
+                <div className="flex flex-row mb-1 gap-1">
+                    <button className="inline-block cursor-pointer" onClick={onShareButtonClicked}>
+                        <div className="flex items-center rounded-full border-1 border-sq-grey shadow-sm py-2 px-3">
+                            <img className="h-5" src={shareButtonImage} />
+                        </div>
+                    </button>
+                    <a className="inline-block" target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps?q=${quest?.location.coordinates[1]},${quest?.location.coordinates[0]}`}>
+                        <div className="flex items-center rounded-full border-1 border-sq-grey shadow-sm py-2 px-3">
+                            <img className="h-5" src={googleMapsImage}></img><p className="ml-2 text-sm">Get Directions</p>
+                        </div>
+                    </a>
+                    
+                </div>
 
                 <hr className="border-sq-grey my-3"></hr>
 
