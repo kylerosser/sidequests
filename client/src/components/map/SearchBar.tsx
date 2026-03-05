@@ -92,7 +92,7 @@ export const SearchBar = () => {
                     />
                     {
                         loading ? 
-                        <Spinner/> : 
+                        <Spinner thickness={3}/> : 
                         <button className="cursor-pointer" onClick={() => setLoading(true)}>
                             <img className="w-6" src={searchImage} />
                         </button>
