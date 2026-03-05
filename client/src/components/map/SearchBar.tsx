@@ -99,7 +99,7 @@ export const SearchBar = () => {
                 }
             `}</style>
 
-            <div className="relative w-full sm:w-lg pointer-events-auto flex flex-col" style={{ height: '100%' }}>
+            <div className={`relative w-full sm:w-lg pointer-events-auto flex flex-col ${searchResults && 'h-full'}`}>
 
                 {/* Search bar */}
                 <form onSubmit={(e) => {
