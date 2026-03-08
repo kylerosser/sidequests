@@ -4,7 +4,7 @@ import path from "path";
 // Load JSON at module initialization
 const PLACES_FILE = path.resolve(__dirname, "places_data.json");
 
-interface Place {
+export interface Place {
   name: string;
   lat: number;
   lng: number;

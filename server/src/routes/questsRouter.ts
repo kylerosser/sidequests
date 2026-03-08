@@ -1,6 +1,5 @@
 import express, { Request, Response } from 'express';
 import { Types } from 'mongoose';
-import { z } from "zod"
 
 import { questsService, BBox } from '../services/questsService'
 import { parseNumber } from '../utils/routeUtils';
@@ -50,6 +49,23 @@ router.get("", async (req: Request, res: Response) => {
         });
     }
 });
+
+router.get("/search", async (req: Request, res: Response) => {
+    const { q } = req.query
+    try {
+        if (!q || typeof q !== 'string') return res.status(400).json({success: false, data: "Query must be present"});
+
+        const searchResults = await questsService.getSearchResultsForQuery(q);
+
+        return res.status(200).json({success: true, data: searchResults});
+    } catch(err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            data: "An unexpected error occurred",
+        });
+    }
+})
 
 // GET api/quests/:id
 // Retrieve a quest by id
