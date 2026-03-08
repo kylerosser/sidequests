@@ -3,7 +3,7 @@ import axios from "axios";
 import type { AxiosError } from "axios";
 
 import type { ApiResponse } from "../api/apiTypes";
-import type { CreateQuestBody } from "@shared/schemas/questSchemas"
+import type { CreateQuestBody, SearchQuestsResponse } from "@shared/schemas/questSchemas"
 
 export type CheckListItem = {
   title: string;
@@ -60,6 +60,22 @@ export const questsApi = {
                 return res.data;
             })
             .catch((error: Error | AxiosError): ApiResponse<Quest | string> => {
+                if (axios.isAxiosError(error) && error.response?.data) {
+                    return error.response.data as ApiResponse<string>;
+                }
+                return {
+                    success: false,
+                    data: "An unknown error occurred",
+                };
+            });
+    },
+    searchQuests: (query: string) => {
+        return api
+            .get<ApiResponse<SearchQuestsResponse | string>>(`/quests/search?q=${encodeURIComponent(query)}`)
+            .then((res) => {
+                return res.data;
+            })
+            .catch((error: Error | AxiosError): ApiResponse<SearchQuestsResponse | string> => {
                 if (axios.isAxiosError(error) && error.response?.data) {
                     return error.response.data as ApiResponse<string>;
                 }

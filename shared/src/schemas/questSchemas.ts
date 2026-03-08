@@ -47,3 +47,12 @@ export const CreateQuestBodySchema = z.object({
 })
 
 export type CreateQuestBody = z.infer<typeof CreateQuestBodySchema>
+
+
+export const SearchQuestsResponse = z.array(z.object({
+    title: z.string(),
+    preview: z.string(),
+    id: z.string()
+})).optional()
+
+export type SearchQuestsResponse = z.infer<typeof SearchQuestsResponse>

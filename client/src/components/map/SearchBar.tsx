@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import searchImage from '/search_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import closeImage from '/close_24dp_193E55_FILL0_wght400_GRAD0_opsz24.svg';
 import { Spinner } from '../common/Spinner';
+import { Link } from 'react-router-dom';
+import { questsApi } from '../../api/questsApi';
 
 const placeholderList = [
     'caving at Rangitoto',
@@ -35,7 +37,7 @@ const placeholderList = [
 type SearchResults = {
     title: string
     preview: string
-    url: string
+    id: string
 }[]
 
 export const SearchBar = () => {
@@ -70,16 +72,20 @@ export const SearchBar = () => {
         };
     }, []);
 
-    const onSearch = () => {
+    const onSearch = async () => {
         if (searchValue == '') return; //reject empty searches
         if (loading) return; //debounce loading state
 
         setLoading(true);
-        setTimeout(() => {
-            setDisplayedSearchQuery(searchValue);
-            setLoading(false);
-            setSearchResults([]) // todo: fetch from DB
-        }, 1000)
+
+        const searchQuestsResponse = await questsApi.searchQuests(searchValue)
+        if (searchQuestsResponse.success && typeof searchQuestsResponse.data !== 'string' && searchQuestsResponse.data) {
+            setSearchResults(searchQuestsResponse.data)
+        } else {
+            setSearchResults([])
+        }
+        setDisplayedSearchQuery(searchValue);
+        setLoading(false);
     }
 
     const onClearResults = () => {
@@ -159,10 +165,10 @@ export const SearchBar = () => {
                             >
                                 <p className="px-6 text-sm mb-2 text-sq-dark">Showing results for <span className="font-italic font-semibold">{displayedSearchQuery}</span></p>
                                 {searchResults.map((searchResult) => {
-                                    return <div className="px-6 border-t-1 border-sq-grey py-3 cursor-pointer hover:bg-gray-100" key={searchResult.url}>
+                                    return <Link to={`/quests/${searchResult.id}`}><div className="px-6 border-t-1 border-sq-grey py-3 cursor-pointer hover:bg-gray-100" key={searchResult.id}>
                                         <h1 className="font-bold">{searchResult.title}</h1>
                                         <p className="text-sm">{searchResult.preview}</p>
-                                    </div>
+                                    </div></Link>
                                 })}
                                 <hr className=" px-6 border-t-1 border-sq-grey" />
 

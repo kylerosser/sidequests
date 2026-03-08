@@ -37,7 +37,6 @@ export const questsService = {
     getSearchResultsForQuery: async (query: string) => {
         // Generate ngrams from query
         const ngrams = generateNgrams(query)
-        console.log(ngrams)
 
         // construct a list of places (lat/long/radius coords) that match ngrams in the query
         const placeMatches: Place[] = []
@@ -55,7 +54,6 @@ export const questsService = {
                 return [] // fatal, auckland doesnt exist for whatever reason
             }
         }
-        console.log(placeMatches) // DEBUG
 
         // Query all quests within the matching places
         const EARTH_RADIUS_KM = 6378.1;
