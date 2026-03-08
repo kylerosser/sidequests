@@ -1,0 +1,5264 @@
+{
+  "reefton": {
+    "name": "Reefton",
+    "lat": -42.116786,
+    "lng": 171.862062,
+    "radiusKm": 12
+  },
+  "waverley": {
+    "name": "Waverley",
+    "lat": -46.387602,
+    "lng": 168.384035,
+    "radiusKm": 6
+  },
+  "rockdale": {
+    "name": "Rockdale",
+    "lat": -46.423217,
+    "lng": 168.393642,
+    "radiusKm": 6
+  },
+  "west gore": {
+    "name": "West Gore",
+    "lat": -46.107188,
+    "lng": 168.932213,
+    "radiusKm": 6
+  },
+  "gore": {
+    "name": "Gore",
+    "lat": -46.096117,
+    "lng": 168.943912,
+    "radiusKm": 12
+  },
+  "makarewa": {
+    "name": "Makarewa",
+    "lat": -46.332249,
+    "lng": 168.347412,
+    "radiusKm": 12
+  },
+  "makerewa township": {
+    "name": "Makerewa Township",
+    "lat": -46.332249,
+    "lng": 168.347412,
+    "radiusKm": 12
+  },
+  "riverton": {
+    "name": "Riverton",
+    "lat": -46.352586,
+    "lng": 168.015392,
+    "radiusKm": 12
+  },
+  "waikiwi": {
+    "name": "Waikiwi",
+    "lat": -46.377128,
+    "lng": 168.353334,
+    "radiusKm": 6
+  },
+  "avenal": {
+    "name": "Avenal",
+    "lat": -46.396831,
+    "lng": 168.347258,
+    "radiusKm": 6
+  },
+  "georgetown": {
+    "name": "Georgetown",
+    "lat": -46.42011,
+    "lng": 168.368652,
+    "radiusKm": 6
+  },
+  "gladstone": {
+    "name": "Gladstone",
+    "lat": -46.392692,
+    "lng": 168.354036,
+    "radiusKm": 6
+  },
+  "glengarry": {
+    "name": "Glengarry",
+    "lat": -46.398924,
+    "lng": 168.374936,
+    "radiusKm": 6
+  },
+  "hawthorndale": {
+    "name": "Hawthorndale",
+    "lat": -46.4098,
+    "lng": 168.386065,
+    "radiusKm": 6
+  },
+  "invercargill": {
+    "name": "Invercargill",
+    "lat": -46.428681,
+    "lng": 168.361596,
+    "radiusKm": 25
+  },
+  "kew": {
+    "name": "Kew",
+    "lat": -46.436579,
+    "lng": 168.355424,
+    "radiusKm": 6
+  },
+  "rosedale": {
+    "name": "Rosedale",
+    "lat": -46.390544,
+    "lng": 168.367263,
+    "radiusKm": 6
+  },
+  "strathern": {
+    "name": "Strathern",
+    "lat": -46.431215,
+    "lng": 168.36553,
+    "radiusKm": 6
+  },
+  "windsor": {
+    "name": "Windsor",
+    "lat": -46.401607,
+    "lng": 168.364617,
+    "radiusKm": 6
+  },
+  "west invercargill": {
+    "name": "West Invercargill",
+    "lat": -46.408952,
+    "lng": 168.32258,
+    "radiusKm": 6
+  },
+  "west end": {
+    "name": "West End",
+    "lat": -46.599779,
+    "lng": 168.326683,
+    "radiusKm": 6
+  },
+  "challis": {
+    "name": "Challis",
+    "lat": -45.880931,
+    "lng": 170.565645,
+    "radiusKm": 6
+  },
+  "clyde hill": {
+    "name": "Clyde Hill",
+    "lat": -45.890529,
+    "lng": 170.482892,
+    "radiusKm": 6
+  },
+  "mosgiel": {
+    "name": "Mosgiel",
+    "lat": -45.875435,
+    "lng": 170.34764,
+    "radiusKm": 12
+  },
+  "ocean grove": {
+    "name": "Ocean Grove",
+    "lat": -45.904188,
+    "lng": 170.544436,
+    "radiusKm": 6
+  },
+  "st clair park": {
+    "name": "St Clair Park",
+    "lat": -45.911021,
+    "lng": 170.479743,
+    "radiusKm": 6
+  },
+  "abbotsford": {
+    "name": "Abbotsford",
+    "lat": -45.897489,
+    "lng": 170.424875,
+    "radiusKm": 6
+  },
+  "kaikorai": {
+    "name": "Kaikorai",
+    "lat": -45.864991,
+    "lng": 170.479683,
+    "radiusKm": 6
+  },
+  "maori hill": {
+    "name": "Maori Hill",
+    "lat": -45.858307,
+    "lng": 170.502438,
+    "radiusKm": 6
+  },
+  "north dunedin": {
+    "name": "North Dunedin",
+    "lat": -45.863023,
+    "lng": 170.516006,
+    "radiusKm": 6
+  },
+  "shiel hill": {
+    "name": "Shiel Hill",
+    "lat": -45.889992,
+    "lng": 170.53756,
+    "radiusKm": 6
+  },
+  "south dunedin": {
+    "name": "South Dunedin",
+    "lat": -45.896819,
+    "lng": 170.496855,
+    "radiusKm": 6
+  },
+  "maia": {
+    "name": "Maia",
+    "lat": -45.861864,
+    "lng": 170.563852,
+    "radiusKm": 6
+  },
+  "tainui": {
+    "name": "Tainui",
+    "lat": -45.902711,
+    "lng": 170.521165,
+    "radiusKm": 6
+  },
+  "andersons bay": {
+    "name": "Andersons Bay",
+    "lat": -45.894758,
+    "lng": 170.528333,
+    "radiusKm": 6
+  },
+  "belleknowes": {
+    "name": "Belleknowes",
+    "lat": -45.875855,
+    "lng": 170.474959,
+    "radiusKm": 6
+  },
+  "bradford": {
+    "name": "Bradford",
+    "lat": -45.874429,
+    "lng": 170.471261,
+    "radiusKm": 6
+  },
+  "caversham": {
+    "name": "Caversham",
+    "lat": -45.896618,
+    "lng": 170.479403,
+    "radiusKm": 6
+  },
+  "concord": {
+    "name": "Concord",
+    "lat": -45.904176,
+    "lng": 170.46113,
+    "radiusKm": 6
+  },
+  "corstorphine": {
+    "name": "Corstorphine",
+    "lat": -45.900422,
+    "lng": 170.470463,
+    "radiusKm": 6
+  },
+  "dunedin": {
+    "name": "Dunedin",
+    "lat": -45.874332,
+    "lng": 170.503483,
+    "radiusKm": 25
+  },
+  "liberton": {
+    "name": "Liberton",
+    "lat": -45.845247,
+    "lng": 170.518484,
+    "radiusKm": 6
+  },
+  "normanby": {
+    "name": "Normanby",
+    "lat": -45.843344,
+    "lng": 170.545069,
+    "radiusKm": 6
+  },
+  "opoho": {
+    "name": "Opoho",
+    "lat": -45.854455,
+    "lng": 170.529971,
+    "radiusKm": 6
+  },
+  "pine hill": {
+    "name": "Pine Hill",
+    "lat": -45.83941,
+    "lng": 170.522458,
+    "radiusKm": 6
+  },
+  "sunnyvale": {
+    "name": "Sunnyvale",
+    "lat": -45.900506,
+    "lng": 170.418831,
+    "radiusKm": 6
+  },
+  "woodhaugh": {
+    "name": "Woodhaugh",
+    "lat": -45.852024,
+    "lng": 170.505379,
+    "radiusKm": 6
+  },
+  "vauxhall": {
+    "name": "Vauxhall",
+    "lat": -45.888643,
+    "lng": 170.525463,
+    "radiusKm": 6
+  },
+  "arrowtown": {
+    "name": "Arrowtown",
+    "lat": -44.942665,
+    "lng": 168.829754,
+    "radiusKm": 12
+  },
+  "otematata": {
+    "name": "Otematata",
+    "lat": -44.604282,
+    "lng": 170.191995,
+    "radiusKm": 12
+  },
+  "haast beach": {
+    "name": "Haast Beach",
+    "lat": -43.864341,
+    "lng": 168.996726,
+    "radiusKm": 12
+  },
+  "haast": {
+    "name": "Haast",
+    "lat": -43.880989,
+    "lng": 169.039754,
+    "radiusKm": 12
+  },
+  "manukau city centre": {
+    "name": "Manukau City Centre",
+    "lat": -36.991651,
+    "lng": 174.881105,
+    "radiusKm": 6
+  },
+  "east tamaki heights": {
+    "name": "East T\u0101maki Heights",
+    "lat": -36.943076,
+    "lng": 174.914388,
+    "radiusKm": 6
+  },
+  "mangere east": {
+    "name": "M\u0101ngere East",
+    "lat": -36.971745,
+    "lng": 174.818382,
+    "radiusKm": 6
+  },
+  "east tamaki": {
+    "name": "East T\u0101maki",
+    "lat": -36.953469,
+    "lng": 174.886554,
+    "radiusKm": 6
+  },
+  "favona": {
+    "name": "Favona",
+    "lat": -36.949001,
+    "lng": 174.809119,
+    "radiusKm": 6
+  },
+  "woodlands park": {
+    "name": "Woodlands Park",
+    "lat": -36.949389,
+    "lng": 174.630935,
+    "radiusKm": 6
+  },
+  "waima": {
+    "name": "Waim\u0101",
+    "lat": -36.940181,
+    "lng": 174.637908,
+    "radiusKm": 6
+  },
+  "waihi": {
+    "name": "Waihi",
+    "lat": -37.392913,
+    "lng": 175.831634,
+    "radiusKm": 12
+  },
+  "tuakau": {
+    "name": "Tuakau",
+    "lat": -37.258545,
+    "lng": 174.945097,
+    "radiusKm": 12
+  },
+  "balclutha": {
+    "name": "Balclutha",
+    "lat": -46.238423,
+    "lng": 169.739136,
+    "radiusKm": 12
+  },
+  "owaka": {
+    "name": "Owaka",
+    "lat": -46.451992,
+    "lng": 169.660534,
+    "radiusKm": 12
+  },
+  "wanaka": {
+    "name": "W\u0101naka",
+    "lat": -44.701203,
+    "lng": 169.130142,
+    "radiusKm": 12
+  },
+  "stoke": {
+    "name": "Stoke",
+    "lat": -41.316616,
+    "lng": 173.2322,
+    "radiusKm": 12
+  },
+  "tahunanui": {
+    "name": "T\u0101hunanui",
+    "lat": -41.286074,
+    "lng": 173.247379,
+    "radiusKm": 6
+  },
+  "monaco": {
+    "name": "Monaco",
+    "lat": -41.304702,
+    "lng": 173.209275,
+    "radiusKm": 6
+  },
+  "maitlands": {
+    "name": "Maitlands",
+    "lat": -41.308748,
+    "lng": 173.241327,
+    "radiusKm": 6
+  },
+  "annesbrook": {
+    "name": "Annesbrook",
+    "lat": -41.298585,
+    "lng": 173.244848,
+    "radiusKm": 6
+  },
+  "totara heights": {
+    "name": "Totara Heights",
+    "lat": -37.164597,
+    "lng": 175.561211,
+    "radiusKm": 6
+  },
+  "moanataiari": {
+    "name": "Moanataiari",
+    "lat": -37.126752,
+    "lng": 175.533479,
+    "radiusKm": 6
+  },
+  "rivertonaparima": {
+    "name": "Riverton/Aparima",
+    "lat": -46.352586,
+    "lng": 168.015392,
+    "radiusKm": 12
+  },
+  "oraka": {
+    "name": "Oraka",
+    "lat": -46.362234,
+    "lng": 167.875734,
+    "radiusKm": 12
+  },
+  "bluff": {
+    "name": "Bluff",
+    "lat": -46.600599,
+    "lng": 168.340506,
+    "radiusKm": 12
+  },
+  "grasmere": {
+    "name": "Grasmere",
+    "lat": -46.383044,
+    "lng": 168.336381,
+    "radiusKm": 6
+  },
+  "kingswell": {
+    "name": "Kingswell",
+    "lat": -46.443052,
+    "lng": 168.3682,
+    "radiusKm": 6
+  },
+  "newfield": {
+    "name": "Newfield",
+    "lat": -46.419839,
+    "lng": 168.385463,
+    "radiusKm": 6
+  },
+  "pembroke": {
+    "name": "Pembroke",
+    "lat": -44.701203,
+    "lng": 169.130142,
+    "radiusKm": 12
+  },
+  "east gore": {
+    "name": "East Gore",
+    "lat": -46.098218,
+    "lng": 168.955068,
+    "radiusKm": 6
+  },
+  "motuopa": {
+    "name": "Motuopa",
+    "lat": -38.932922,
+    "lng": 175.874345,
+    "radiusKm": 12
+  },
+  "st andrews": {
+    "name": "St Andrews",
+    "lat": -37.750863,
+    "lng": 175.253454,
+    "radiusKm": 6
+  },
+  "melville": {
+    "name": "Melville",
+    "lat": -37.812394,
+    "lng": 175.277492,
+    "radiusKm": 6
+  },
+  "hillcrest": {
+    "name": "Hillcrest",
+    "lat": -37.795,
+    "lng": 175.31162,
+    "radiusKm": 6
+  },
+  "nawton": {
+    "name": "Nawton",
+    "lat": -37.77875,
+    "lng": 175.236916,
+    "radiusKm": 6
+  },
+  "glenview": {
+    "name": "Glenview",
+    "lat": -37.820697,
+    "lng": 175.287373,
+    "radiusKm": 6
+  },
+  "chartwell": {
+    "name": "Chartwell",
+    "lat": -37.755299,
+    "lng": 175.281733,
+    "radiusKm": 6
+  },
+  "chedworth": {
+    "name": "Chedworth",
+    "lat": -37.750753,
+    "lng": 175.287333,
+    "radiusKm": 6
+  },
+  "pukete": {
+    "name": "Pukete",
+    "lat": -37.741489,
+    "lng": 175.240249,
+    "radiusKm": 6
+  },
+  "silverdale": {
+    "name": "Silverdale",
+    "lat": -37.787656,
+    "lng": 175.330499,
+    "radiusKm": 6
+  },
+  "whitiora": {
+    "name": "Whitiora",
+    "lat": -37.777539,
+    "lng": 175.270399,
+    "radiusKm": 6
+  },
+  "huntly west": {
+    "name": "Huntly West",
+    "lat": -37.554626,
+    "lng": 175.146836,
+    "radiusKm": 6
+  },
+  "westmere": {
+    "name": "Westmere",
+    "lat": -37.576191,
+    "lng": 175.145819,
+    "radiusKm": 6
+  },
+  "huntly": {
+    "name": "Huntly",
+    "lat": -37.559519,
+    "lng": 175.160456,
+    "radiusKm": 12
+  },
+  "taupahi": {
+    "name": "Taupahi",
+    "lat": -38.988512,
+    "lng": 175.809555,
+    "radiusKm": 12
+  },
+  "turangi": {
+    "name": "T\u016brangi",
+    "lat": -38.988512,
+    "lng": 175.809555,
+    "radiusKm": 12
+  },
+  "brooklands": {
+    "name": "Brooklands",
+    "lat": -41.25307,
+    "lng": 173.308269,
+    "radiusKm": 6
+  },
+  "nelson east": {
+    "name": "Nelson East",
+    "lat": -41.277833,
+    "lng": 173.29257,
+    "radiusKm": 6
+  },
+  "stepneyville": {
+    "name": "Stepneyville",
+    "lat": -41.268538,
+    "lng": 173.26911,
+    "radiusKm": 6
+  },
+  "beachville": {
+    "name": "Beachville",
+    "lat": -41.268039,
+    "lng": 173.274797,
+    "radiusKm": 6
+  },
+  "nelson south": {
+    "name": "Nelson South",
+    "lat": -41.284647,
+    "lng": 173.271353,
+    "radiusKm": 6
+  },
+  "toi toi": {
+    "name": "Toi Toi",
+    "lat": -41.280805,
+    "lng": 173.267901,
+    "radiusKm": 6
+  },
+  "mt cook": {
+    "name": "Mount Cook",
+    "lat": -43.735107,
+    "lng": 170.098209,
+    "radiusKm": 12
+  },
+  "mount cook": {
+    "name": "Mount Cook",
+    "lat": -43.735107,
+    "lng": 170.098209,
+    "radiusKm": 12
+  },
+  "riversdale": {
+    "name": "Riversdale",
+    "lat": -41.506094,
+    "lng": 173.966987,
+    "radiusKm": 6
+  },
+  "springlands": {
+    "name": "Springlands",
+    "lat": -41.509157,
+    "lng": 173.93415,
+    "radiusKm": 6
+  },
+  "roselands": {
+    "name": "Roselands",
+    "lat": -41.505819,
+    "lng": 173.926822,
+    "radiusKm": 6
+  },
+  "blenheim": {
+    "name": "Blenheim",
+    "lat": -41.512283,
+    "lng": 173.957892,
+    "radiusKm": 12
+  },
+  "burleigh": {
+    "name": "Burleigh",
+    "lat": -41.528741,
+    "lng": 173.931388,
+    "radiusKm": 6
+  },
+  "bridge hill": {
+    "name": "Bridge Hill",
+    "lat": -45.260967,
+    "lng": 169.383051,
+    "radiusKm": 6
+  },
+  "cromwell": {
+    "name": "Cromwell",
+    "lat": -45.043879,
+    "lng": 169.198349,
+    "radiusKm": 12
+  },
+  "calton hill": {
+    "name": "Calton Hill",
+    "lat": -45.898762,
+    "lng": 170.472841,
+    "radiusKm": 6
+  },
+  "lookout point": {
+    "name": "Lookout Point",
+    "lat": -45.89662,
+    "lng": 170.463508,
+    "radiusKm": 6
+  },
+  "burnside": {
+    "name": "Burnside",
+    "lat": -45.897399,
+    "lng": 170.454839,
+    "radiusKm": 6
+  },
+  "helensbrook": {
+    "name": "Helensbrook",
+    "lat": -46.10927,
+    "lng": 169.973517,
+    "radiusKm": 6
+  },
+  "kensington": {
+    "name": "Kensington",
+    "lat": -45.890662,
+    "lng": 170.493071,
+    "radiusKm": 6
+  },
+  "waitara": {
+    "name": "Waitara",
+    "lat": -38.996984,
+    "lng": 174.231254,
+    "radiusKm": 12
+  },
+  "te whaitaranuiawharematangikitekimiitanamatuaangarue": {
+    "name": "Te Whai-taranui-a-Whare-Matangi-ki-te-kimi-i-tana-matua-a-Ngarue",
+    "lat": -38.996984,
+    "lng": 174.231254,
+    "radiusKm": 12
+  },
+  "inglewood": {
+    "name": "Inglewood",
+    "lat": -39.156066,
+    "lng": 174.2073,
+    "radiusKm": 12
+  },
+  "stratford": {
+    "name": "Stratford",
+    "lat": -39.340894,
+    "lng": 174.284468,
+    "radiusKm": 12
+  },
+  "red hill": {
+    "name": "Red Hill",
+    "lat": -37.06869,
+    "lng": 174.974,
+    "radiusKm": 6
+  },
+  "pukekohe": {
+    "name": "Pukekohe",
+    "lat": -37.203057,
+    "lng": 174.904307,
+    "radiusKm": 12
+  },
+  "pahurehure": {
+    "name": "Pahurehure",
+    "lat": -37.067529,
+    "lng": 174.931131,
+    "radiusKm": 6
+  },
+  "flat bush": {
+    "name": "Flat Bush",
+    "lat": -36.966248,
+    "lng": 174.914403,
+    "radiusKm": 12
+  },
+  "wai o taiki bay": {
+    "name": "Wai o Taiki Bay",
+    "lat": -36.87366,
+    "lng": 174.875963,
+    "radiusKm": 6
+  },
+  "birkenhead": {
+    "name": "Birkenhead",
+    "lat": -36.80968,
+    "lng": 174.72203,
+    "radiusKm": 6
+  },
+  "chatswood": {
+    "name": "Chatswood",
+    "lat": -36.819382,
+    "lng": 174.709836,
+    "radiusKm": 6
+  },
+  "hauraki": {
+    "name": "Hauraki",
+    "lat": -36.799474,
+    "lng": 174.776642,
+    "radiusKm": 6
+  },
+  "northcote point": {
+    "name": "Northcote Point",
+    "lat": -36.814541,
+    "lng": 174.745245,
+    "radiusKm": 6
+  },
+  "northcross": {
+    "name": "Northcross",
+    "lat": -36.709537,
+    "lng": 174.72803,
+    "radiusKm": 6
+  },
+  "stanley point": {
+    "name": "Stanley Point",
+    "lat": -36.826404,
+    "lng": 174.783992,
+    "radiusKm": 6
+  },
+  "waiake": {
+    "name": "Waiake",
+    "lat": -36.70742,
+    "lng": 174.749653,
+    "radiusKm": 6
+  },
+  "remuwera": {
+    "name": "Remuwera",
+    "lat": -36.876675,
+    "lng": 174.797502,
+    "radiusKm": 6
+  },
+  "balmoral": {
+    "name": "Balmoral",
+    "lat": -36.889472,
+    "lng": 174.748,
+    "radiusKm": 6
+  },
+  "herne bay": {
+    "name": "Herne Bay",
+    "lat": -36.846664,
+    "lng": 174.725657,
+    "radiusKm": 6
+  },
+  "northcote": {
+    "name": "Northcote",
+    "lat": -36.803058,
+    "lng": 174.745497,
+    "radiusKm": 6
+  },
+  "campbells bay": {
+    "name": "Campbells Bay",
+    "lat": -36.748196,
+    "lng": 174.756819,
+    "radiusKm": 6
+  },
+  "highland park": {
+    "name": "Highland Park",
+    "lat": -36.899961,
+    "lng": 174.906815,
+    "radiusKm": 6
+  },
+  "hillsborough": {
+    "name": "Hillsborough",
+    "lat": -36.921372,
+    "lng": 174.755555,
+    "radiusKm": 6
+  },
+  "kingsland": {
+    "name": "Kingsland",
+    "lat": -36.872324,
+    "lng": 174.741144,
+    "radiusKm": 6
+  },
+  "newton": {
+    "name": "Newton",
+    "lat": -36.864406,
+    "lng": 174.754789,
+    "radiusKm": 6
+  },
+  "royal oak": {
+    "name": "Royal Oak",
+    "lat": -36.910514,
+    "lng": 174.77582,
+    "radiusKm": 6
+  },
+  "morningside": {
+    "name": "Morningside",
+    "lat": -36.877834,
+    "lng": 174.735206,
+    "radiusKm": 6
+  },
+  "devonport": {
+    "name": "Devonport",
+    "lat": -36.829742,
+    "lng": 174.797682,
+    "radiusKm": 6
+  },
+  "masseybirdwood": {
+    "name": "Massey-Birdwood",
+    "lat": -36.843272,
+    "lng": 174.6128,
+    "radiusKm": 6
+  },
+  "mclaren park": {
+    "name": "McLaren Park",
+    "lat": -36.897942,
+    "lng": 174.618354,
+    "radiusKm": 6
+  },
+  "stonefields": {
+    "name": "Stonefields",
+    "lat": -36.887365,
+    "lng": 174.839717,
+    "radiusKm": 6
+  },
+  "remuera": {
+    "name": "Remuera",
+    "lat": -36.876675,
+    "lng": 174.797502,
+    "radiusKm": 6
+  },
+  "auckland": {
+    "name": "Auckland",
+    "lat": -36.852472,
+    "lng": 174.76225,
+    "radiusKm": 100
+  },
+  "cheltenham": {
+    "name": "Cheltenham",
+    "lat": -36.826374,
+    "lng": 174.808273,
+    "radiusKm": 6
+  },
+  "mt wellington": {
+    "name": "Mount Wellington",
+    "lat": -36.911804,
+    "lng": 174.838024,
+    "radiusKm": 6
+  },
+  "mount wellington": {
+    "name": "Mount Wellington",
+    "lat": -36.911804,
+    "lng": 174.838024,
+    "radiusKm": 6
+  },
+  "sandringham": {
+    "name": "Sandringham",
+    "lat": -36.893142,
+    "lng": 174.736374,
+    "radiusKm": 6
+  },
+  "arch hill": {
+    "name": "Arch Hill",
+    "lat": -36.866686,
+    "lng": 174.744162,
+    "radiusKm": 6
+  },
+  "avondale": {
+    "name": "Avondale",
+    "lat": -36.895667,
+    "lng": 174.696839,
+    "radiusKm": 6
+  },
+  "glendene": {
+    "name": "Glendene",
+    "lat": -36.891766,
+    "lng": 174.650911,
+    "radiusKm": 6
+  },
+  "waterview": {
+    "name": "Waterview",
+    "lat": -36.877932,
+    "lng": 174.698872,
+    "radiusKm": 6
+  },
+  "mechanics bay": {
+    "name": "Mechanics Bay",
+    "lat": -36.847676,
+    "lng": 174.783574,
+    "radiusKm": 6
+  },
+  "mangere bridge": {
+    "name": "M\u0101ngere Bridge",
+    "lat": -36.94475,
+    "lng": 174.777333,
+    "radiusKm": 6
+  },
+  "waiuku": {
+    "name": "Waiuku",
+    "lat": -37.250245,
+    "lng": 174.727223,
+    "radiusKm": 12
+  },
+  "manurewa": {
+    "name": "Manurewa",
+    "lat": -37.027482,
+    "lng": 174.880945,
+    "radiusKm": 6
+  },
+  "manurewa east": {
+    "name": "Manurewa East",
+    "lat": -37.023334,
+    "lng": 174.918633,
+    "radiusKm": 6
+  },
+  "middlemore": {
+    "name": "Middlemore",
+    "lat": -36.963821,
+    "lng": 174.839886,
+    "radiusKm": 6
+  },
+  "pokeno": {
+    "name": "P\u014dkeno",
+    "lat": -37.243407,
+    "lng": 175.017776,
+    "radiusKm": 12
+  },
+  "wattle downs": {
+    "name": "Wattle Downs",
+    "lat": -37.047364,
+    "lng": 174.889365,
+    "radiusKm": 6
+  },
+  "weymouth": {
+    "name": "Weymouth",
+    "lat": -37.04683,
+    "lng": 174.863503,
+    "radiusKm": 6
+  },
+  "conifer grove": {
+    "name": "Conifer Grove",
+    "lat": -37.051434,
+    "lng": 174.907164,
+    "radiusKm": 6
+  },
+  "hillpark": {
+    "name": "Hillpark",
+    "lat": -37.016878,
+    "lng": 174.901447,
+    "radiusKm": 6
+  },
+  "bastia hill": {
+    "name": "Bastia Hill",
+    "lat": -39.929587,
+    "lng": 175.062671,
+    "radiusKm": 6
+  },
+  "whanganui": {
+    "name": "Whanganui",
+    "lat": -39.933041,
+    "lng": 175.027947,
+    "radiusKm": 25
+  },
+  "saint johns hill": {
+    "name": "Saint Johns Hill",
+    "lat": -39.922829,
+    "lng": 175.026364,
+    "radiusKm": 6
+  },
+  "springvale": {
+    "name": "Springvale",
+    "lat": -39.925896,
+    "lng": 175.016191,
+    "radiusKm": 6
+  },
+  "east end": {
+    "name": "East End",
+    "lat": -39.048597,
+    "lng": 174.096463,
+    "radiusKm": 6
+  },
+  "fitzroy": {
+    "name": "Fitzroy",
+    "lat": -39.050728,
+    "lng": 174.102764,
+    "radiusKm": 6
+  },
+  "merrilands": {
+    "name": "Merrilands",
+    "lat": -39.067445,
+    "lng": 174.100879,
+    "radiusKm": 6
+  },
+  "moturoa": {
+    "name": "Moturoa",
+    "lat": -39.064383,
+    "lng": 174.04079,
+    "radiusKm": 6
+  },
+  "new plymouth": {
+    "name": "New Plymouth",
+    "lat": -39.056023,
+    "lng": 174.083182,
+    "radiusKm": 25
+  },
+  "whalers gate": {
+    "name": "Whalers Gate",
+    "lat": -39.085331,
+    "lng": 174.034541,
+    "radiusKm": 6
+  },
+  "maraenui": {
+    "name": "Maraenui",
+    "lat": -39.515775,
+    "lng": 176.904743,
+    "radiusKm": 6
+  },
+  "onekawa": {
+    "name": "Onekawa",
+    "lat": -39.507804,
+    "lng": 176.892281,
+    "radiusKm": 6
+  },
+  "te awa": {
+    "name": "Te Awa",
+    "lat": -39.511093,
+    "lng": 176.91149,
+    "radiusKm": 6
+  },
+  "hampden": {
+    "name": "Hampden",
+    "lat": -41.800343,
+    "lng": 172.325805,
+    "radiusKm": 12
+  },
+  "totara park": {
+    "name": "T\u014dtara Park",
+    "lat": -41.107864,
+    "lng": 175.084992,
+    "radiusKm": 6
+  },
+  "birchville": {
+    "name": "Birchville",
+    "lat": -41.096187,
+    "lng": 175.100733,
+    "radiusKm": 6
+  },
+  "riverstone terraces": {
+    "name": "Riverstone Terraces",
+    "lat": -41.112914,
+    "lng": 175.041442,
+    "radiusKm": 6
+  },
+  "avalon": {
+    "name": "Avalon",
+    "lat": -41.198813,
+    "lng": 174.939551,
+    "radiusKm": 6
+  },
+  "brown owl": {
+    "name": "Brown Owl",
+    "lat": -41.101955,
+    "lng": 175.096036,
+    "radiusKm": 6
+  },
+  "timberlea": {
+    "name": "Timberlea",
+    "lat": -41.105259,
+    "lng": 175.104047,
+    "radiusKm": 6
+  },
+  "wainuiomata": {
+    "name": "Wainuiomata",
+    "lat": -41.261005,
+    "lng": 174.945306,
+    "radiusKm": 12
+  },
+  "wallaceville": {
+    "name": "Wallaceville",
+    "lat": -41.131257,
+    "lng": 175.063038,
+    "radiusKm": 6
+  },
+  "heretaunga": {
+    "name": "Heretaunga",
+    "lat": -41.143322,
+    "lng": 175.019547,
+    "radiusKm": 6
+  },
+  "manor park": {
+    "name": "Manor Park",
+    "lat": -41.159049,
+    "lng": 174.977131,
+    "radiusKm": 6
+  },
+  "maoribank": {
+    "name": "Maoribank",
+    "lat": -41.112177,
+    "lng": 175.099191,
+    "radiusKm": 6
+  },
+  "upper hutt": {
+    "name": "Upper Hutt",
+    "lat": -41.12454,
+    "lng": 175.06898,
+    "radiusKm": 12
+  },
+  "katikati": {
+    "name": "Katikati",
+    "lat": -37.551748,
+    "lng": 175.917968,
+    "radiusKm": 12
+  },
+  "judea": {
+    "name": "Judea",
+    "lat": -37.698177,
+    "lng": 176.136143,
+    "radiusKm": 6
+  },
+  "te puke": {
+    "name": "Te Puke",
+    "lat": -37.785119,
+    "lng": 176.319316,
+    "radiusKm": 12
+  },
+  "gate pa": {
+    "name": "Gate Pa",
+    "lat": -37.713946,
+    "lng": 176.132905,
+    "radiusKm": 6
+  },
+  "opunake": {
+    "name": "\u014cpunake",
+    "lat": -39.454409,
+    "lng": 173.859318,
+    "radiusKm": 12
+  },
+  "sunshine": {
+    "name": "Sunshine",
+    "lat": -45.895673,
+    "lng": 170.518723,
+    "radiusKm": 6
+  },
+  "meadowbank": {
+    "name": "Meadowbank",
+    "lat": -45.079939,
+    "lng": 170.97877,
+    "radiusKm": 6
+  },
+  "halfway bush": {
+    "name": "Halfway Bush",
+    "lat": -45.85587,
+    "lng": 170.468137,
+    "radiusKm": 6
+  },
+  "roslyn": {
+    "name": "Roslyn",
+    "lat": -45.866779,
+    "lng": 170.48985,
+    "radiusKm": 6
+  },
+  "waimate": {
+    "name": "Waimate",
+    "lat": -44.732809,
+    "lng": 171.047135,
+    "radiusKm": 12
+  },
+  "lowry bay": {
+    "name": "Lowry Bay",
+    "lat": -41.256611,
+    "lng": 174.914359,
+    "radiusKm": 6
+  },
+  "harbour view": {
+    "name": "Harbour View",
+    "lat": -41.201136,
+    "lng": 174.897753,
+    "radiusKm": 6
+  },
+  "waiwhetu": {
+    "name": "Waiwhet\u016b",
+    "lat": -41.221416,
+    "lng": 174.912396,
+    "radiusKm": 6
+  },
+  "waiwetu": {
+    "name": "Waiwetu",
+    "lat": -41.221416,
+    "lng": 174.912396,
+    "radiusKm": 6
+  },
+  "aotea": {
+    "name": "Aotea",
+    "lat": -41.131085,
+    "lng": 174.849848,
+    "radiusKm": 6
+  },
+  "ascot park": {
+    "name": "Ascot Park",
+    "lat": -41.119459,
+    "lng": 174.872987,
+    "radiusKm": 6
+  },
+  "camborne": {
+    "name": "Camborne",
+    "lat": -41.088588,
+    "lng": 174.877159,
+    "radiusKm": 6
+  },
+  "porirua east": {
+    "name": "Porirua East",
+    "lat": -41.140505,
+    "lng": 174.865533,
+    "radiusKm": 6
+  },
+  "titahi bay": {
+    "name": "T\u012btahi Bay",
+    "lat": -41.105142,
+    "lng": 174.844952,
+    "radiusKm": 6
+  },
+  "ranui": {
+    "name": "R\u0101nui",
+    "lat": -41.144132,
+    "lng": 174.850578,
+    "radiusKm": 6
+  },
+  "days bay": {
+    "name": "Days Bay",
+    "lat": -41.279379,
+    "lng": 174.908675,
+    "radiusKm": 6
+  },
+  "eastbourne": {
+    "name": "Eastbourne",
+    "lat": -41.293895,
+    "lng": 174.894766,
+    "radiusKm": 6
+  },
+  "korokoro": {
+    "name": "Korokoro",
+    "lat": -41.211836,
+    "lng": 174.867216,
+    "radiusKm": 6
+  },
+  "point howard": {
+    "name": "Point Howard",
+    "lat": -41.252181,
+    "lng": 174.906858,
+    "radiusKm": 6
+  },
+  "york bay": {
+    "name": "York Bay",
+    "lat": -41.262554,
+    "lng": 174.911822,
+    "radiusKm": 6
+  },
+  "johnsonville": {
+    "name": "Johnsonville",
+    "lat": -41.224345,
+    "lng": 174.803643,
+    "radiusKm": 6
+  },
+  "rangoon heights": {
+    "name": "Rangoon Heights",
+    "lat": -41.242646,
+    "lng": 174.800976,
+    "radiusKm": 6
+  },
+  "glenside": {
+    "name": "Glenside",
+    "lat": -41.203818,
+    "lng": 174.815841,
+    "radiusKm": 6
+  },
+  "gracefield": {
+    "name": "Gracefield",
+    "lat": -41.239296,
+    "lng": 174.913288,
+    "radiusKm": 6
+  },
+  "grenada north": {
+    "name": "Grenada North",
+    "lat": -41.186701,
+    "lng": 174.836037,
+    "radiusKm": 6
+  },
+  "moera": {
+    "name": "Moera",
+    "lat": -41.227988,
+    "lng": 174.903604,
+    "radiusKm": 6
+  },
+  "paparangi": {
+    "name": "Paparangi",
+    "lat": -41.218241,
+    "lng": 174.816778,
+    "radiusKm": 6
+  },
+  "woburn": {
+    "name": "Woburn",
+    "lat": -41.220723,
+    "lng": 174.905676,
+    "radiusKm": 6
+  },
+  "tirohanga": {
+    "name": "Tirohanga",
+    "lat": -41.197391,
+    "lng": 174.906181,
+    "radiusKm": 6
+  },
+  "churton park": {
+    "name": "Churton Park",
+    "lat": -41.202794,
+    "lng": 174.805374,
+    "radiusKm": 6
+  },
+  "hokowhitu": {
+    "name": "Hokowhitu",
+    "lat": -40.360315,
+    "lng": 175.626271,
+    "radiusKm": 6
+  },
+  "masterton": {
+    "name": "Masterton",
+    "lat": -40.951878,
+    "lng": 175.661296,
+    "radiusKm": 12
+  },
+  "terrace end": {
+    "name": "Terrace End",
+    "lat": -40.349253,
+    "lng": 175.635187,
+    "radiusKm": 6
+  },
+  "washdyke": {
+    "name": "Washdyke",
+    "lat": -44.353498,
+    "lng": 171.249548,
+    "radiusKm": 6
+  },
+  "temuka": {
+    "name": "Temuka",
+    "lat": -44.234991,
+    "lng": 171.282748,
+    "radiusKm": 12
+  },
+  "fernhill": {
+    "name": "Fernhill",
+    "lat": -45.040221,
+    "lng": 168.633575,
+    "radiusKm": 6
+  },
+  "clifton": {
+    "name": "Clifton",
+    "lat": -46.452775,
+    "lng": 168.36592,
+    "radiusKm": 6
+  },
+  "appleby": {
+    "name": "Appleby",
+    "lat": -46.432331,
+    "lng": 168.356347,
+    "radiusKm": 6
+  },
+  "heidelberg": {
+    "name": "Heidelberg",
+    "lat": -46.430526,
+    "lng": 168.375279,
+    "radiusKm": 6
+  },
+  "richmond": {
+    "name": "Richmond",
+    "lat": -46.411053,
+    "lng": 168.366286,
+    "radiusKm": 6
+  },
+  "tisbury": {
+    "name": "Tisbury",
+    "lat": -46.44447,
+    "lng": 168.399347,
+    "radiusKm": 6
+  },
+  "waihopai": {
+    "name": "Waihopai",
+    "lat": -46.381124,
+    "lng": 168.361584,
+    "radiusKm": 6
+  },
+  "the rocks": {
+    "name": "The Rocks",
+    "lat": -46.374556,
+    "lng": 168.02882,
+    "radiusKm": 6
+  },
+  "wanganui": {
+    "name": "Wanganui",
+    "lat": -39.933041,
+    "lng": 175.027947,
+    "radiusKm": 25
+  },
+  "parakai": {
+    "name": "Parakai",
+    "lat": -36.660441,
+    "lng": 174.43266,
+    "radiusKm": 12
+  },
+  "awapuni": {
+    "name": "Awapuni",
+    "lat": -38.668027,
+    "lng": 177.997526,
+    "radiusKm": 6
+  },
+  "gonville": {
+    "name": "Gonville",
+    "lat": -39.942286,
+    "lng": 175.021032,
+    "radiusKm": 6
+  },
+  "havelock north": {
+    "name": "Havelock North",
+    "lat": -39.669541,
+    "lng": 176.877198,
+    "radiusKm": 12
+  },
+  "napier south": {
+    "name": "Napier South",
+    "lat": -39.500125,
+    "lng": 176.91007,
+    "radiusKm": 6
+  },
+  "western spit": {
+    "name": "Western Spit",
+    "lat": -39.473426,
+    "lng": 176.879684,
+    "radiusKm": 6
+  },
+  "mahora": {
+    "name": "Mahora",
+    "lat": -39.626878,
+    "lng": 176.844419,
+    "radiusKm": 6
+  },
+  "st albans": {
+    "name": "St Albans",
+    "lat": -43.513333,
+    "lng": 172.636072,
+    "radiusKm": 6
+  },
+  "north new brighton": {
+    "name": "North New Brighton",
+    "lat": -43.492491,
+    "lng": 172.718723,
+    "radiusKm": 6
+  },
+  "sydenham": {
+    "name": "Sydenham",
+    "lat": -43.552163,
+    "lng": 172.641571,
+    "radiusKm": 6
+  },
+  "waimairi beach": {
+    "name": "Waimairi Beach",
+    "lat": -43.485014,
+    "lng": 172.722087,
+    "radiusKm": 6
+  },
+  "wainoni": {
+    "name": "Wainoni",
+    "lat": -43.519192,
+    "lng": 172.685545,
+    "radiusKm": 6
+  },
+  "richmond hill": {
+    "name": "Richmond Hill",
+    "lat": -43.57312,
+    "lng": 172.75457,
+    "radiusKm": 6
+  },
+  "aranui": {
+    "name": "Aranui",
+    "lat": -43.514746,
+    "lng": 172.707367,
+    "radiusKm": 6
+  },
+  "avonside": {
+    "name": "Avonside",
+    "lat": -43.522752,
+    "lng": 172.667396,
+    "radiusKm": 6
+  },
+  "bexley": {
+    "name": "Bexley",
+    "lat": -43.512485,
+    "lng": 172.720675,
+    "radiusKm": 6
+  },
+  "broomfield": {
+    "name": "Broomfield",
+    "lat": -43.529605,
+    "lng": 172.528737,
+    "radiusKm": 6
+  },
+  "cashmere": {
+    "name": "Cashmere",
+    "lat": -43.572054,
+    "lng": 172.629451,
+    "radiusKm": 6
+  },
+  "dallington": {
+    "name": "Dallington",
+    "lat": -43.511303,
+    "lng": 172.673229,
+    "radiusKm": 6
+  },
+  "hoon hay": {
+    "name": "Hoon Hay",
+    "lat": -43.568673,
+    "lng": 172.608612,
+    "radiusKm": 6
+  },
+  "huntsbury": {
+    "name": "Huntsbury",
+    "lat": -43.567876,
+    "lng": 172.652145,
+    "radiusKm": 6
+  },
+  "islington": {
+    "name": "Islington",
+    "lat": -43.542382,
+    "lng": 172.512684,
+    "radiusKm": 6
+  },
+  "mount pleasant": {
+    "name": "Mount Pleasant",
+    "lat": -43.564585,
+    "lng": 172.717515,
+    "radiusKm": 6
+  },
+  "mt pleasant": {
+    "name": "Mount Pleasant",
+    "lat": -43.564585,
+    "lng": 172.717515,
+    "radiusKm": 6
+  },
+  "redcliffs": {
+    "name": "Redcliffs",
+    "lat": -43.562383,
+    "lng": 172.736478,
+    "radiusKm": 6
+  },
+  "redwood": {
+    "name": "Redwood",
+    "lat": -43.476298,
+    "lng": 172.617519,
+    "radiusKm": 6
+  },
+  "shirley": {
+    "name": "Shirley",
+    "lat": -43.502843,
+    "lng": 172.659537,
+    "radiusKm": 6
+  },
+  "waltham": {
+    "name": "Waltham",
+    "lat": -43.550358,
+    "lng": 172.650811,
+    "radiusKm": 6
+  },
+  "rolleston": {
+    "name": "Rolleston",
+    "lat": -43.590709,
+    "lng": 172.378978,
+    "radiusKm": 12
+  },
+  "ngapuna": {
+    "name": "Ngapuna",
+    "lat": -38.144414,
+    "lng": 176.272868,
+    "radiusKm": 6
+  },
+  "pomare": {
+    "name": "Pomare",
+    "lat": -38.154198,
+    "lng": 176.22183,
+    "radiusKm": 6
+  },
+  "selwyn heights": {
+    "name": "Selwyn Heights",
+    "lat": -38.116805,
+    "lng": 176.221942,
+    "radiusKm": 6
+  },
+  "karoro": {
+    "name": "Karoro",
+    "lat": -42.473641,
+    "lng": 171.186236,
+    "radiusKm": 6
+  },
+  "greytown": {
+    "name": "Greytown",
+    "lat": -41.079888,
+    "lng": 175.460953,
+    "radiusKm": 12
+  },
+  "featherston": {
+    "name": "Featherston",
+    "lat": -41.116871,
+    "lng": 175.325796,
+    "radiusKm": 12
+  },
+  "boydtown": {
+    "name": "Boydtown",
+    "lat": -45.027792,
+    "lng": 168.662216,
+    "radiusKm": 6
+  },
+  "kaitaia": {
+    "name": "Kaitaia",
+    "lat": -35.112394,
+    "lng": 173.262655,
+    "radiusKm": 12
+  },
+  "ahipara": {
+    "name": "Ahipara",
+    "lat": -35.164346,
+    "lng": 173.15644,
+    "radiusKm": 12
+  },
+  "ashburton": {
+    "name": "Ashburton",
+    "lat": -43.905401,
+    "lng": 171.744818,
+    "radiusKm": 12
+  },
+  "gleniti": {
+    "name": "Gleniti",
+    "lat": -44.384321,
+    "lng": 171.191871,
+    "radiusKm": 6
+  },
+  "tinwald": {
+    "name": "Tinwald",
+    "lat": -43.919635,
+    "lng": 171.720825,
+    "radiusKm": 12
+  },
+  "mangawhai heads": {
+    "name": "Mangawhai Heads",
+    "lat": -36.099595,
+    "lng": 174.588823,
+    "radiusKm": 12
+  },
+  "kororareka": {
+    "name": "Koror\u0101reka",
+    "lat": -35.261263,
+    "lng": 174.122491,
+    "radiusKm": 12
+  },
+  "kaikoura": {
+    "name": "Kaik\u014dura",
+    "lat": -42.41071,
+    "lng": 173.686114,
+    "radiusKm": 12
+  },
+  "nolantown": {
+    "name": "Nolantown",
+    "lat": -39.583221,
+    "lng": 174.288314,
+    "radiusKm": 6
+  },
+  "turuturu": {
+    "name": "Turuturu",
+    "lat": -39.573533,
+    "lng": 174.274987,
+    "radiusKm": 6
+  },
+  "western heights": {
+    "name": "Western Heights",
+    "lat": -37.789427,
+    "lng": 175.231025,
+    "radiusKm": 6
+  },
+  "te awamutu": {
+    "name": "Te Awamutu",
+    "lat": -38.01028,
+    "lng": 175.323622,
+    "radiusKm": 12
+  },
+  "hamilton east": {
+    "name": "Hamilton East",
+    "lat": -37.792519,
+    "lng": 175.300224,
+    "radiusKm": 6
+  },
+  "cambridge": {
+    "name": "Cambridge",
+    "lat": -37.886444,
+    "lng": 175.444972,
+    "radiusKm": 12
+  },
+  "riverlea": {
+    "name": "Riverlea",
+    "lat": -37.807342,
+    "lng": 175.324812,
+    "radiusKm": 6
+  },
+  "hamilton lake": {
+    "name": "Hamilton Lake",
+    "lat": -37.801779,
+    "lng": 175.271953,
+    "radiusKm": 6
+  },
+  "deanwell": {
+    "name": "Deanwell",
+    "lat": -37.82147,
+    "lng": 175.276707,
+    "radiusKm": 6
+  },
+  "forest lake": {
+    "name": "Forest Lake",
+    "lat": -37.772876,
+    "lng": 175.252401,
+    "radiusKm": 6
+  },
+  "hamilton central": {
+    "name": "Hamilton Central",
+    "lat": -37.784523,
+    "lng": 175.277116,
+    "radiusKm": 6
+  },
+  "raglan": {
+    "name": "Raglan",
+    "lat": -37.799728,
+    "lng": 174.871112,
+    "radiusKm": 12
+  },
+  "moana": {
+    "name": "Moana",
+    "lat": -41.2793,
+    "lng": 173.253471,
+    "radiusKm": 6
+  },
+  "the wood": {
+    "name": "The Wood",
+    "lat": -41.268636,
+    "lng": 173.293846,
+    "radiusKm": 6
+  },
+  "bishopdale": {
+    "name": "Bishopdale",
+    "lat": -41.298945,
+    "lng": 173.268258,
+    "radiusKm": 6
+  },
+  "nelson": {
+    "name": "Nelson",
+    "lat": -41.273459,
+    "lng": 173.282347,
+    "radiusKm": 25
+  },
+  "wakatu": {
+    "name": "Wakatu",
+    "lat": -41.305371,
+    "lng": 173.243824,
+    "radiusKm": 6
+  },
+  "nayland": {
+    "name": "Nayland",
+    "lat": -41.304821,
+    "lng": 173.233864,
+    "radiusKm": 6
+  },
+  "the brook": {
+    "name": "The Brook",
+    "lat": -41.286423,
+    "lng": 173.29126,
+    "radiusKm": 6
+  },
+  "glenholme": {
+    "name": "Glenholme",
+    "lat": -38.151134,
+    "lng": 176.247747,
+    "radiusKm": 6
+  },
+  "matipo heights": {
+    "name": "Matipo Heights",
+    "lat": -38.154598,
+    "lng": 176.217008,
+    "radiusKm": 6
+  },
+  "rainbow point": {
+    "name": "Rainbow Point",
+    "lat": -38.719659,
+    "lng": 176.078532,
+    "radiusKm": 6
+  },
+  "kawerau": {
+    "name": "Kawerau",
+    "lat": -38.084678,
+    "lng": 176.701929,
+    "radiusKm": 12
+  },
+  "murupara": {
+    "name": "Murupara",
+    "lat": -38.456408,
+    "lng": 176.704782,
+    "radiusKm": 12
+  },
+  "matata": {
+    "name": "Matat\u0101",
+    "lat": -37.89022,
+    "lng": 176.757801,
+    "radiusKm": 12
+  },
+  "whangarei": {
+    "name": "Whang\u0101rei",
+    "lat": -35.724721,
+    "lng": 174.319573,
+    "radiusKm": 25
+  },
+  "hikurangi": {
+    "name": "Hikurangi",
+    "lat": -35.600721,
+    "lng": 174.287068,
+    "radiusKm": 12
+  },
+  "maunu": {
+    "name": "Maunu",
+    "lat": -35.741235,
+    "lng": 174.280515,
+    "radiusKm": 6
+  },
+  "onerahi": {
+    "name": "Onerahi",
+    "lat": -35.764643,
+    "lng": 174.361471,
+    "radiusKm": 6
+  },
+  "sherwood rise": {
+    "name": "Sherwood Rise",
+    "lat": -35.750289,
+    "lng": 174.364585,
+    "radiusKm": 6
+  },
+  "south rakaia": {
+    "name": "South Rakaia",
+    "lat": -43.755644,
+    "lng": 172.025053,
+    "radiusKm": 12
+  },
+  "allenton": {
+    "name": "Allenton",
+    "lat": -43.888978,
+    "lng": 171.741343,
+    "radiusKm": 6
+  },
+  "witherlea": {
+    "name": "Witherlea",
+    "lat": -41.538173,
+    "lng": 173.951727,
+    "radiusKm": 6
+  },
+  "wither rise": {
+    "name": "Wither Rise",
+    "lat": -41.538838,
+    "lng": 173.961134,
+    "radiusKm": 6
+  },
+  "mayfield": {
+    "name": "Mayfield",
+    "lat": -41.502964,
+    "lng": 173.952872,
+    "radiusKm": 6
+  },
+  "yelverton": {
+    "name": "Yelverton",
+    "lat": -41.512717,
+    "lng": 173.93029,
+    "radiusKm": 6
+  },
+  "farnham": {
+    "name": "Farnham",
+    "lat": -41.500756,
+    "lng": 173.937528,
+    "radiusKm": 6
+  },
+  "colac bayoraka": {
+    "name": "Colac Bay/\u014craka",
+    "lat": -46.362234,
+    "lng": 167.875734,
+    "radiusKm": 12
+  },
+  "colac": {
+    "name": "Colac",
+    "lat": -46.362234,
+    "lng": 167.875734,
+    "radiusKm": 12
+  },
+  "otumoetai": {
+    "name": "Otumoetai",
+    "lat": -37.672244,
+    "lng": 176.144315,
+    "radiusKm": 6
+  },
+  "bellevue": {
+    "name": "Bellevue",
+    "lat": -37.676335,
+    "lng": 176.126509,
+    "radiusKm": 6
+  },
+  "matua": {
+    "name": "Matua",
+    "lat": -37.667469,
+    "lng": 176.120873,
+    "radiusKm": 6
+  },
+  "te maunga": {
+    "name": "Te Maunga",
+    "lat": -37.682917,
+    "lng": 176.216932,
+    "radiusKm": 6
+  },
+  "pukerua bay": {
+    "name": "Pukerua Bay",
+    "lat": -41.051592,
+    "lng": 174.887241,
+    "radiusKm": 6
+  },
+  "paraparaumu": {
+    "name": "Paraparaumu",
+    "lat": -40.906406,
+    "lng": 175.00733,
+    "radiusKm": 12
+  },
+  "paekakariki": {
+    "name": "Paek\u0101k\u0101riki",
+    "lat": -40.983077,
+    "lng": 174.954445,
+    "radiusKm": 12
+  },
+  "paraparaumu beach": {
+    "name": "Paraparaumu Beach",
+    "lat": -40.888164,
+    "lng": 174.983173,
+    "radiusKm": 12
+  },
+  "waikanae": {
+    "name": "Waikanae",
+    "lat": -40.876267,
+    "lng": 175.066038,
+    "radiusKm": 12
+  },
+  "hannahs bay": {
+    "name": "Hannahs Bay",
+    "lat": -38.115872,
+    "lng": 176.307889,
+    "radiusKm": 6
+  },
+  "wiri": {
+    "name": "Wiri",
+    "lat": -37.004323,
+    "lng": 174.869396,
+    "radiusKm": 6
+  },
+  "homai": {
+    "name": "Homai",
+    "lat": -37.017505,
+    "lng": 174.874584,
+    "radiusKm": 6
+  },
+  "paeroa": {
+    "name": "Paeroa",
+    "lat": -37.383183,
+    "lng": 175.674321,
+    "radiusKm": 12
+  },
+  "morrinsville": {
+    "name": "Morrinsville",
+    "lat": -37.658369,
+    "lng": 175.526043,
+    "radiusKm": 12
+  },
+  "sunshine bay": {
+    "name": "Sunshine Bay",
+    "lat": -45.04356,
+    "lng": 168.625871,
+    "radiusKm": 6
+  },
+  "kelburn": {
+    "name": "Kelburn",
+    "lat": -41.287117,
+    "lng": 174.766067,
+    "radiusKm": 6
+  },
+  "kilbirnie": {
+    "name": "Kilbirnie",
+    "lat": -41.317047,
+    "lng": 174.795294,
+    "radiusKm": 6
+  },
+  "owhiro bay": {
+    "name": "\u014cwhiro Bay",
+    "lat": -41.34407,
+    "lng": 174.759597,
+    "radiusKm": 6
+  },
+  "karori": {
+    "name": "Karori",
+    "lat": -41.284517,
+    "lng": 174.73807,
+    "radiusKm": 6
+  },
+  "wellington": {
+    "name": "Wellington",
+    "lat": -41.285574,
+    "lng": 174.776685,
+    "radiusKm": 25
+  },
+  "berhampore": {
+    "name": "Berhampore",
+    "lat": -41.320645,
+    "lng": 174.775254,
+    "radiusKm": 6
+  },
+  "brooklyn": {
+    "name": "Brooklyn",
+    "lat": -41.305367,
+    "lng": 174.763285,
+    "radiusKm": 6
+  },
+  "happy valley": {
+    "name": "Happy Valley",
+    "lat": -41.3312,
+    "lng": 174.756946,
+    "radiusKm": 6
+  },
+  "highbury": {
+    "name": "Highbury",
+    "lat": -41.292107,
+    "lng": 174.75511,
+    "radiusKm": 6
+  },
+  "lyall bay": {
+    "name": "Lyall Bay",
+    "lat": -41.328094,
+    "lng": 174.793448,
+    "radiusKm": 6
+  },
+  "newtown": {
+    "name": "Newtown",
+    "lat": -41.313729,
+    "lng": 174.779884,
+    "radiusKm": 6
+  },
+  "rongotai": {
+    "name": "Rongotai",
+    "lat": -41.323399,
+    "lng": 174.803806,
+    "radiusKm": 6
+  },
+  "thorndon": {
+    "name": "Thorndon",
+    "lat": -41.274652,
+    "lng": 174.774215,
+    "radiusKm": 6
+  },
+  "aro valley": {
+    "name": "Aro Valley",
+    "lat": -41.294468,
+    "lng": 174.76284,
+    "radiusKm": 6
+  },
+  "maupuia": {
+    "name": "Maupuia",
+    "lat": -41.30093,
+    "lng": 174.820517,
+    "radiusKm": 6
+  },
+  "island bay": {
+    "name": "Island Bay",
+    "lat": -41.337292,
+    "lng": 174.772582,
+    "radiusKm": 6
+  },
+  "kingston": {
+    "name": "Kingston",
+    "lat": -41.322947,
+    "lng": 174.763139,
+    "radiusKm": 6
+  },
+  "southgate": {
+    "name": "Southgate",
+    "lat": -41.337421,
+    "lng": 174.781662,
+    "radiusKm": 6
+  },
+  "kaikohe": {
+    "name": "Kaikohe",
+    "lat": -35.40659,
+    "lng": 173.801757,
+    "radiusKm": 12
+  },
+  "camberley": {
+    "name": "Camberley",
+    "lat": -39.625701,
+    "lng": 176.816326,
+    "radiusKm": 6
+  },
+  "mayfair": {
+    "name": "Mayfair",
+    "lat": -39.639615,
+    "lng": 176.857906,
+    "radiusKm": 6
+  },
+  "tamatea": {
+    "name": "Tamatea",
+    "lat": -39.513037,
+    "lng": 176.865,
+    "radiusKm": 6
+  },
+  "westshore": {
+    "name": "Westshore",
+    "lat": -39.473426,
+    "lng": 176.879684,
+    "radiusKm": 6
+  },
+  "taumarunui": {
+    "name": "Taumarunui",
+    "lat": -38.88317,
+    "lng": 175.258845,
+    "radiusKm": 12
+  },
+  "matapuna": {
+    "name": "Matapuna",
+    "lat": -38.885812,
+    "lng": 175.29308,
+    "radiusKm": 6
+  },
+  "hospital hill": {
+    "name": "Hospital Hill",
+    "lat": -38.886354,
+    "lng": 175.253245,
+    "radiusKm": 6
+  },
+  "rangoroa": {
+    "name": "Rangoroa",
+    "lat": -38.876027,
+    "lng": 175.260269,
+    "radiusKm": 6
+  },
+  "riverdale": {
+    "name": "Riverdale",
+    "lat": -38.643859,
+    "lng": 178.004618,
+    "radiusKm": 6
+  },
+  "taruheru": {
+    "name": "Taruheru",
+    "lat": -38.643424,
+    "lng": 177.985026,
+    "radiusKm": 6
+  },
+  "aorakimount cook": {
+    "name": "Aoraki/Mount Cook",
+    "lat": -43.735107,
+    "lng": 170.098209,
+    "radiusKm": 12
+  },
+  "kuratau": {
+    "name": "Kuratau",
+    "lat": -38.892395,
+    "lng": 175.770491,
+    "radiusKm": 12
+  },
+  "kaiti": {
+    "name": "Kaiti",
+    "lat": -38.670737,
+    "lng": 178.039623,
+    "radiusKm": 6
+  },
+  "elgin": {
+    "name": "Elgin",
+    "lat": -38.659221,
+    "lng": 177.994901,
+    "radiusKm": 6
+  },
+  "gisborne": {
+    "name": "Gisborne",
+    "lat": -38.661946,
+    "lng": 178.019023,
+    "radiusKm": 12
+  },
+  "mangapapa": {
+    "name": "Mangapapa",
+    "lat": -38.644371,
+    "lng": 178.009944,
+    "radiusKm": 6
+  },
+  "whataupoko": {
+    "name": "Whataupoko",
+    "lat": -38.653053,
+    "lng": 178.026251,
+    "radiusKm": 6
+  },
+  "wainui": {
+    "name": "Wainui",
+    "lat": -38.689581,
+    "lng": 178.071245,
+    "radiusKm": 6
+  },
+  "okitu": {
+    "name": "Okit\u016b",
+    "lat": -38.67577,
+    "lng": 178.082181,
+    "radiusKm": 6
+  },
+  "outer kaiti": {
+    "name": "Outer Kaiti",
+    "lat": -38.67005,
+    "lng": 178.05176,
+    "radiusKm": 6
+  },
+  "blaketown": {
+    "name": "Blaketown",
+    "lat": -42.44725,
+    "lng": 171.195944,
+    "radiusKm": 6
+  },
+  "feilding": {
+    "name": "Feilding",
+    "lat": -40.225062,
+    "lng": 175.565087,
+    "radiusKm": 12
+  },
+  "milson": {
+    "name": "Milson",
+    "lat": -40.329069,
+    "lng": 175.615333,
+    "radiusKm": 6
+  },
+  "kelvin grove": {
+    "name": "Kelvin Grove",
+    "lat": -40.329506,
+    "lng": 175.640153,
+    "radiusKm": 6
+  },
+  "summerhill": {
+    "name": "Summerhill",
+    "lat": -40.385662,
+    "lng": 175.635528,
+    "radiusKm": 6
+  },
+  "takaro": {
+    "name": "Takaro",
+    "lat": -40.352306,
+    "lng": 175.593835,
+    "radiusKm": 6
+  },
+  "palmerston north": {
+    "name": "Palmerston North",
+    "lat": -40.35566,
+    "lng": 175.616579,
+    "radiusKm": 25
+  },
+  "fitzherbert": {
+    "name": "Fitzherbert",
+    "lat": -40.38017,
+    "lng": 175.62267,
+    "radiusKm": 6
+  },
+  "motuoapa": {
+    "name": "Motuoapa",
+    "lat": -38.932922,
+    "lng": 175.874345,
+    "radiusKm": 12
+  },
+  "foxton beach": {
+    "name": "Foxton Beach",
+    "lat": -40.464647,
+    "lng": 175.230789,
+    "radiusKm": 12
+  },
+  "harington point": {
+    "name": "Harington Point",
+    "lat": -45.791838,
+    "lng": 170.730126,
+    "radiusKm": 6
+  },
+  "collinswood": {
+    "name": "Collinswood",
+    "lat": -45.871787,
+    "lng": 170.593166,
+    "radiusKm": 6
+  },
+  "palmerston": {
+    "name": "Palmerston",
+    "lat": -45.483477,
+    "lng": 170.715486,
+    "radiusKm": 12
+  },
+  "saint leonards": {
+    "name": "Saint Leonards",
+    "lat": -45.849032,
+    "lng": 170.57646,
+    "radiusKm": 6
+  },
+  "port chalmers": {
+    "name": "Port Chalmers",
+    "lat": -45.818715,
+    "lng": 170.620734,
+    "radiusKm": 12
+  },
+  "tokoroa central": {
+    "name": "Tokoroa Central",
+    "lat": -38.220523,
+    "lng": 175.872606,
+    "radiusKm": 6
+  },
+  "mangakino": {
+    "name": "Mangakino",
+    "lat": -38.368763,
+    "lng": 175.774891,
+    "radiusKm": 12
+  },
+  "tirau": {
+    "name": "T\u012brau",
+    "lat": -37.979254,
+    "lng": 175.759839,
+    "radiusKm": 12
+  },
+  "oxford": {
+    "name": "Oxford",
+    "lat": -37.979254,
+    "lng": 175.759839,
+    "radiusKm": 12
+  },
+  "solway": {
+    "name": "Solway",
+    "lat": -40.962328,
+    "lng": 175.620516,
+    "radiusKm": 6
+  },
+  "minginui": {
+    "name": "Minginui",
+    "lat": -38.642953,
+    "lng": 176.731819,
+    "radiusKm": 12
+  },
+  "wharewaka": {
+    "name": "Wharewaka",
+    "lat": -38.727471,
+    "lng": 176.071137,
+    "radiusKm": 12
+  },
+  "richmond heights": {
+    "name": "Richmond Heights",
+    "lat": -38.715953,
+    "lng": 176.094837,
+    "radiusKm": 6
+  },
+  "gradwell": {
+    "name": "Gradwell",
+    "lat": -38.711096,
+    "lng": 176.097209,
+    "radiusKm": 6
+  },
+  "tauhara": {
+    "name": "Tauhara",
+    "lat": -38.685735,
+    "lng": 176.100729,
+    "radiusKm": 6
+  },
+  "haumoana": {
+    "name": "Haumoana",
+    "lat": -39.610322,
+    "lng": 176.951525,
+    "radiusKm": 12
+  },
+  "bluff hill": {
+    "name": "Bluff Hill",
+    "lat": -39.482601,
+    "lng": 176.914808,
+    "radiusKm": 6
+  },
+  "te awanga": {
+    "name": "Te Awanga",
+    "lat": -39.633787,
+    "lng": 176.981254,
+    "radiusKm": 12
+  },
+  "napier": {
+    "name": "Napier",
+    "lat": -39.492625,
+    "lng": 176.914181,
+    "radiusKm": 25
+  },
+  "marewa": {
+    "name": "Marewa",
+    "lat": -39.505126,
+    "lng": 176.906085,
+    "radiusKm": 6
+  },
+  "flaxmere": {
+    "name": "Flaxmere",
+    "lat": -39.623167,
+    "lng": 176.786389,
+    "radiusKm": 6
+  },
+  "frimley": {
+    "name": "Frimley",
+    "lat": -39.622969,
+    "lng": 176.828167,
+    "radiusKm": 6
+  },
+  "greenmeadows": {
+    "name": "Greenmeadows",
+    "lat": -39.525622,
+    "lng": 176.856698,
+    "radiusKm": 6
+  },
+  "pirimai": {
+    "name": "Pirimai",
+    "lat": -39.51469,
+    "lng": 176.880424,
+    "radiusKm": 6
+  },
+  "taradale": {
+    "name": "Taradale",
+    "lat": -39.539859,
+    "lng": 176.844738,
+    "radiusKm": 6
+  },
+  "otaki": {
+    "name": "\u014ctaki",
+    "lat": -40.752817,
+    "lng": 175.140081,
+    "radiusKm": 12
+  },
+  "papakura": {
+    "name": "Papakura",
+    "lat": -37.062458,
+    "lng": 174.942125,
+    "radiusKm": 6
+  },
+  "parawai": {
+    "name": "Parawai",
+    "lat": -37.150124,
+    "lng": 175.559086,
+    "radiusKm": 6
+  },
+  "thames": {
+    "name": "Thames",
+    "lat": -37.138431,
+    "lng": 175.540521,
+    "radiusKm": 12
+  },
+  "thames north": {
+    "name": "Thames North",
+    "lat": -37.12867,
+    "lng": 175.531408,
+    "radiusKm": 6
+  },
+  "ohakune": {
+    "name": "Ohakune",
+    "lat": -39.41779,
+    "lng": 175.399512,
+    "radiusKm": 12
+  },
+  "waiouru": {
+    "name": "Waiouru",
+    "lat": -39.468523,
+    "lng": 175.676095,
+    "radiusKm": 12
+  },
+  "waipukurau": {
+    "name": "Waipukurau",
+    "lat": -39.996293,
+    "lng": 176.553976,
+    "radiusKm": 12
+  },
+  "akina": {
+    "name": "\u0100kina",
+    "lat": -39.651001,
+    "lng": 176.841523,
+    "radiusKm": 6
+  },
+  "hastings": {
+    "name": "Hastings",
+    "lat": -39.638968,
+    "lng": 176.846515,
+    "radiusKm": 25
+  },
+  "parkvale": {
+    "name": "Parkvale",
+    "lat": -39.647822,
+    "lng": 176.852203,
+    "radiusKm": 6
+  },
+  "raureka": {
+    "name": "Raureka",
+    "lat": -39.640131,
+    "lng": 176.826532,
+    "radiusKm": 6
+  },
+  "dannevirke": {
+    "name": "Dannevirke",
+    "lat": -40.21193,
+    "lng": 176.094963,
+    "radiusKm": 12
+  },
+  "puhuka": {
+    "name": "Puhuka",
+    "lat": -44.36207,
+    "lng": 171.238334,
+    "radiusKm": 6
+  },
+  "glendale": {
+    "name": "Glendale",
+    "lat": -45.106027,
+    "lng": 170.946664,
+    "radiusKm": 6
+  },
+  "fernbrook": {
+    "name": "Fernbrook",
+    "lat": -45.066551,
+    "lng": 170.990514,
+    "radiusKm": 6
+  },
+  "waimataitai": {
+    "name": "Waimataitai",
+    "lat": -44.382538,
+    "lng": 171.23839,
+    "radiusKm": 6
+  },
+  "awamoa": {
+    "name": "Awamoa",
+    "lat": -45.106463,
+    "lng": 170.953296,
+    "radiusKm": 6
+  },
+  "buckleys hill": {
+    "name": "Buckleys Hill",
+    "lat": -45.057588,
+    "lng": 170.975869,
+    "radiusKm": 6
+  },
+  "moncks spur": {
+    "name": "Moncks Spur",
+    "lat": -43.569032,
+    "lng": 172.730465,
+    "radiusKm": 6
+  },
+  "murray aynsley": {
+    "name": "Murray Aynsley",
+    "lat": -43.565781,
+    "lng": 172.665322,
+    "radiusKm": 6
+  },
+  "riccarton": {
+    "name": "Riccarton",
+    "lat": -43.533362,
+    "lng": 172.596417,
+    "radiusKm": 6
+  },
+  "hei hei": {
+    "name": "Hei Hei",
+    "lat": -43.533653,
+    "lng": 172.520604,
+    "radiusKm": 6
+  },
+  "hornby": {
+    "name": "Hornby",
+    "lat": -43.547931,
+    "lng": 172.532053,
+    "radiusKm": 6
+  },
+  "middleton": {
+    "name": "Middleton",
+    "lat": -43.543922,
+    "lng": 172.583295,
+    "radiusKm": 6
+  },
+  "prebbleton": {
+    "name": "Prebbleton",
+    "lat": -43.581147,
+    "lng": 172.512084,
+    "radiusKm": 12
+  },
+  "lincoln": {
+    "name": "Lincoln",
+    "lat": -43.64002,
+    "lng": 172.486067,
+    "radiusKm": 12
+  },
+  "heathcote valley": {
+    "name": "Heathcote Valley",
+    "lat": -43.577048,
+    "lng": 172.709656,
+    "radiusKm": 6
+  },
+  "north linwood": {
+    "name": "North Linwood",
+    "lat": -43.526609,
+    "lng": 172.674292,
+    "radiusKm": 6
+  },
+  "bromley": {
+    "name": "Bromley",
+    "lat": -43.533331,
+    "lng": 172.685378,
+    "radiusKm": 6
+  },
+  "merivale": {
+    "name": "Merivale",
+    "lat": -43.512364,
+    "lng": 172.617788,
+    "radiusKm": 6
+  },
+  "south new brighton": {
+    "name": "South New Brighton",
+    "lat": -43.528726,
+    "lng": 172.735931,
+    "radiusKm": 6
+  },
+  "christchurch": {
+    "name": "Christchurch",
+    "lat": -43.530972,
+    "lng": 172.636333,
+    "radiusKm": 25
+  },
+  "ilam": {
+    "name": "Ilam",
+    "lat": -43.521308,
+    "lng": 172.573124,
+    "radiusKm": 6
+  },
+  "russley": {
+    "name": "Russley",
+    "lat": -43.51892,
+    "lng": 172.543428,
+    "radiusKm": 6
+  },
+  "tomahawk": {
+    "name": "Tomahawk",
+    "lat": -45.904188,
+    "lng": 170.544436,
+    "radiusKm": 6
+  },
+  "brockville": {
+    "name": "Brockville",
+    "lat": -45.867083,
+    "lng": 170.455699,
+    "radiusKm": 6
+  },
+  "mt mera": {
+    "name": "Mount Mera",
+    "lat": -45.845091,
+    "lng": 170.539319,
+    "radiusKm": 6
+  },
+  "mount mera": {
+    "name": "Mount Mera",
+    "lat": -45.845091,
+    "lng": 170.539319,
+    "radiusKm": 6
+  },
+  "north east valley": {
+    "name": "North East Valley",
+    "lat": -45.850318,
+    "lng": 170.531936,
+    "radiusKm": 6
+  },
+  "saint clair": {
+    "name": "Saint Clair",
+    "lat": -45.910352,
+    "lng": 170.487859,
+    "radiusKm": 6
+  },
+  "st andrews hill": {
+    "name": "St Andrews Hill",
+    "lat": -43.558264,
+    "lng": 172.716341,
+    "radiusKm": 6
+  },
+  "balmoral hill": {
+    "name": "Balmoral Hill",
+    "lat": -43.560596,
+    "lng": 172.730847,
+    "radiusKm": 6
+  },
+  "lyttelton": {
+    "name": "Lyttelton",
+    "lat": -43.603439,
+    "lng": 172.720035,
+    "radiusKm": 12
+  },
+  "opawa": {
+    "name": "Opawa",
+    "lat": -43.553235,
+    "lng": 172.663453,
+    "radiusKm": 6
+  },
+  "woolston": {
+    "name": "Woolston",
+    "lat": -43.554066,
+    "lng": 172.672508,
+    "radiusKm": 6
+  },
+  "beckenham": {
+    "name": "Beckenham",
+    "lat": -43.560876,
+    "lng": 172.642859,
+    "radiusKm": 6
+  },
+  "halswell": {
+    "name": "Halswell",
+    "lat": -43.585384,
+    "lng": 172.570771,
+    "radiusKm": 6
+  },
+  "oaklands": {
+    "name": "Oaklands",
+    "lat": -43.575528,
+    "lng": 172.56125,
+    "radiusKm": 6
+  },
+  "hillmorton": {
+    "name": "Hillmorton",
+    "lat": -43.559962,
+    "lng": 172.586866,
+    "radiusKm": 6
+  },
+  "saint martins": {
+    "name": "Saint Martins",
+    "lat": -43.557878,
+    "lng": 172.652845,
+    "radiusKm": 6
+  },
+  "church bay": {
+    "name": "Church Bay",
+    "lat": -43.634255,
+    "lng": 172.719434,
+    "radiusKm": 6
+  },
+  "casebrook": {
+    "name": "Casebrook",
+    "lat": -43.481092,
+    "lng": 172.59772,
+    "radiusKm": 6
+  },
+  "harewood": {
+    "name": "Harewood",
+    "lat": -43.478752,
+    "lng": 172.556149,
+    "radiusKm": 6
+  },
+  "papanui": {
+    "name": "Papanui",
+    "lat": -43.496808,
+    "lng": 172.607893,
+    "radiusKm": 6
+  },
+  "rangiora": {
+    "name": "Rangiora",
+    "lat": -43.303279,
+    "lng": 172.596115,
+    "radiusKm": 12
+  },
+  "kingsley heights": {
+    "name": "Kingsley Heights",
+    "lat": -41.125104,
+    "lng": 175.082969,
+    "radiusKm": 6
+  },
+  "scarborough": {
+    "name": "Scarborough",
+    "lat": -43.573286,
+    "lng": 172.775377,
+    "radiusKm": 6
+  },
+  "parklands": {
+    "name": "Parklands",
+    "lat": -43.478489,
+    "lng": 172.695461,
+    "radiusKm": 6
+  },
+  "petone": {
+    "name": "Petone",
+    "lat": -41.226053,
+    "lng": 174.880853,
+    "radiusKm": 6
+  },
+  "seaview": {
+    "name": "Seaview",
+    "lat": -41.242341,
+    "lng": 174.90483,
+    "radiusKm": 6
+  },
+  "raumati south": {
+    "name": "Raumati South",
+    "lat": -40.936272,
+    "lng": 174.97735,
+    "radiusKm": 12
+  },
+  "raumati beach": {
+    "name": "Raumati Beach",
+    "lat": -40.918734,
+    "lng": 174.981207,
+    "radiusKm": 12
+  },
+  "pinehaven": {
+    "name": "Pinehaven",
+    "lat": -41.16102,
+    "lng": 175.012142,
+    "radiusKm": 6
+  },
+  "trentham": {
+    "name": "Trentham",
+    "lat": -41.132652,
+    "lng": 175.040424,
+    "radiusKm": 6
+  },
+  "silverstream": {
+    "name": "Silverstream",
+    "lat": -41.152848,
+    "lng": 175.010504,
+    "radiusKm": 6
+  },
+  "belmont": {
+    "name": "Belmont",
+    "lat": -41.19026,
+    "lng": 174.91481,
+    "radiusKm": 6
+  },
+  "boulcott": {
+    "name": "Boulcott",
+    "lat": -41.203312,
+    "lng": 174.924579,
+    "radiusKm": 6
+  },
+  "lower hutt": {
+    "name": "Lower Hutt",
+    "lat": -41.208702,
+    "lng": 174.906174,
+    "radiusKm": 25
+  },
+  "waterloo": {
+    "name": "Waterloo",
+    "lat": -41.215374,
+    "lng": 174.926161,
+    "radiusKm": 6
+  },
+  "epuni": {
+    "name": "Epuni",
+    "lat": -41.210721,
+    "lng": 174.931894,
+    "radiusKm": 6
+  },
+  "fairfield": {
+    "name": "Fairfield",
+    "lat": -41.213302,
+    "lng": 174.939086,
+    "radiusKm": 6
+  },
+  "kelson": {
+    "name": "Kelson",
+    "lat": -41.175761,
+    "lng": 174.938841,
+    "radiusKm": 6
+  },
+  "otaki beach": {
+    "name": "\u014ctaki Beach",
+    "lat": -40.740113,
+    "lng": 175.117615,
+    "radiusKm": 12
+  },
+  "levin": {
+    "name": "Levin",
+    "lat": -40.620385,
+    "lng": 175.285208,
+    "radiusKm": 12
+  },
+  "waikanae beach": {
+    "name": "Waikanae Beach",
+    "lat": -40.865864,
+    "lng": 175.026382,
+    "radiusKm": 12
+  },
+  "burwood": {
+    "name": "Burwood",
+    "lat": -43.494809,
+    "lng": 172.685173,
+    "radiusKm": 6
+  },
+  "mairehau": {
+    "name": "Mairehau",
+    "lat": -43.498852,
+    "lng": 172.640236,
+    "radiusKm": 6
+  },
+  "kaiapoi": {
+    "name": "Kaiapoi",
+    "lat": -43.383219,
+    "lng": 172.653619,
+    "radiusKm": 12
+  },
+  "whitby": {
+    "name": "Whitby",
+    "lat": -41.121998,
+    "lng": 174.895381,
+    "radiusKm": 6
+  },
+  "taita": {
+    "name": "Tait\u0101",
+    "lat": -41.179237,
+    "lng": 174.957947,
+    "radiusKm": 6
+  },
+  "stokes valley": {
+    "name": "Stokes Valley",
+    "lat": -41.180829,
+    "lng": 174.982392,
+    "radiusKm": 6
+  },
+  "queenstown": {
+    "name": "Queenstown",
+    "lat": -45.032259,
+    "lng": 168.661449,
+    "radiusKm": 12
+  },
+  "te aroha": {
+    "name": "Te Aroha",
+    "lat": -37.541432,
+    "lng": 175.710966,
+    "radiusKm": 12
+  },
+  "starrtown": {
+    "name": "Starrtown",
+    "lat": -37.561265,
+    "lng": 175.163795,
+    "radiusKm": 6
+  },
+  "hanmer": {
+    "name": "Hanmer",
+    "lat": -42.524202,
+    "lng": 172.831358,
+    "radiusKm": 12
+  },
+  "pakuranga heights": {
+    "name": "Pakuranga Heights",
+    "lat": -36.915475,
+    "lng": 174.889188,
+    "radiusKm": 6
+  },
+  "botany downs": {
+    "name": "Botany Downs",
+    "lat": -36.908834,
+    "lng": 174.923826,
+    "radiusKm": 6
+  },
+  "farm cove": {
+    "name": "Farm Cove",
+    "lat": -36.895231,
+    "lng": 174.887136,
+    "radiusKm": 6
+  },
+  "bucklands beach": {
+    "name": "Bucklands Beach",
+    "lat": -36.865453,
+    "lng": 174.903354,
+    "radiusKm": 6
+  },
+  "eastern beach": {
+    "name": "Eastern Beach",
+    "lat": -36.871672,
+    "lng": 174.908787,
+    "radiusKm": 6
+  },
+  "glendowie": {
+    "name": "Glendowie",
+    "lat": -36.858866,
+    "lng": 174.871466,
+    "radiusKm": 6
+  },
+  "howick": {
+    "name": "Howick",
+    "lat": -36.894465,
+    "lng": 174.929462,
+    "radiusKm": 6
+  },
+  "whakatane": {
+    "name": "Whakat\u0101ne",
+    "lat": -37.96434,
+    "lng": 176.984451,
+    "radiusKm": 12
+  },
+  "manukau": {
+    "name": "Manukau",
+    "lat": -36.998848,
+    "lng": 174.864447,
+    "radiusKm": 25
+  },
+  "otahuhu": {
+    "name": "\u014ct\u0101huhu",
+    "lat": -36.945417,
+    "lng": 174.840306,
+    "radiusKm": 6
+  },
+  "papatoetoe": {
+    "name": "Papatoetoe",
+    "lat": -36.979488,
+    "lng": 174.852343,
+    "radiusKm": 6
+  },
+  "oakura": {
+    "name": "\u014cakura",
+    "lat": -39.113914,
+    "lng": 173.953236,
+    "radiusKm": 12
+  },
+  "te rapa": {
+    "name": "Te Rapa",
+    "lat": -37.755829,
+    "lng": 175.240244,
+    "radiusKm": 6
+  },
+  "grandview heights": {
+    "name": "Grandview Heights",
+    "lat": -37.781845,
+    "lng": 175.220889,
+    "radiusKm": 6
+  },
+  "temple view": {
+    "name": "Temple View",
+    "lat": -37.82078,
+    "lng": 175.224538,
+    "radiusKm": 12
+  },
+  "putaruru": {
+    "name": "Put\u0101ruru",
+    "lat": -38.052718,
+    "lng": 175.780445,
+    "radiusKm": 12
+  },
+  "tamarau": {
+    "name": "Tamarau",
+    "lat": -38.68174,
+    "lng": 178.053276,
+    "radiusKm": 6
+  },
+  "opotiki": {
+    "name": "\u014cp\u014dtiki",
+    "lat": -38.006615,
+    "lng": 177.287061,
+    "radiusKm": 12
+  },
+  "holdens bay": {
+    "name": "Holdens Bay",
+    "lat": -38.119976,
+    "lng": 176.30394,
+    "radiusKm": 6
+  },
+  "owhata": {
+    "name": "\u014cwhata",
+    "lat": -38.134221,
+    "lng": 176.303758,
+    "radiusKm": 6
+  },
+  "matamata": {
+    "name": "Matamata",
+    "lat": -37.811012,
+    "lng": 175.773495,
+    "radiusKm": 12
+  },
+  "ngongotaha": {
+    "name": "Ngongotah\u0101",
+    "lat": -38.076999,
+    "lng": 176.214858,
+    "radiusKm": 6
+  },
+  "kawaha point": {
+    "name": "Kawaha Point",
+    "lat": -38.107147,
+    "lng": 176.237926,
+    "radiusKm": 6
+  },
+  "koutu": {
+    "name": "Koutu",
+    "lat": -38.118022,
+    "lng": 176.234044,
+    "radiusKm": 6
+  },
+  "sunnybrook": {
+    "name": "Sunnybrook",
+    "lat": -38.149584,
+    "lng": 176.212136,
+    "radiusKm": 6
+  },
+  "tihiotonga": {
+    "name": "Tihiotonga",
+    "lat": -38.173058,
+    "lng": 176.240242,
+    "radiusKm": 6
+  },
+  "fordlands": {
+    "name": "Fordlands",
+    "lat": -38.143338,
+    "lng": 176.22317,
+    "radiusKm": 6
+  },
+  "kihikihi": {
+    "name": "Kihikihi",
+    "lat": -38.037888,
+    "lng": 175.345521,
+    "radiusKm": 12
+  },
+  "taihape": {
+    "name": "Taihape",
+    "lat": -39.677506,
+    "lng": 175.796599,
+    "radiusKm": 12
+  },
+  "aramoho": {
+    "name": "Aramoho",
+    "lat": -39.895922,
+    "lng": 175.062205,
+    "radiusKm": 6
+  },
+  "durie hill": {
+    "name": "Durie Hill",
+    "lat": -39.937458,
+    "lng": 175.069532,
+    "radiusKm": 6
+  },
+  "wanganui east": {
+    "name": "Wanganui East",
+    "lat": -39.917283,
+    "lng": 175.057991,
+    "radiusKm": 6
+  },
+  "matarawa": {
+    "name": "Matarawa",
+    "lat": -38.2238,
+    "lng": 175.855368,
+    "radiusKm": 6
+  },
+  "twizel": {
+    "name": "Twizel",
+    "lat": -44.25779,
+    "lng": 170.097009,
+    "radiusKm": 12
+  },
+  "hamilton": {
+    "name": "Hamilton",
+    "lat": -37.780806,
+    "lng": 175.272917,
+    "radiusKm": 25
+  },
+  "claudelands": {
+    "name": "Claudelands",
+    "lat": -37.777905,
+    "lng": 175.289856,
+    "radiusKm": 6
+  },
+  "livingstone": {
+    "name": "Livingstone",
+    "lat": -37.781033,
+    "lng": 175.24955,
+    "radiusKm": 6
+  },
+  "hamilton north": {
+    "name": "Hamilton North",
+    "lat": -37.780104,
+    "lng": 175.275892,
+    "radiusKm": 6
+  },
+  "frankton": {
+    "name": "Frankton",
+    "lat": -37.793191,
+    "lng": 175.256771,
+    "radiusKm": 6
+  },
+  "dinsdale": {
+    "name": "Dinsdale",
+    "lat": -37.795064,
+    "lng": 175.241747,
+    "radiusKm": 6
+  },
+  "hamilton west": {
+    "name": "Hamilton West",
+    "lat": -37.801779,
+    "lng": 175.271953,
+    "radiusKm": 6
+  },
+  "bader": {
+    "name": "Bader",
+    "lat": -37.808851,
+    "lng": 175.292538,
+    "radiusKm": 6
+  },
+  "enderley": {
+    "name": "Enderley",
+    "lat": -37.764781,
+    "lng": 175.2931,
+    "radiusKm": 6
+  },
+  "fairview downs": {
+    "name": "Fairview Downs",
+    "lat": -37.762064,
+    "lng": 175.305797,
+    "radiusKm": 6
+  },
+  "beerescourt": {
+    "name": "Beerescourt",
+    "lat": -37.771989,
+    "lng": 175.263657,
+    "radiusKm": 6
+  },
+  "maeroa": {
+    "name": "Maeroa",
+    "lat": -37.777915,
+    "lng": 175.256521,
+    "radiusKm": 6
+  },
+  "alexandra": {
+    "name": "Alexandra",
+    "lat": -45.256498,
+    "lng": 169.394146,
+    "radiusKm": 12
+  },
+  "hawera": {
+    "name": "H\u0101wera",
+    "lat": -39.588991,
+    "lng": 174.282179,
+    "radiusKm": 12
+  },
+  "ngaruawahia": {
+    "name": "Ng\u0101ruaw\u0101hia",
+    "lat": -37.668426,
+    "lng": 175.146932,
+    "radiusKm": 12
+  },
+  "harrowfield": {
+    "name": "Harrowfield",
+    "lat": -37.741548,
+    "lng": 175.260053,
+    "radiusKm": 6
+  },
+  "rototuna": {
+    "name": "Rototuna",
+    "lat": -37.736342,
+    "lng": 175.273092,
+    "radiusKm": 6
+  },
+  "queenwood": {
+    "name": "Queenwood",
+    "lat": -37.749366,
+    "lng": 175.267705,
+    "radiusKm": 6
+  },
+  "rototuna north": {
+    "name": "Rototuna North",
+    "lat": -37.726078,
+    "lng": 175.263601,
+    "radiusKm": 6
+  },
+  "flagstaff": {
+    "name": "Flagstaff",
+    "lat": -37.730349,
+    "lng": 175.250134,
+    "radiusKm": 6
+  },
+  "huntington": {
+    "name": "Huntington",
+    "lat": -37.734783,
+    "lng": 175.282897,
+    "radiusKm": 6
+  },
+  "te rapa park": {
+    "name": "Te Rapa Park",
+    "lat": -37.734118,
+    "lng": 175.223457,
+    "radiusKm": 6
+  },
+  "ohinemutu": {
+    "name": "Ohinemutu",
+    "lat": -38.128974,
+    "lng": 176.244554,
+    "radiusKm": 6
+  },
+  "pleasant heights": {
+    "name": "Pleasant Heights",
+    "lat": -38.128745,
+    "lng": 176.206037,
+    "radiusKm": 6
+  },
+  "whakarewarewa": {
+    "name": "Whakarewarewa",
+    "lat": -38.162177,
+    "lng": 176.25585,
+    "radiusKm": 6
+  },
+  "fenton park": {
+    "name": "Fenton Park",
+    "lat": -38.15221,
+    "lng": 176.256036,
+    "radiusKm": 6
+  },
+  "mangakakahi": {
+    "name": "Mangakakahi",
+    "lat": -38.133561,
+    "lng": 176.214078,
+    "radiusKm": 6
+  },
+  "pukehangi": {
+    "name": "Pukehangi",
+    "lat": -38.13973,
+    "lng": 176.20475,
+    "radiusKm": 6
+  },
+  "rotorua": {
+    "name": "Rotorua",
+    "lat": -38.137534,
+    "lng": 176.252365,
+    "radiusKm": 25
+  },
+  "springfield": {
+    "name": "Springfield",
+    "lat": -38.158649,
+    "lng": 176.226647,
+    "radiusKm": 6
+  },
+  "tokoroa": {
+    "name": "Tokoroa",
+    "lat": -38.223166,
+    "lng": 175.86629,
+    "radiusKm": 12
+  },
+  "paraonui": {
+    "name": "Paraonui",
+    "lat": -38.21213,
+    "lng": 175.853947,
+    "radiusKm": 6
+  },
+  "parkdale": {
+    "name": "Parkdale",
+    "lat": -38.204499,
+    "lng": 175.866432,
+    "radiusKm": 6
+  },
+  "strathmore": {
+    "name": "Strathmore",
+    "lat": -38.234727,
+    "lng": 175.867739,
+    "radiusKm": 6
+  },
+  "amisfield": {
+    "name": "Amisfield",
+    "lat": -38.232503,
+    "lng": 175.876941,
+    "radiusKm": 6
+  },
+  "ellerslie": {
+    "name": "Ellerslie",
+    "lat": -36.898444,
+    "lng": 174.810925,
+    "radiusKm": 6
+  },
+  "penrose": {
+    "name": "Penrose",
+    "lat": -36.909342,
+    "lng": 174.810001,
+    "radiusKm": 6
+  },
+  "southdown": {
+    "name": "Southdown",
+    "lat": -36.919491,
+    "lng": 174.819798,
+    "radiusKm": 6
+  },
+  "wesley": {
+    "name": "Wesley",
+    "lat": -36.903535,
+    "lng": 174.728922,
+    "radiusKm": 6
+  },
+  "blockhouse bay": {
+    "name": "Blockhouse Bay",
+    "lat": -36.922856,
+    "lng": 174.70145,
+    "radiusKm": 6
+  },
+  "greenlane": {
+    "name": "Greenlane",
+    "lat": -36.89457,
+    "lng": 174.793564,
+    "radiusKm": 6
+  },
+  "mount roskill": {
+    "name": "Mount Roskill",
+    "lat": -36.906322,
+    "lng": 174.741212,
+    "radiusKm": 6
+  },
+  "mt roskill": {
+    "name": "Mount Roskill",
+    "lat": -36.906322,
+    "lng": 174.741212,
+    "radiusKm": 6
+  },
+  "mount albert": {
+    "name": "Mount Albert",
+    "lat": -36.887783,
+    "lng": 174.721124,
+    "radiusKm": 6
+  },
+  "mt albert": {
+    "name": "Mount Albert",
+    "lat": -36.887783,
+    "lng": 174.721124,
+    "radiusKm": 6
+  },
+  "one tree hill": {
+    "name": "One Tree Hill",
+    "lat": -36.903453,
+    "lng": 174.794565,
+    "radiusKm": 6
+  },
+  "oranga": {
+    "name": "Oranga",
+    "lat": -36.91067,
+    "lng": 174.795008,
+    "radiusKm": 6
+  },
+  "owairaka": {
+    "name": "\u014cwairaka",
+    "lat": -36.894822,
+    "lng": 174.716042,
+    "radiusKm": 6
+  },
+  "panmure": {
+    "name": "Panmure",
+    "lat": -36.899892,
+    "lng": 174.854959,
+    "radiusKm": 6
+  },
+  "three kings": {
+    "name": "Three Kings",
+    "lat": -36.904359,
+    "lng": 174.752382,
+    "radiusKm": 6
+  },
+  "waikowhai": {
+    "name": "Waik\u014dwhai",
+    "lat": -36.927236,
+    "lng": 174.739788,
+    "radiusKm": 6
+  },
+  "westfield": {
+    "name": "Westfield",
+    "lat": -36.936084,
+    "lng": 174.835803,
+    "radiusKm": 6
+  },
+  "leamington": {
+    "name": "Leamington",
+    "lat": -37.902744,
+    "lng": 175.463345,
+    "radiusKm": 6
+  },
+  "manaia": {
+    "name": "Manaia",
+    "lat": -39.550974,
+    "lng": 174.124932,
+    "radiusKm": 12
+  },
+  "clive": {
+    "name": "Clive",
+    "lat": -39.586736,
+    "lng": 176.912747,
+    "radiusKm": 12
+  },
+  "tauranga": {
+    "name": "Tauranga",
+    "lat": -37.678701,
+    "lng": 176.167341,
+    "radiusKm": 25
+  },
+  "mt maunganui": {
+    "name": "Mount Maunganui",
+    "lat": -37.643394,
+    "lng": 176.188213,
+    "radiusKm": 12
+  },
+  "mount maunganui": {
+    "name": "Mount Maunganui",
+    "lat": -37.643394,
+    "lng": 176.188213,
+    "radiusKm": 12
+  },
+  "brookfield": {
+    "name": "Brookfield",
+    "lat": -37.686965,
+    "lng": 176.133077,
+    "radiusKm": 6
+  },
+  "tauranga central": {
+    "name": "Tauranga Central",
+    "lat": -37.682638,
+    "lng": 176.167915,
+    "radiusKm": 6
+  },
+  "omanu": {
+    "name": "Omanu",
+    "lat": -37.662694,
+    "lng": 176.212267,
+    "radiusKm": 6
+  },
+  "omanu beach": {
+    "name": "Omanu Beach",
+    "lat": -37.668997,
+    "lng": 176.230413,
+    "radiusKm": 6
+  },
+  "papamoa beach": {
+    "name": "Papamoa Beach",
+    "lat": -37.709595,
+    "lng": 176.315186,
+    "radiusKm": 6
+  },
+  "arataki": {
+    "name": "Arataki",
+    "lat": -37.673217,
+    "lng": 176.226174,
+    "radiusKm": 6
+  },
+  "onehunga": {
+    "name": "Onehunga",
+    "lat": -36.922859,
+    "lng": 174.785876,
+    "radiusKm": 6
+  },
+  "lynfield": {
+    "name": "Lynfield",
+    "lat": -36.928496,
+    "lng": 174.720429,
+    "radiusKm": 6
+  },
+  "mangere": {
+    "name": "M\u0101ngere",
+    "lat": -36.97503,
+    "lng": 174.797256,
+    "radiusKm": 6
+  },
+  "otara": {
+    "name": "\u014ctara",
+    "lat": -36.959668,
+    "lng": 174.873674,
+    "radiusKm": 6
+  },
+  "te papapa": {
+    "name": "Te Papapa",
+    "lat": -36.920925,
+    "lng": 174.806179,
+    "radiusKm": 6
+  },
+  "maitai": {
+    "name": "Maitai",
+    "lat": -41.273486,
+    "lng": 173.306314,
+    "radiusKm": 6
+  },
+  "dodson valley": {
+    "name": "Dodson Valley",
+    "lat": -41.241838,
+    "lng": 173.326666,
+    "radiusKm": 6
+  },
+  "enner glynn": {
+    "name": "Enner Glynn",
+    "lat": -41.305331,
+    "lng": 173.256999,
+    "radiusKm": 6
+  },
+  "washington valley": {
+    "name": "Washington Valley",
+    "lat": -41.270834,
+    "lng": 173.265987,
+    "radiusKm": 6
+  },
+  "britannia heights": {
+    "name": "Britannia Heights",
+    "lat": -41.275035,
+    "lng": 173.262054,
+    "radiusKm": 6
+  },
+  "new brighton": {
+    "name": "New Brighton",
+    "lat": -43.509627,
+    "lng": 172.730374,
+    "radiusKm": 6
+  },
+  "cracroft": {
+    "name": "Cracroft",
+    "lat": -43.581809,
+    "lng": 172.612312,
+    "radiusKm": 6
+  },
+  "avonhead": {
+    "name": "Avonhead",
+    "lat": -43.515139,
+    "lng": 172.554833,
+    "radiusKm": 6
+  },
+  "sockburn": {
+    "name": "Sockburn",
+    "lat": -43.534889,
+    "lng": 172.549667,
+    "radiusKm": 6
+  },
+  "southshore": {
+    "name": "Southshore",
+    "lat": -43.551667,
+    "lng": 172.747389,
+    "radiusKm": 6
+  },
+  "spreydon": {
+    "name": "Spreydon",
+    "lat": -43.555077,
+    "lng": 172.608034,
+    "radiusKm": 6
+  },
+  "sumner": {
+    "name": "Sumner",
+    "lat": -43.568504,
+    "lng": 172.759086,
+    "radiusKm": 6
+  },
+  "phillipstown": {
+    "name": "Phillipstown",
+    "lat": -43.541799,
+    "lng": 172.662699,
+    "radiusKm": 6
+  },
+  "addington": {
+    "name": "Addington",
+    "lat": -43.54305,
+    "lng": 172.614561,
+    "radiusKm": 6
+  },
+  "fendalton": {
+    "name": "Fendalton",
+    "lat": -43.518861,
+    "lng": 172.595875,
+    "radiusKm": 6
+  },
+  "linwood": {
+    "name": "Linwood",
+    "lat": -43.537497,
+    "lng": 172.661195,
+    "radiusKm": 6
+  },
+  "somerfield": {
+    "name": "Somerfield",
+    "lat": -43.560238,
+    "lng": 172.628228,
+    "radiusKm": 6
+  },
+  "upper riccarton": {
+    "name": "Upper Riccarton",
+    "lat": -43.528054,
+    "lng": 172.574659,
+    "radiusKm": 6
+  },
+  "jacobs town": {
+    "name": "Jacobs Town",
+    "lat": -46.093141,
+    "lng": 168.943104,
+    "radiusKm": 6
+  },
+  "whangamata": {
+    "name": "Whangamat\u0101",
+    "lat": -37.209645,
+    "lng": 175.873585,
+    "radiusKm": 12
+  },
+  "westgate": {
+    "name": "Westgate",
+    "lat": -36.814546,
+    "lng": 174.604384,
+    "radiusKm": 6
+  },
+  "kelston": {
+    "name": "Kelston",
+    "lat": -36.899749,
+    "lng": 174.663569,
+    "radiusKm": 6
+  },
+  "titirangi": {
+    "name": "Titirangi",
+    "lat": -36.938023,
+    "lng": 174.655787,
+    "radiusKm": 6
+  },
+  "paremoremo": {
+    "name": "P\u0101remoremo",
+    "lat": -36.755295,
+    "lng": 174.652403,
+    "radiusKm": 6
+  },
+  "elsdon": {
+    "name": "Elsdon",
+    "lat": -41.135989,
+    "lng": 174.827477,
+    "radiusKm": 6
+  },
+  "porirua city centre": {
+    "name": "Porirua City Centre",
+    "lat": -41.133135,
+    "lng": 174.838899,
+    "radiusKm": 6
+  },
+  "ranui heights": {
+    "name": "Ranui Heights",
+    "lat": -41.144132,
+    "lng": 174.850578,
+    "radiusKm": 6
+  },
+  "plimmerton": {
+    "name": "Plimmerton",
+    "lat": -41.070828,
+    "lng": 174.867557,
+    "radiusKm": 6
+  },
+  "owhariu": {
+    "name": "Owhariu",
+    "lat": -41.205561,
+    "lng": 174.774718,
+    "radiusKm": 6
+  },
+  "broadmeadows": {
+    "name": "Broadmeadows",
+    "lat": -41.233758,
+    "lng": 174.794029,
+    "radiusKm": 6
+  },
+  "greenacres": {
+    "name": "Greenacres",
+    "lat": -41.164825,
+    "lng": 174.841143,
+    "radiusKm": 6
+  },
+  "grenada village": {
+    "name": "Grenada Village",
+    "lat": -41.205843,
+    "lng": 174.824038,
+    "radiusKm": 6
+  },
+  "newlands": {
+    "name": "Newlands",
+    "lat": -41.227056,
+    "lng": 174.819047,
+    "radiusKm": 6
+  },
+  "tawa": {
+    "name": "Tawa",
+    "lat": -41.16849,
+    "lng": 174.825026,
+    "radiusKm": 6
+  },
+  "murchison": {
+    "name": "Murchison",
+    "lat": -41.800343,
+    "lng": 172.325805,
+    "radiusKm": 12
+  },
+  "redcastle": {
+    "name": "Redcastle",
+    "lat": -45.068895,
+    "lng": 170.988416,
+    "radiusKm": 6
+  },
+  "eveline": {
+    "name": "Eveline",
+    "lat": -45.074269,
+    "lng": 170.987182,
+    "radiusKm": 6
+  },
+  "casa nova": {
+    "name": "Casa Nova",
+    "lat": -45.076398,
+    "lng": 170.97897,
+    "radiusKm": 6
+  },
+  "marybank": {
+    "name": "Marybank",
+    "lat": -41.224799,
+    "lng": 173.32609,
+    "radiusKm": 6
+  },
+  "atawhai": {
+    "name": "Atawhai",
+    "lat": -41.235511,
+    "lng": 173.319793,
+    "radiusKm": 6
+  },
+  "tui glen": {
+    "name": "T\u016b\u012b Glen",
+    "lat": -41.240297,
+    "lng": 173.318917,
+    "radiusKm": 6
+  },
+  "motueka": {
+    "name": "Motueka",
+    "lat": -41.110826,
+    "lng": 173.011613,
+    "radiusKm": 12
+  },
+  "bethlehem": {
+    "name": "Bethlehem",
+    "lat": -37.698204,
+    "lng": 176.113608,
+    "radiusKm": 6
+  },
+  "dunollie": {
+    "name": "Dunollie",
+    "lat": -42.39681,
+    "lng": 171.26232,
+    "radiusKm": 6
+  },
+  "wharemoa": {
+    "name": "Wharemoa",
+    "lat": -42.463281,
+    "lng": 171.198523,
+    "radiusKm": 6
+  },
+  "westport": {
+    "name": "Westport",
+    "lat": -41.755337,
+    "lng": 171.599159,
+    "radiusKm": 12
+  },
+  "poike": {
+    "name": "Poike",
+    "lat": -37.731375,
+    "lng": 176.149218,
+    "radiusKm": 6
+  },
+  "greerton": {
+    "name": "Greerton",
+    "lat": -37.729538,
+    "lng": 176.136498,
+    "radiusKm": 6
+  },
+  "te reti": {
+    "name": "Te Reti",
+    "lat": -37.705544,
+    "lng": 176.127886,
+    "radiusKm": 6
+  },
+  "tauranga south": {
+    "name": "Tauranga South",
+    "lat": -37.706325,
+    "lng": 176.159114,
+    "radiusKm": 6
+  },
+  "bayswater": {
+    "name": "Bayswater",
+    "lat": -36.81389,
+    "lng": 174.776975,
+    "radiusKm": 6
+  },
+  "takapuna": {
+    "name": "Takapuna",
+    "lat": -36.787379,
+    "lng": 174.771808,
+    "radiusKm": 6
+  },
+  "kumeu": {
+    "name": "Kume\u016b",
+    "lat": -36.777107,
+    "lng": 174.559081,
+    "radiusKm": 12
+  },
+  "green bay": {
+    "name": "Green Bay",
+    "lat": -36.930491,
+    "lng": 174.679626,
+    "radiusKm": 6
+  },
+  "north titirangi": {
+    "name": "North Titirangi",
+    "lat": -36.924255,
+    "lng": 174.662611,
+    "radiusKm": 6
+  },
+  "mount eden": {
+    "name": "Mount Eden",
+    "lat": -36.882208,
+    "lng": 174.756418,
+    "radiusKm": 6
+  },
+  "mt eden": {
+    "name": "Mount Eden",
+    "lat": -36.882208,
+    "lng": 174.756418,
+    "radiusKm": 6
+  },
+  "saint heliers": {
+    "name": "Saint Heliers",
+    "lat": -36.853793,
+    "lng": 174.859293,
+    "radiusKm": 6
+  },
+  "eden terrace": {
+    "name": "Eden Terrace",
+    "lat": -36.869423,
+    "lng": 174.756739,
+    "radiusKm": 6
+  },
+  "glen innes": {
+    "name": "Glen Innes",
+    "lat": -36.874569,
+    "lng": 174.862124,
+    "radiusKm": 6
+  },
+  "grafton": {
+    "name": "Grafton",
+    "lat": -36.864117,
+    "lng": 174.771041,
+    "radiusKm": 6
+  },
+  "kohimarama": {
+    "name": "Kohimarama",
+    "lat": -36.858993,
+    "lng": 174.845763,
+    "radiusKm": 6
+  },
+  "parnell": {
+    "name": "Parnell",
+    "lat": -36.858267,
+    "lng": 174.782467,
+    "radiusKm": 6
+  },
+  "point england": {
+    "name": "Point England",
+    "lat": -36.882387,
+    "lng": 174.862666,
+    "radiusKm": 6
+  },
+  "freemans bay": {
+    "name": "Freemans Bay",
+    "lat": -36.848506,
+    "lng": 174.748224,
+    "radiusKm": 6
+  },
+  "te atatu south": {
+    "name": "Te Atat\u016b South",
+    "lat": -36.868529,
+    "lng": 174.646605,
+    "radiusKm": 6
+  },
+  "grey lynn": {
+    "name": "Grey Lynn",
+    "lat": -36.863508,
+    "lng": 174.737119,
+    "radiusKm": 6
+  },
+  "point chevalier": {
+    "name": "Point Chevalier",
+    "lat": -36.865906,
+    "lng": 174.706778,
+    "radiusKm": 6
+  },
+  "saint marys bay": {
+    "name": "Saint Marys Bay",
+    "lat": -36.845114,
+    "lng": 174.74028,
+    "radiusKm": 6
+  },
+  "west harbour": {
+    "name": "West Harbour",
+    "lat": -36.821422,
+    "lng": 174.626381,
+    "radiusKm": 6
+  },
+  "western springs": {
+    "name": "Western Springs",
+    "lat": -36.863515,
+    "lng": 174.729799,
+    "radiusKm": 6
+  },
+  "melrose": {
+    "name": "Melrose",
+    "lat": -41.325522,
+    "lng": 174.787559,
+    "radiusKm": 6
+  },
+  "miramar": {
+    "name": "Miramar",
+    "lat": -41.31279,
+    "lng": 174.822887,
+    "radiusKm": 6
+  },
+  "seatoun": {
+    "name": "Seatoun",
+    "lat": -41.322722,
+    "lng": 174.831172,
+    "radiusKm": 6
+  },
+  "strathmore park": {
+    "name": "Strathmore Park",
+    "lat": -41.331149,
+    "lng": 174.821055,
+    "radiusKm": 6
+  },
+  "murapara": {
+    "name": "Murapara",
+    "lat": -38.456408,
+    "lng": 176.704782,
+    "radiusKm": 12
+  },
+  "ferndale": {
+    "name": "Ferndale",
+    "lat": -39.086801,
+    "lng": 174.06164,
+    "radiusKm": 6
+  },
+  "vogeltown": {
+    "name": "Vogeltown",
+    "lat": -39.080394,
+    "lng": 174.081939,
+    "radiusKm": 6
+  },
+  "westown": {
+    "name": "Westown",
+    "lat": -39.071391,
+    "lng": 174.059168,
+    "radiusKm": 6
+  },
+  "albany heights": {
+    "name": "Albany Heights",
+    "lat": -36.717446,
+    "lng": 174.695392,
+    "radiusKm": 6
+  },
+  "bayview": {
+    "name": "Bayview",
+    "lat": -36.775242,
+    "lng": 174.708054,
+    "radiusKm": 6
+  },
+  "birkdale": {
+    "name": "Birkdale",
+    "lat": -36.797759,
+    "lng": 174.704472,
+    "radiusKm": 6
+  },
+  "lucas heights": {
+    "name": "Lucas Heights",
+    "lat": -36.734255,
+    "lng": 174.67451,
+    "radiusKm": 6
+  },
+  "little murrays bay": {
+    "name": "Little Murray's Bay",
+    "lat": -36.738872,
+    "lng": 174.747244,
+    "radiusKm": 6
+  },
+  "murrays bay": {
+    "name": "Murrays Bay",
+    "lat": -36.732326,
+    "lng": 174.745977,
+    "radiusKm": 6
+  },
+  "torbay": {
+    "name": "Torbay",
+    "lat": -36.699134,
+    "lng": 174.739389,
+    "radiusKm": 6
+  },
+  "unsworth heights": {
+    "name": "Unsworth Heights",
+    "lat": -36.757996,
+    "lng": 174.716314,
+    "radiusKm": 6
+  },
+  "windsor park": {
+    "name": "Windsor Park",
+    "lat": -36.742385,
+    "lng": 174.736126,
+    "radiusKm": 6
+  },
+  "totara vale": {
+    "name": "T\u014dtara Vale",
+    "lat": -36.762339,
+    "lng": 174.727614,
+    "radiusKm": 6
+  },
+  "bell block": {
+    "name": "Bell Block",
+    "lat": -39.027839,
+    "lng": 174.1505,
+    "radiusKm": 12
+  },
+  "glen avon": {
+    "name": "Glen Avon",
+    "lat": -39.05552,
+    "lng": 174.108639,
+    "radiusKm": 6
+  },
+  "wairoa": {
+    "name": "Wairoa",
+    "lat": -39.041449,
+    "lng": 177.423741,
+    "radiusKm": 12
+  },
+  "north clyde": {
+    "name": "North Clyde",
+    "lat": -39.02849,
+    "lng": 177.420636,
+    "radiusKm": 6
+  },
+  "spotswood": {
+    "name": "Spotswood",
+    "lat": -39.073651,
+    "lng": 174.029722,
+    "radiusKm": 6
+  },
+  "blagdon": {
+    "name": "Blagdon",
+    "lat": -39.067504,
+    "lng": 174.044035,
+    "radiusKm": 6
+  },
+  "granity": {
+    "name": "Granity",
+    "lat": -41.629193,
+    "lng": 171.855264,
+    "radiusKm": 12
+  },
+  "kawakawa": {
+    "name": "Kawakawa",
+    "lat": -35.38331,
+    "lng": 174.067691,
+    "radiusKm": 12
+  },
+  "awaroa creek": {
+    "name": "Awaroa Creek",
+    "lat": -35.732667,
+    "lng": 174.36884,
+    "radiusKm": 6
+  },
+  "hanmer springs": {
+    "name": "Hanmer Springs",
+    "lat": -42.524202,
+    "lng": 172.831358,
+    "radiusKm": 12
+  },
+  "dargaville": {
+    "name": "Dargaville",
+    "lat": -35.941289,
+    "lng": 173.868595,
+    "radiusKm": 12
+  },
+  "greta valley": {
+    "name": "Greta Valley",
+    "lat": -42.965126,
+    "lng": 172.97087,
+    "radiusKm": 12
+  },
+  "nukuhau": {
+    "name": "Nukuhau",
+    "lat": -38.680959,
+    "lng": 176.057409,
+    "radiusKm": 6
+  },
+  "taupo": {
+    "name": "Taup\u014d",
+    "lat": -38.686234,
+    "lng": 176.070963,
+    "radiusKm": 12
+  },
+  "waipahihi": {
+    "name": "Waipahihi",
+    "lat": -38.706711,
+    "lng": 176.089154,
+    "radiusKm": 6
+  },
+  "raetihi": {
+    "name": "Raetihi",
+    "lat": -39.426482,
+    "lng": 175.278608,
+    "radiusKm": 12
+  },
+  "torea": {
+    "name": "Torea",
+    "lat": -41.629193,
+    "lng": 171.855264,
+    "radiusKm": 12
+  },
+  "castlecliff": {
+    "name": "Castlecliff",
+    "lat": -39.941111,
+    "lng": 174.983528,
+    "radiusKm": 6
+  },
+  "manawatu heads": {
+    "name": "Manawatu Heads",
+    "lat": -40.464647,
+    "lng": 175.230789,
+    "radiusKm": 12
+  },
+  "cloverlea": {
+    "name": "Cloverlea",
+    "lat": -40.34632,
+    "lng": 175.58526,
+    "radiusKm": 6
+  },
+  "marton": {
+    "name": "Marton",
+    "lat": -40.070028,
+    "lng": 175.376456,
+    "radiusKm": 12
+  },
+  "maewa": {
+    "name": "Maewa",
+    "lat": -40.1962,
+    "lng": 175.57057,
+    "radiusKm": 6
+  },
+  "mairtown": {
+    "name": "Mairtown",
+    "lat": -35.704138,
+    "lng": 174.322422,
+    "radiusKm": 6
+  },
+  "te kamo": {
+    "name": "Te Kamo",
+    "lat": -35.683396,
+    "lng": 174.300933,
+    "radiusKm": 6
+  },
+  "martinborough": {
+    "name": "Martinborough",
+    "lat": -41.218527,
+    "lng": 175.459477,
+    "radiusKm": 12
+  },
+  "strandon": {
+    "name": "Strandon",
+    "lat": -39.054335,
+    "lng": 174.090711,
+    "radiusKm": 6
+  },
+  "hurdon": {
+    "name": "Hurdon",
+    "lat": -39.086869,
+    "lng": 174.049532,
+    "radiusKm": 6
+  },
+  "lynmouth": {
+    "name": "Lynmouth",
+    "lat": -39.066706,
+    "lng": 174.048773,
+    "radiusKm": 6
+  },
+  "welbourn": {
+    "name": "Welbourn",
+    "lat": -39.071903,
+    "lng": 174.091637,
+    "radiusKm": 6
+  },
+  "marfell": {
+    "name": "Marfell",
+    "lat": -39.07478,
+    "lng": 174.047137,
+    "radiusKm": 6
+  },
+  "holmes hill": {
+    "name": "Holmes Hill",
+    "lat": -45.102428,
+    "lng": 170.946606,
+    "radiusKm": 6
+  },
+  "oamaru": {
+    "name": "Oamaru",
+    "lat": -45.097315,
+    "lng": 170.972173,
+    "radiusKm": 12
+  },
+  "south hill": {
+    "name": "South Hill",
+    "lat": -45.104891,
+    "lng": 170.962988,
+    "radiusKm": 6
+  },
+  "south oamaru": {
+    "name": "South Oamaru",
+    "lat": -45.112657,
+    "lng": 170.959499,
+    "radiusKm": 6
+  },
+  "cape wanbrow": {
+    "name": "Cape Wanbrow",
+    "lat": -45.113359,
+    "lng": 170.978151,
+    "radiusKm": 6
+  },
+  "musselburgh": {
+    "name": "Musselburgh",
+    "lat": -45.899656,
+    "lng": 170.517558,
+    "radiusKm": 6
+  },
+  "saint kilda": {
+    "name": "Saint Kilda",
+    "lat": -45.903927,
+    "lng": 170.502945,
+    "radiusKm": 6
+  },
+  "mornington": {
+    "name": "Mornington",
+    "lat": -45.885545,
+    "lng": 170.480666,
+    "radiusKm": 6
+  },
+  "green island": {
+    "name": "Green Island",
+    "lat": -45.900593,
+    "lng": 170.428831,
+    "radiusKm": 6
+  },
+  "kenmure": {
+    "name": "Kenmure",
+    "lat": -45.883708,
+    "lng": 170.468342,
+    "radiusKm": 6
+  },
+  "helensburgh": {
+    "name": "Helensburgh",
+    "lat": -45.852593,
+    "lng": 170.480731,
+    "radiusKm": 6
+  },
+  "wakari": {
+    "name": "Wakari",
+    "lat": -45.858072,
+    "lng": 170.484677,
+    "radiusKm": 6
+  },
+  "balaclava": {
+    "name": "Balaclava",
+    "lat": -45.888705,
+    "lng": 170.467455,
+    "radiusKm": 6
+  },
+  "maryhill": {
+    "name": "Maryhill",
+    "lat": -45.889246,
+    "lng": 170.485046,
+    "radiusKm": 6
+  },
+  "ocean view": {
+    "name": "Ocean View",
+    "lat": -45.936356,
+    "lng": 170.34396,
+    "radiusKm": 6
+  },
+  "portobello": {
+    "name": "Portobello",
+    "lat": -45.839763,
+    "lng": 170.64811,
+    "radiusKm": 6
+  },
+  "sawyers bay": {
+    "name": "Sawyers Bay",
+    "lat": -45.817285,
+    "lng": 170.6007,
+    "radiusKm": 6
+  },
+  "dalmore": {
+    "name": "Dalmore",
+    "lat": -45.850675,
+    "lng": 170.513856,
+    "radiusKm": 6
+  },
+  "ravensbourne": {
+    "name": "Ravensbourne",
+    "lat": -45.863103,
+    "lng": 170.555676,
+    "radiusKm": 6
+  },
+  "picton": {
+    "name": "Picton",
+    "lat": -41.290702,
+    "lng": 174.006803,
+    "radiusKm": 12
+  },
+  "redwoodtown": {
+    "name": "Redwoodtown",
+    "lat": -41.532058,
+    "lng": 173.950862,
+    "radiusKm": 6
+  },
+  "carterton": {
+    "name": "Carterton",
+    "lat": -41.024237,
+    "lng": 175.528655,
+    "radiusKm": 12
+  },
+  "hokitika": {
+    "name": "Hokitika",
+    "lat": -42.717592,
+    "lng": 170.962534,
+    "radiusKm": 12
+  },
+  "te anau": {
+    "name": "Te Anau",
+    "lat": -45.414649,
+    "lng": 167.715672,
+    "radiusKm": 12
+  },
+  "te hapara": {
+    "name": "Te H\u0101para",
+    "lat": -38.654122,
+    "lng": 177.991992,
+    "radiusKm": 6
+  },
+  "frankleigh park": {
+    "name": "Frankleigh Park",
+    "lat": -39.08378,
+    "lng": 174.068916,
+    "radiusKm": 6
+  },
+  "highlands park": {
+    "name": "Highlands Park",
+    "lat": -39.080513,
+    "lng": 174.100482,
+    "radiusKm": 6
+  },
+  "beach haven": {
+    "name": "Beach Haven",
+    "lat": -36.798929,
+    "lng": 174.690327,
+    "radiusKm": 6
+  },
+  "browns bay": {
+    "name": "Browns Bay",
+    "lat": -36.716346,
+    "lng": 174.742263,
+    "radiusKm": 6
+  },
+  "castor bay": {
+    "name": "Castor Bay",
+    "lat": -36.760945,
+    "lng": 174.761189,
+    "radiusKm": 6
+  },
+  "greenhithe": {
+    "name": "Greenhithe",
+    "lat": -36.771135,
+    "lng": 174.684352,
+    "radiusKm": 6
+  },
+  "milford": {
+    "name": "Milford",
+    "lat": -36.772676,
+    "lng": 174.760337,
+    "radiusKm": 6
+  },
+  "murray bay": {
+    "name": "Murray Bay",
+    "lat": -36.732326,
+    "lng": 174.745977,
+    "radiusKm": 6
+  },
+  "oteha": {
+    "name": "Oteha",
+    "lat": -36.718073,
+    "lng": 174.721026,
+    "radiusKm": 6
+  },
+  "pinehill": {
+    "name": "Pinehill",
+    "lat": -36.7312,
+    "lng": 174.72658,
+    "radiusKm": 6
+  },
+  "schnapper rock": {
+    "name": "Schnapper Rock",
+    "lat": -36.757494,
+    "lng": 174.68838,
+    "radiusKm": 6
+  },
+  "forrest hill": {
+    "name": "Forrest Hill",
+    "lat": -36.764754,
+    "lng": 174.747434,
+    "radiusKm": 6
+  },
+  "glenfield": {
+    "name": "Glenfield",
+    "lat": -36.783177,
+    "lng": 174.720237,
+    "radiusKm": 6
+  },
+  "rothesay bay": {
+    "name": "Rothesay Bay",
+    "lat": -36.723305,
+    "lng": 174.746414,
+    "radiusKm": 6
+  },
+  "rangitata": {
+    "name": "Rangitata",
+    "lat": -44.065918,
+    "lng": 171.373111,
+    "radiusKm": 12
+  },
+  "south township": {
+    "name": "South Township",
+    "lat": -44.065918,
+    "lng": 171.373111,
+    "radiusKm": 12
+  },
+  "andrewville": {
+    "name": "Andrewville",
+    "lat": -44.231922,
+    "lng": 171.274475,
+    "radiusKm": 6
+  },
+  "grantlea": {
+    "name": "Grantlea",
+    "lat": -44.374583,
+    "lng": 171.233529,
+    "radiusKm": 6
+  },
+  "timaru": {
+    "name": "Timaru",
+    "lat": -44.398444,
+    "lng": 171.255194,
+    "radiusKm": 12
+  },
+  "watlington": {
+    "name": "Watlington",
+    "lat": -44.40523,
+    "lng": 171.232616,
+    "radiusKm": 6
+  },
+  "glenwood": {
+    "name": "Glenwood",
+    "lat": -44.386072,
+    "lng": 171.205315,
+    "radiusKm": 6
+  },
+  "highfield": {
+    "name": "Highfield",
+    "lat": -44.387499,
+    "lng": 171.219606,
+    "radiusKm": 6
+  },
+  "marchwiel": {
+    "name": "Marchwiel",
+    "lat": -44.379384,
+    "lng": 171.221669,
+    "radiusKm": 6
+  },
+  "parkside": {
+    "name": "Parkside",
+    "lat": -44.404068,
+    "lng": 171.248307,
+    "radiusKm": 6
+  },
+  "akaroa": {
+    "name": "Akaroa",
+    "lat": -43.805215,
+    "lng": 172.967079,
+    "radiusKm": 12
+  },
+  "netherby": {
+    "name": "Netherby",
+    "lat": -43.900248,
+    "lng": 171.762732,
+    "radiusKm": 6
+  },
+  "hampstead": {
+    "name": "Hampstead",
+    "lat": -43.908423,
+    "lng": 171.754609,
+    "radiusKm": 6
+  },
+  "greymouth": {
+    "name": "Greymouth",
+    "lat": -42.451111,
+    "lng": 171.206778,
+    "radiusKm": 12
+  },
+  "cobden": {
+    "name": "Cobden",
+    "lat": -42.436691,
+    "lng": 171.211494,
+    "radiusKm": 6
+  },
+  "massey": {
+    "name": "Massey",
+    "lat": -36.843272,
+    "lng": 174.6128,
+    "radiusKm": 6
+  },
+  "massey east": {
+    "name": "Massey East",
+    "lat": -36.833276,
+    "lng": 174.625711,
+    "radiusKm": 6
+  },
+  "massey west": {
+    "name": "Massey West",
+    "lat": -36.838934,
+    "lng": 174.600429,
+    "radiusKm": 6
+  },
+  "narrow neck": {
+    "name": "Narrow Neck",
+    "lat": -36.81535,
+    "lng": 174.799671,
+    "radiusKm": 6
+  },
+  "stanley bay": {
+    "name": "Stanley Bay",
+    "lat": -36.826404,
+    "lng": 174.783992,
+    "radiusKm": 6
+  },
+  "ponsonby": {
+    "name": "Ponsonby",
+    "lat": -36.851512,
+    "lng": 174.740158,
+    "radiusKm": 6
+  },
+  "orakei": {
+    "name": "\u014cr\u0101kei",
+    "lat": -36.858393,
+    "lng": 174.81761,
+    "radiusKm": 6
+  },
+  "newmarket": {
+    "name": "Newmarket",
+    "lat": -36.867558,
+    "lng": 174.778083,
+    "radiusKm": 6
+  },
+  "half moon bay": {
+    "name": "Half Moon Bay",
+    "lat": -36.884286,
+    "lng": 174.900832,
+    "radiusKm": 6
+  },
+  "mellons bay": {
+    "name": "Mellons Bay",
+    "lat": -36.884446,
+    "lng": 174.924265,
+    "radiusKm": 6
+  },
+  "tamaki": {
+    "name": "T\u0101maki",
+    "lat": -36.891381,
+    "lng": 174.862964,
+    "radiusKm": 6
+  },
+  "pakuranga": {
+    "name": "Pakuranga",
+    "lat": -36.914391,
+    "lng": 174.87157,
+    "radiusKm": 6
+  },
+  "sunnyhills": {
+    "name": "Sunnyhills",
+    "lat": -36.900237,
+    "lng": 174.87964,
+    "radiusKm": 6
+  },
+  "ohinenoutu": {
+    "name": "Ohinenoutu",
+    "lat": -38.128974,
+    "lng": 176.244554,
+    "radiusKm": 6
+  },
+  "lynmore": {
+    "name": "Lynmore",
+    "lat": -38.151115,
+    "lng": 176.28871,
+    "radiusKm": 6
+  },
+  "utuhina": {
+    "name": "Utuhina",
+    "lat": -38.14165,
+    "lng": 176.233091,
+    "radiusKm": 6
+  },
+  "golden gate": {
+    "name": "Golden Gate",
+    "lat": -41.098513,
+    "lng": 174.868231,
+    "radiusKm": 6
+  },
+  "karehana bay": {
+    "name": "Karehana Bay",
+    "lat": -41.070828,
+    "lng": 174.867557,
+    "radiusKm": 6
+  },
+  "wharekaho": {
+    "name": "Wharekaho",
+    "lat": -36.798081,
+    "lng": 175.721953,
+    "radiusKm": 6
+  },
+  "papakowhai": {
+    "name": "Papakowhai",
+    "lat": -41.115233,
+    "lng": 174.862298,
+    "radiusKm": 6
+  },
+  "mission bay": {
+    "name": "Mission Bay",
+    "lat": -36.851645,
+    "lng": 174.831079,
+    "radiusKm": 6
+  },
+  "wairau valley": {
+    "name": "Wairau Valley",
+    "lat": -36.774391,
+    "lng": 174.739808,
+    "radiusKm": 6
+  },
+  "marlborough": {
+    "name": "Marlborough",
+    "lat": -36.784546,
+    "lng": 174.730833,
+    "radiusKm": 6
+  },
+  "northcote central": {
+    "name": "Northcote Central",
+    "lat": -36.801076,
+    "lng": 174.736432,
+    "radiusKm": 6
+  },
+  "sunnynook": {
+    "name": "Sunnynook",
+    "lat": -36.754066,
+    "lng": 174.738629,
+    "radiusKm": 6
+  },
+  "te atatu north": {
+    "name": "Te Atatu North",
+    "lat": -36.836404,
+    "lng": 174.650165,
+    "radiusKm": 6
+  },
+  "te atatu peninsula": {
+    "name": "Te Atat\u016b Peninsula",
+    "lat": -36.836404,
+    "lng": 174.650165,
+    "radiusKm": 6
+  },
+  "paremata": {
+    "name": "Paremata",
+    "lat": -41.098513,
+    "lng": 174.868231,
+    "radiusKm": 6
+  },
+  "mana": {
+    "name": "Mana",
+    "lat": -41.098513,
+    "lng": 174.868231,
+    "radiusKm": 6
+  },
+  "takapuwahia": {
+    "name": "Takap\u016bw\u0101hia",
+    "lat": -41.122797,
+    "lng": 174.82853,
+    "radiusKm": 6
+  },
+  "plimmerton extension": {
+    "name": "Plimmerton Extension",
+    "lat": -41.070828,
+    "lng": 174.867557,
+    "radiusKm": 6
+  },
+  "northland": {
+    "name": "Northland",
+    "lat": -41.279396,
+    "lng": 174.759528,
+    "radiusKm": 6
+  },
+  "ngaio": {
+    "name": "Ngaio",
+    "lat": -41.250436,
+    "lng": 174.773137,
+    "radiusKm": 6
+  },
+  "mitchelltown": {
+    "name": "Mitchelltown",
+    "lat": -41.29689,
+    "lng": 174.756853,
+    "radiusKm": 6
+  },
+  "karori west": {
+    "name": "Karori West",
+    "lat": -41.288666,
+    "lng": 174.72103,
+    "radiusKm": 6
+  },
+  "crofton downs": {
+    "name": "Crofton Downs",
+    "lat": -41.258381,
+    "lng": 174.763258,
+    "radiusKm": 6
+  },
+  "kowhai park": {
+    "name": "Kowhai Park",
+    "lat": -41.313568,
+    "lng": 174.75659,
+    "radiusKm": 6
+  },
+  "lambton": {
+    "name": "Lambton",
+    "lat": -41.282266,
+    "lng": 174.776211,
+    "radiusKm": 6
+  },
+  "taitville": {
+    "name": "Taitville",
+    "lat": -41.290515,
+    "lng": 174.75628,
+    "radiusKm": 6
+  },
+  "oriental bay": {
+    "name": "Oriental Bay",
+    "lat": -41.291376,
+    "lng": 174.793646,
+    "radiusKm": 6
+  },
+  "wadestown": {
+    "name": "Wadestown",
+    "lat": -41.261663,
+    "lng": 174.775633,
+    "radiusKm": 6
+  },
+  "wilton": {
+    "name": "Wilton",
+    "lat": -41.267688,
+    "lng": 174.758556,
+    "radiusKm": 6
+  },
+  "waimauku": {
+    "name": "Waimauku",
+    "lat": -36.769283,
+    "lng": 174.492091,
+    "radiusKm": 12
+  },
+  "beachlands": {
+    "name": "Beachlands",
+    "lat": -36.884656,
+    "lng": 175.000499,
+    "radiusKm": 6
+  },
+  "cockle bay": {
+    "name": "Cockle Bay",
+    "lat": -36.900525,
+    "lng": 174.94201,
+    "radiusKm": 6
+  },
+  "shelly park": {
+    "name": "Shelly Park",
+    "lat": -36.905931,
+    "lng": 174.946334,
+    "radiusKm": 6
+  },
+  "cannons creek": {
+    "name": "Cannons Creek",
+    "lat": -41.140505,
+    "lng": 174.865533,
+    "radiusKm": 6
+  },
+  "waitangirua": {
+    "name": "Waitangirua",
+    "lat": -41.129162,
+    "lng": 174.879944,
+    "radiusKm": 6
+  },
+  "alicetown": {
+    "name": "Alicetown",
+    "lat": -41.21482,
+    "lng": 174.890067,
+    "radiusKm": 6
+  },
+  "maungaraki": {
+    "name": "Maungaraki",
+    "lat": -41.206514,
+    "lng": 174.88135,
+    "radiusKm": 6
+  },
+  "normandale": {
+    "name": "Normandale",
+    "lat": -41.202534,
+    "lng": 174.889386,
+    "radiusKm": 6
+  },
+  "epsom": {
+    "name": "Epsom",
+    "lat": -36.888802,
+    "lng": 174.770063,
+    "radiusKm": 6
+  },
+  "st johns": {
+    "name": "St Johns",
+    "lat": -36.877081,
+    "lng": 174.844032,
+    "radiusKm": 6
+  },
+  "new windsor": {
+    "name": "New Windsor",
+    "lat": -36.906665,
+    "lng": 174.711933,
+    "radiusKm": 6
+  },
+  "henderson": {
+    "name": "Henderson",
+    "lat": -36.879963,
+    "lng": 174.61701,
+    "radiusKm": 6
+  },
+  "konini": {
+    "name": "K\u014dnini",
+    "lat": -36.928197,
+    "lng": 174.644334,
+    "radiusKm": 6
+  },
+  "new lynn": {
+    "name": "New Lynn",
+    "lat": -36.909174,
+    "lng": 174.680401,
+    "radiusKm": 6
+  },
+  "waari hamlet": {
+    "name": "Waari Hamlet",
+    "lat": -36.895454,
+    "lng": 174.639771,
+    "radiusKm": 6
+  },
+  "glen eden": {
+    "name": "Glen Eden",
+    "lat": -36.91547,
+    "lng": 174.649231,
+    "radiusKm": 6
+  },
+  "ohariu": {
+    "name": "Ohariu",
+    "lat": -41.205561,
+    "lng": 174.774718,
+    "radiusKm": 6
+  },
+  "khandallah": {
+    "name": "Khandallah",
+    "lat": -41.24597,
+    "lng": 174.789789,
+    "radiusKm": 6
+  },
+  "mahina bay": {
+    "name": "M\u0101hina Bay",
+    "lat": -41.270258,
+    "lng": 174.909203,
+    "radiusKm": 6
+  },
+  "hataitai": {
+    "name": "Hataitai",
+    "lat": -41.301945,
+    "lng": 174.797552,
+    "radiusKm": 6
+  },
+  "seatoun heights": {
+    "name": "Seatoun Heights",
+    "lat": -41.31742,
+    "lng": 174.823084,
+    "radiusKm": 6
+  },
+  "breaker bay": {
+    "name": "Breaker Bay",
+    "lat": -41.334825,
+    "lng": 174.82547,
+    "radiusKm": 6
+  },
+  "te aro": {
+    "name": "Te Aro",
+    "lat": -41.291827,
+    "lng": 174.780924,
+    "radiusKm": 6
+  },
+  "mt victoria": {
+    "name": "Mount Victoria",
+    "lat": -41.296465,
+    "lng": 174.785431,
+    "radiusKm": 6
+  },
+  "mount victoria": {
+    "name": "Mount Victoria",
+    "lat": -41.296465,
+    "lng": 174.785431,
+    "radiusKm": 6
+  },
+  "houghton bay": {
+    "name": "Houghton Bay",
+    "lat": -41.338789,
+    "lng": 174.786738,
+    "radiusKm": 6
+  },
+  "roseneath": {
+    "name": "Roseneath",
+    "lat": -41.291822,
+    "lng": 174.800484,
+    "radiusKm": 6
+  },
+  "moerewa": {
+    "name": "Moerewa",
+    "lat": -35.386812,
+    "lng": 174.018689,
+    "radiusKm": 12
+  },
+  "rakaia": {
+    "name": "Rakaia",
+    "lat": -43.755644,
+    "lng": 172.025053,
+    "radiusKm": 12
+  },
+  "mangawhare": {
+    "name": "Mangawhare",
+    "lat": -35.950392,
+    "lng": 173.863787,
+    "radiusKm": 6
+  },
+  "paihia": {
+    "name": "Paihia",
+    "lat": -35.283254,
+    "lng": 174.092075,
+    "radiusKm": 12
+  },
+  "horahora": {
+    "name": "Horahora",
+    "lat": -35.733193,
+    "lng": 174.307793,
+    "radiusKm": 6
+  },
+  "woodhill": {
+    "name": "Woodhill",
+    "lat": -35.728148,
+    "lng": 174.311472,
+    "radiusKm": 6
+  },
+  "raumanga": {
+    "name": "Raumanga",
+    "lat": -35.745211,
+    "lng": 174.300496,
+    "radiusKm": 6
+  },
+  "porirua city": {
+    "name": "Porirua City",
+    "lat": -41.133135,
+    "lng": 174.838899,
+    "radiusKm": 6
+  },
+  "kenepuru": {
+    "name": "Kenepuru",
+    "lat": -41.151405,
+    "lng": 174.823812,
+    "radiusKm": 6
+  },
+  "lindenvale": {
+    "name": "Lindenvale",
+    "lat": -41.157327,
+    "lng": 174.828107,
+    "radiusKm": 6
+  },
+  "linden": {
+    "name": "Linden",
+    "lat": -41.157579,
+    "lng": 174.835901,
+    "radiusKm": 6
+  },
+  "porirua": {
+    "name": "Porirua",
+    "lat": -41.13595,
+    "lng": 174.837649,
+    "radiusKm": 25
+  },
+  "raroa": {
+    "name": "Raroa",
+    "lat": -41.230492,
+    "lng": 174.80598,
+    "radiusKm": 6
+  },
+  "westhaven": {
+    "name": "Westhaven",
+    "lat": -41.172928,
+    "lng": 174.816622,
+    "radiusKm": 6
+  },
+  "sundale": {
+    "name": "Sundale",
+    "lat": -41.182753,
+    "lng": 174.828662,
+    "radiusKm": 6
+  },
+  "johnsonville east": {
+    "name": "Johnsonville East",
+    "lat": -41.223203,
+    "lng": 174.811057,
+    "radiusKm": 6
+  },
+  "kamo": {
+    "name": "Kamo",
+    "lat": -35.683396,
+    "lng": 174.300933,
+    "radiusKm": 6
+  },
+  "otangarei": {
+    "name": "Otangarei",
+    "lat": -35.693808,
+    "lng": 174.317531,
+    "radiusKm": 6
+  },
+  "riverside": {
+    "name": "Riverside",
+    "lat": -35.722994,
+    "lng": 174.330164,
+    "radiusKm": 6
+  },
+  "tikipunga": {
+    "name": "Tikipunga",
+    "lat": -35.689312,
+    "lng": 174.329645,
+    "radiusKm": 6
+  },
+  "whau valley": {
+    "name": "Whau Valley",
+    "lat": -35.697122,
+    "lng": 174.30529,
+    "radiusKm": 6
+  },
+  "fairview heights": {
+    "name": "Fairview Heights",
+    "lat": -36.711156,
+    "lng": 174.714151,
+    "radiusKm": 6
+  },
+  "mairangi bay": {
+    "name": "Mairangi Bay",
+    "lat": -36.738872,
+    "lng": 174.747244,
+    "radiusKm": 6
+  },
+  "whangaparaoa": {
+    "name": "Whangapar\u0101oa",
+    "lat": -36.634876,
+    "lng": 174.748043,
+    "radiusKm": 12
+  },
+  "long bay": {
+    "name": "Long Bay",
+    "lat": -36.687064,
+    "lng": 174.746162,
+    "radiusKm": 6
+  },
+  "arkles bay": {
+    "name": "Arkles Bay",
+    "lat": -36.640426,
+    "lng": 174.744476,
+    "radiusKm": 6
+  },
+  "okura": {
+    "name": "\u014ckura",
+    "lat": -36.677986,
+    "lng": 174.723645,
+    "radiusKm": 6
+  },
+  "warkworth": {
+    "name": "Warkworth",
+    "lat": -36.400522,
+    "lng": 174.663746,
+    "radiusKm": 12
+  },
+  "kerikeri": {
+    "name": "Kerikeri",
+    "lat": -35.227794,
+    "lng": 173.955384,
+    "radiusKm": 12
+  },
+  "russell": {
+    "name": "Russell",
+    "lat": -35.261263,
+    "lng": 174.122491,
+    "radiusKm": 12
+  },
+  "albany": {
+    "name": "Albany",
+    "lat": -36.73425,
+    "lng": 174.707352,
+    "radiusKm": 6
+  }
+}

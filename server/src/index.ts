@@ -8,6 +8,7 @@ import questsRouter from './routes/questsRouter';
 import usersRouter from './routes/usersRouter';
 import authRouter from './routes/authRouter';
 import completionsRouter from './routes/completionsRouter';
+import { getPlace } from 'utils/placesUtils';
 
 const PORT = process.env.PORT || 3000;
 const API_PREFIX = '/api';
