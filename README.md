@@ -20,7 +20,11 @@ View it for yourself: [https://sidequests.nz](https://sidequests.nz)
 
 ## Screenshots
 
-<img src="https://sidequests.nz/github_screenshot.png" alt="Screenshot of the Sidequests app" width="700px" />
+<img src="https://sidequests.nz/github_screenshot1.png" alt="Screenshot of the Sidequests app" width="700px" />
+
+<img src="https://sidequests.nz/github_screenshot2.png" alt="Screenshot of the Sidequests app" width="700px" />
+
+<img src="https://sidequests.nz/github_screenshot3.png" alt="Screenshot of the Sidequests app" width="700px" />
 
 ## Technical Description
 
