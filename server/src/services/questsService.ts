@@ -107,7 +107,20 @@ export const questsService = {
                 if (newGeoScore > geoScore) geoScore = newGeoScore;
             }
 
-            searchResultsWithScore.push({...searchResult, score: geoScore})
+            // Calculate a text-score using average TF (term frequency) across query ngrams
+            let words = foundQuest.title + ' ' + foundQuest.description
+            for (const checkListItem of foundQuest.checkList) {
+                words += (checkListItem.title + ' ' + checkListItem.description)
+            }
+            const questNgrams = generateNgrams(words);
+            let textScore = 0;
+            for (const ngram of ngrams) {
+                const tf = questNgrams.filter(g => g === ngram.toLowerCase()).length / ngrams.length;
+                textScore += tf;
+            }
+            textScore /= ngrams.length; // average TF across query ngrams
+
+            searchResultsWithScore.push({...searchResult, score: geoScore * 0.1 + textScore * 0.9})
         }
 
         // Sort & truncate results to max 20 in descending order of score
