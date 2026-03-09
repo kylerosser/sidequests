@@ -120,7 +120,7 @@ export const questsService = {
             }
             textScore /= ngrams.length; // average TF across query ngrams
 
-            searchResultsWithScore.push({...searchResult, score: geoScore * 0.1 + textScore * 0.9})
+            searchResultsWithScore.push({...searchResult, score: geoScore * 0.25 + textScore * 0.75})
         }
 
         // Sort & truncate results to max 20 in descending order of score
