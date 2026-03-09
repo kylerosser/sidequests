@@ -13,10 +13,10 @@ View it for yourself: [https://sidequests.nz](https://sidequests.nz)
 - [x] Email verification & password resets via tokens with TTL stored in the database
 - [x] Interactive Leaflet map to explore quests across New Zealand, featuring debounced, lazy loading for performance
 - [x] Quest checklist with progress tracking, saved state, user comments, and recent activity feed
-- [ ] Quest submission page (upcoming)
+- [x] Quest submission form
+- [x] Search quests with natural language query processing
 - [ ] User profile page (upcoming)
 - [ ] Content moderation queue with user reporting and filtering of inappropriate content (upcoming)
-- [ ] Search quests by location and keywords (upcoming)
 
 ## Screenshots
 
@@ -43,17 +43,31 @@ Email functionality is handled with **Resend**, using **MJML** for responsive em
 ### Deployment
 Sidequests is deployed on a **DigitalOcean Ubuntu Droplet**. The backend is managed with **PM2** for process management, while **Caddy** acts as a reverse proxy and handles HTTPS automatically.
 
-## Growth & Learning Highlights
-Sidequests was my first real dive into full-stack development, and my first serious project using React & TypeScript. It taught me how to structure a non-trivial app, handle real-world authentication flows with JWT and Google OAuth, and work with geospatial data in MongoDB. 
+### Quest Search Feature
+One of Sidequests’ standout features is the search system. Users can type natural language queries like "easy walk near Auckland with water view" and the system parses it intelligentsly:
+1. The query is cleaned and normalised (lowercased, accents removed, punctuation stripped)
+2. Monograms (instances of a single word) and bigrams (sequential two-word combinations e.g. "mount eden") are generated (collectively referred to as n-grams.)
+3. Stopwords (filler words e.g. "at", "and", "near") are removed to reduce noise.
+4. Monograms are lemmatized to improve matching of different word-forms (e.g. caving &rarr; cave).
+5. [LINZ location data](https://www.linz.govt.nz/) is used to match monograms to towns/suburbs/cities in NZ and their latitude/longitude/radius.
+6. The database is geospatially queried for quests near matching locations, expanding the search radius if there are too few results.
+7. Search results are scored based on their proximity to the matching places.
+8. Search results are also scored based on the term frequency (TF) of query n-grams in the quest title/description/checklist.
+9. Search results are sorted based on their combined geo and TF score, and truncated for performance.
 
-I also learned how to deploy and manage a live application, and focused on writing clean, modular APIs using Express. Overall, the project helped me level up across the stack and gain confidence building and shipping real features.
+## Growth & Learning Highlights
+This project taught me:
+- Structuring a full-stack TypeScript application with modular frontend and backend code
+- Implementing real-world authentication flows with JWT and Google OAuth (including forgot password email flows)
+- Working with geospatial data in MongoDB
+- Building an natural language search system with data cleaning, tokenisation, and proximity scoring
+- Deploying and maintaining a live production application
 
 ## Next Steps
-Soon you'll be able to submit your own quests and view the profiles of other users. I'm also adding content moderation tools to keep things safe and clean. Better search options will enable finding quests by location or keywords.
-
-As the number of quests grows, maintaining smooth map performance will become more important. I plan to implement server-side clustering using spatial partitioning techniques like quadtrees to group nearby quests. This will reduce the number of markers sent to the client and improve load times.
-
-I'm also planning to clean up the codebase by adding validation middleware to backend routes, which will make the code cleaner and adding new routes easier. Re-typing the Mongoose schemas is on the list too, to improve type safety. I'm also working on separating business logic from route handlers to keep things more modular and maintainable.
+- User profile pages and social features for tracking friends’ progress
+- Enhanced content moderation tools to ensure safe, high-quality quests
+- Server-side clustering for map markers using spatial partitioning to maintain smooth performance as the number of quests grows
+- Validation middleware, typed Mongoose schemas, and separation of business logic for cleaner, more maintainable backend code
 
 ## License
 This project is not licensed. All rights are reserved by the author.
